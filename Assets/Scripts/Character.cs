@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour, IBuyable
 {
-    public bool ally;
     public int health;
-    public int size;
 
     public Action action;
     public List<CharacterAbility> abilities;
@@ -28,10 +26,5 @@ public class Character : MonoBehaviour, IBuyable
     void Update()
     {
         
-    }
-
-    void MoveToRelativePosition(Vector3 position)
-    {
-        // 
     }
 }
