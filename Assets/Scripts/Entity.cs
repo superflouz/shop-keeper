@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour, IBuyable
+public class Entity : MonoBehaviour, IBuyable
 {
     public int health;
 
     public Action action;
-    public List<CharacterAbility> abilities;
+    public List<EntityAbility> abilities;
 
     public Sprite icon;
     public Sprite Icon { get { return icon; } }

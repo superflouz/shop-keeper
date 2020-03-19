@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct CharacterAbility
+public struct EntityAbility
 {
     public Ability ability;
     public int manaCost;
