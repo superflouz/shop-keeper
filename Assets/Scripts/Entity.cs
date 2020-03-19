@@ -29,7 +29,7 @@ public class Entity : MonoBehaviour, IBuyable
 
     public int slotCount;
     public Team team;
-
+    
     public delegate void KillEvent(Entity killed, Entity killer);
     public KillEvent killEvent;
 
@@ -50,6 +50,11 @@ public class Entity : MonoBehaviour, IBuyable
     void Update()
     {
         
+    }
+
+    public void ApplyDamage(int amount, Action.DamageType type)
+    {
+
     }
 
     public void Kill(Entity killer = null)

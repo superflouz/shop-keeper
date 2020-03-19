@@ -24,7 +24,7 @@ public class Party : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Check if the party is moving
+        // Check if there is an ennemy in the front of the party
         isMoving = true;
         Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position + (Vector3.left * 0.5f), Vector2.one, 0);
         foreach (Collider2D hit in hits) {
@@ -37,7 +37,6 @@ public class Party : MonoBehaviour
         if (isMoving) {
             transform.Translate(Vector3.right * scrollSpeed * Time.deltaTime);
         }
-
     }
 
     public int GetFreeSlotsCount()
@@ -63,17 +62,19 @@ public class Party : MonoBehaviour
         entity.transform.parent = null;
     }
 
-    public void SwapEntity(EntityMovement entity)
+    public bool SwapEntity(EntityMovement entity)
     {
         int index = entities.IndexOf(entity);
         if (index < 0) {
-            return;
+            return false;
         }
 
         if (entities.Count > index + 1) {
             entities[index] = entities[index + 1];
             entities[index + 1] = entity;
         }
+
+        return true;
     }
 
     public Vector3 GetEntityLocalPosition(EntityMovement entity)
