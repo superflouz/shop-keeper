@@ -4,6 +4,5 @@ using UnityEngine;
 
 public static class Global
 {
-    public static float ScrollSpeed = 2;
-    public static float SwapSpeed = 3;
+
 }

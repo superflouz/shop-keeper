@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Party : MonoBehaviour
 {
+    public float scrollSpeed;
+    public float swapSpeed;
     public int maxSlots;
     public List<EntityMovement> entities;
+
+    private bool isMoving;
+    public bool IsMoving { get { return isMoving; } }
 
     // Start is called before the first frame update
     void Start()
@@ -19,17 +24,18 @@ public class Party : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool enemyHit = false;
+        // Check if the party is moving
+        isMoving = true;
         Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position + (Vector3.left * 0.5f), Vector2.one, 0);
         foreach (Collider2D hit in hits) {
             EntityMovement entity = hit.GetComponent<EntityMovement>();
             if (entity != null && entity.Team != Team.Ally) {
-                enemyHit = true;
+                isMoving = false;
             }
         }
 
-        if (!enemyHit) {
-            transform.Translate(Vector3.right * Global.ScrollSpeed * Time.deltaTime);
+        if (isMoving) {
+            transform.Translate(Vector3.right * scrollSpeed * Time.deltaTime);
         }
 
     }
