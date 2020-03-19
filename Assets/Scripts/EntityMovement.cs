@@ -33,6 +33,7 @@ public class EntityMovement : MonoBehaviour
         if (Party != null) {
             Vector3 wantedPosition = Party.GetEntityLocalPosition(this);
 
+            // It's not where it's supposed to be
             if (transform.localPosition != wantedPosition) {
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, wantedPosition, Party.swapSpeed * Time.deltaTime);
 
@@ -47,6 +48,9 @@ public class EntityMovement : MonoBehaviour
                 else {
                     transform.localScale = new Vector3(1, 1, 1);
                 }
+
+                // Tell the entity it's swapping
+                entity.CurrentState = Entity.State.Swapping;
             }
             else {
                 // The entity doesn't move

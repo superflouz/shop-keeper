@@ -10,6 +10,12 @@ public enum Team
 
 public class Entity : MonoBehaviour, IBuyable
 {
+    public enum State
+    {
+        Idle,
+        Swapping
+    }
+
     public int health;
 
     public Action action;
@@ -27,11 +33,17 @@ public class Entity : MonoBehaviour, IBuyable
     public delegate void KillEvent(Entity killed, Entity killer);
     public KillEvent killEvent;
 
+    public State CurrentState { get; set; }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        switch (CurrentState) {
+            case State.Idle:
+                break;
+            case State.Swapping:
+                break;
+        }
     }
 
     // Update is called once per frame
