@@ -8,17 +8,10 @@ public enum Faction
     Enemy
 }
 
-public enum DamageType
-{
-    Magical,
-    Physical,
-    Piercing
-}
-
 public enum Range
 {
-    melee, 
-    ranged
+    Melee, 
+    Ranged
 }
 
 public class Entity : MonoBehaviour, IBuyable
