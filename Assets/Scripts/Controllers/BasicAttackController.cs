@@ -24,14 +24,7 @@ public class BasicAttackController : Controller
                 // Check the first enemy in front of the entity
                 if (enemy.faction != entity.faction)
                 {
-                    // Check if the attack is of cooldown
-                    if (entity.CanAttack())
-                    {
-                        entity.attack.ExecuteAttack(entity, enemy);
-                        // Set the cooldown of the attack
-                        entity.SetTimerAttack();
-                        break;
-                    }
+                    entity.attack.PrepareAttack(enemy);
                 }
             }
         }

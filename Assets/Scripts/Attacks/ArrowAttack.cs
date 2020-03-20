@@ -17,12 +17,6 @@ public class ArrowAttack : Attack
        
     }
 
-    // Launch the arrow up
-    public override void ExecuteAttack(Entity Entity, Entity Target)
-    {
-
-    }
-
     private Vector2 CalculateQuadraticBezierCurve(float t, Vector2 P0, Vector2 P1, Vector2 P2)
     {
         //P0 is origin
