@@ -15,6 +15,20 @@ public enum DamageType
     Piercing
 }
 
+public enum DamageType
+{
+    heal,
+    magic,
+    physical,
+    piercing
+}
+
+public enum Range
+{
+    melee, 
+    ranged
+}
+
 public class Entity : MonoBehaviour, IBuyable
 {
     public enum State
@@ -33,6 +47,12 @@ public class Entity : MonoBehaviour, IBuyable
     public int magicArmor;
     
     public Attack attack;
+    public int health;
+
+    public float range;
+    public float Range { get { return range; } }
+
+    public Action action;
     public List<EntityAbility> abilities;
 
     public Sprite icon;
