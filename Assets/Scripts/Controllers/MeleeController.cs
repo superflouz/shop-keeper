@@ -20,6 +20,7 @@ public class MeleeController : Controller
                 if (enemy.team != entity.team) {
                     if (entity.CanAttack()) {
                         entity.attack.ExecuteAttack(enemy);
+                        entity.SetTimerAttack();
                         break;
                     }
                 }

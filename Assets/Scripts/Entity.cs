@@ -63,11 +63,12 @@ public class Entity : MonoBehaviour, IBuyable
 
     public bool CanAttack()
     {
-        if (timerAttack <= 0) {
-            timerAttack = 1 / attackSpeed;
-            return true;
-        }
-        return false;
+        return timerAttack <= 0;
+    }
+
+    public void SetTimerAttack()
+    {
+        timerAttack = 1 / attackSpeed;
     }
 
     public void ApplyDamage(int amount, Attack.DamageType type)
