@@ -8,6 +8,13 @@ public enum Faction
     Enemy
 }
 
+public enum DamageType
+{   
+    Physical,
+    Magical,
+    Piercing
+}
+
 public enum Range
 {
     Melee, 
