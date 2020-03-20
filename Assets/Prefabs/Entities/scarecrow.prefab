@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 519684302096290238}
   - component: {fileID: 519684302096290209}
   - component: {fileID: 519684302096290208}
-  - component: {fileID: 8288001878032380880}
   - component: {fileID: 519684302096290211}
   - component: {fileID: 519684302096290239}
   - component: {fileID: 519684302096290236}
+  - component: {fileID: 8596481762981004632}
   m_Layer: 8
   m_Name: scarecrow
   m_TagString: Untagged
@@ -77,18 +77,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   constantMovingAnimation: 0
---- !u!114 &8288001878032380880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519684302096290210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab50c5c427165f84e8bd063b5f7fd54a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &519684302096290211
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -185,3 +173,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8596481762981004632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519684302096290210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f694d29b057d73c4fbbb81dd17315d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

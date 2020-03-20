@@ -326,6 +326,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 519684302096290209, guid: 059e0d9940588724280aff5665bdaea5,
+        type: 3}
+      propertyPath: slotSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 519684302096290210, guid: 059e0d9940588724280aff5665bdaea5,
         type: 3}
       propertyPath: m_Name
@@ -605,6 +610,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 519684302096290209, guid: 059e0d9940588724280aff5665bdaea5,
+        type: 3}
+      propertyPath: slotSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 519684302096290210, guid: 059e0d9940588724280aff5665bdaea5,
         type: 3}
       propertyPath: m_Name
@@ -674,6 +684,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 519684302096290209, guid: 059e0d9940588724280aff5665bdaea5,
+        type: 3}
+      propertyPath: slotSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 519684302096290210, guid: 059e0d9940588724280aff5665bdaea5,
         type: 3}
       propertyPath: m_Name
@@ -1034,6 +1049,7 @@ GameObject:
   - component: {fileID: 1420444341}
   - component: {fileID: 1420444340}
   - component: {fileID: 1420444343}
+  - component: {fileID: 1420444344}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1126,6 +1142,18 @@ MonoBehaviour:
   m_CropFrameX: 1
   m_CropFrameY: 1
   m_StretchFill: 0
+--- !u!114 &1420444344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420444339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3290d40eaa31a3641a33189b04e82a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1520254453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1331,6 +1359,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 519684302096290209, guid: 059e0d9940588724280aff5665bdaea5,
+        type: 3}
+      propertyPath: range
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 519684302096290209, guid: 059e0d9940588724280aff5665bdaea5,
+        type: 3}
+      propertyPath: slotSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 519684302096290210, guid: 059e0d9940588724280aff5665bdaea5,
         type: 3}
       propertyPath: m_Name
