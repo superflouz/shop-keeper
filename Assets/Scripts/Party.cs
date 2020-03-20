@@ -29,7 +29,7 @@ public class Party : MonoBehaviour
         Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position + (Vector3.left * 0.5f), Vector2.one, 0);
         foreach (Collider2D hit in hits) {
             EntityMovement entity = hit.GetComponent<EntityMovement>();
-            if (entity != null && entity.Team != Team.Ally) {
+            if (entity != null && entity.Team != Faction.Ally) {
                 isMoving = false;
             }
         }

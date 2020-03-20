@@ -2,10 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Team
+public enum Faction
 {
     Ally,
     Enemy
+}
+
+public enum DamageType
+{
+    Magical,
+    Physical,
+    Piercing
 }
 
 public class Entity : MonoBehaviour, IBuyable
@@ -16,7 +23,7 @@ public class Entity : MonoBehaviour, IBuyable
         Swapping
     }
     public int slotCount;
-    public Team team;
+    public Faction faction;
 
     public int health;
     public int attackDamage;
@@ -41,16 +48,12 @@ public class Entity : MonoBehaviour, IBuyable
     public State CurrentState { get; set; }
 
     private float timerAttack;
+    private int currentHealth;
 
     // Start is called before the first frame update
     void Start()
     {
-        switch (CurrentState) {
-            case State.Idle:
-                break;
-            case State.Swapping:
-                break;
-        }
+        currentHealth = health;
     }
 
     // Update is called once per frame
@@ -71,9 +74,33 @@ public class Entity : MonoBehaviour, IBuyable
         timerAttack = 1 / attackSpeed;
     }
 
-    public void ApplyDamage(int amount, Attack.DamageType type)
+    public void ApplyDamage(int amount, DamageType type, Entity source)
     {
+        float amountFloat = amount;
 
+        string dmgType = "unknown";
+
+        switch (type) {
+            case DamageType.Physical:
+                amountFloat -= (amountFloat * (physicArmor / 100f));
+                dmgType = "physical";
+                break;
+            case DamageType.Magical:
+                amountFloat -= (amountFloat * (magicArmor / 100f));
+                dmgType = "magical";
+                break;
+            case DamageType.Piercing:
+                dmgType = "piercing";
+                break;
+        }
+
+        string s = name + " take " + Mathf.RoundToInt(amountFloat) + " " + dmgType + " damage(s) from " + source.name;
+        Debug.Log(s);
+
+        currentHealth -= Mathf.RoundToInt(amountFloat);
+        if (currentHealth <= 0) {
+            Kill(source);
+        }
     }
 
     public void Kill(Entity killer = null)

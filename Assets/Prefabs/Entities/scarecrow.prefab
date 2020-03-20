@@ -49,14 +49,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotCount: 1
-  team: 0
+  faction: 0
   health: 10
-  attackDamage: 0
+  attackDamage: 2
   attackSpeed: 1
   abilityPower: 0
   physicArmor: 0
   magicArmor: 0
-  attack: {fileID: 3435548258118065871, guid: cceda244f9f23be4b977dafa3069c16a, type: 3}
+  attack: {fileID: 2460282837792225157, guid: f5fef0c8c863eab458133fcad057f311, type: 3}
   abilities:
   - ability: {fileID: 0}
     manaCost: 0

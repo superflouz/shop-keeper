@@ -6,7 +6,7 @@ public class EntityMovement : MonoBehaviour
 {
     public bool constantMovingAnimation;
     public float SlotCount { get { return entity.slotCount; } }
-    public Team Team { get { return entity.team; } }
+    public Faction Team { get { return entity.faction; } }
 
     public Party Party { get; set; }
 
@@ -21,6 +21,7 @@ public class EntityMovement : MonoBehaviour
 
     public void Start()
     {
+        animator.logWarnings = false;
         entity.killEvent += EntityKilled;
         if (constantMovingAnimation)
             animator.SetBool("Moving", true);
