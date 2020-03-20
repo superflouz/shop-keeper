@@ -5,7 +5,7 @@ using UnityEngine;
 public class EntityMovement : MonoBehaviour
 {
     public bool constantMovingAnimation;
-    public float SlotCount { get { return entity.slotCount; } }
+    public float SlotCount { get { return entity.slotSize; } }
     public Faction Team { get { return entity.faction; } }
 
     public Party Party { get; set; }
@@ -16,7 +16,12 @@ public class EntityMovement : MonoBehaviour
     private void Awake()
     {
         entity = GetComponent<Entity>();
-        animator = GetComponent<Animator>();
+        foreach (Transform child in transform) {
+            if (child.CompareTag("Legs")) {
+                animator = child.GetComponent<Animator>();
+                break;
+            }
+        }
     }
 
     public void Start()

@@ -28,7 +28,7 @@ public class Entity : MonoBehaviour, IBuyable
         Idle,
         Swapping
     }
-    public int slotCount;
+    public int slotSize;
     public Faction faction;
 
     public int health;
@@ -60,6 +60,19 @@ public class Entity : MonoBehaviour, IBuyable
     private float timerAttack;
     private int currentHealth;
 
+    void Awake()
+    {
+        if (attack != null) {
+            attack.user = this;
+            foreach (Transform child in transform) {
+                if (child.CompareTag("Body")) {
+                    attack.animator = child.GetComponent<Animator>();
+                    break;
+                }
+            }
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,19 +82,7 @@ public class Entity : MonoBehaviour, IBuyable
     // Update is called once per frame
     void Update()
     {
-        if (timerAttack > 0) {
-            timerAttack -= Time.deltaTime;
-        }
-    }
 
-    public bool CanAttack()
-    {
-        return timerAttack <= 0;
-    }
-
-    public void SetTimerAttack()
-    {
-        timerAttack = 1 / attackSpeed;
     }
 
     public void ApplyDamage(int amount, DamageType type, Entity source)

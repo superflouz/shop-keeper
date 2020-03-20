@@ -48,15 +48,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187f2a00ad9be7a4abc4016acd54c60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotCount: 1
+  slotSize: 1
   faction: 0
-  health: 10
-  attackDamage: 2
+  health: 100
+  attackDamage: 25
   attackSpeed: 1
   abilityPower: 0
   physicArmor: 0
   magicArmor: 0
   attack: {fileID: 2460282837792225157, guid: f5fef0c8c863eab458133fcad057f311, type: 3}
+  range: 0
   abilities:
   - ability: {fileID: 0}
     manaCost: 0

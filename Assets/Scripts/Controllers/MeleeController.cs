@@ -14,18 +14,12 @@ public class MeleeController : Controller
     void Update()
     {
         if (entity.CurrentState == Entity.State.Idle) {
-            Collider2D[] hits = Physics2D.OverlapCircleAll((Vector2)transform.position + (Vector2.right * transform.localScale.x * (float)entity.slotCount) / 2, 0.1f);
+            Collider2D[] hits = Physics2D.OverlapCircleAll((Vector2)transform.position + (Vector2.right * transform.localScale.x * entity.slotSize) / 2, 0.1f);
             foreach (Collider2D hit in hits) {
                 Entity enemy = hit.GetComponent<Entity>();
                 // Check the first enemy in front of the entity
                 if (enemy.faction != entity.faction) {
-                    // Check if the attack is of cooldown
-                    if (entity.CanAttack()) {
-                        entity.attack.ExecuteAttack(entity, enemy);
-                        // Set the cooldown of the attack
-                        entity.SetTimerAttack();
-                        break;
-                    }
+                    entity.attack.PrepareAttack(enemy);
                 }
             }
         }

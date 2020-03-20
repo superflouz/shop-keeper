@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class MeleeAttack : Attack
 {
-    public override void ExecuteAttack(Entity attacker, Entity target)
-    {
-        // Add Some pif paf poof animation here
 
-        target.ApplyDamage(attacker.attackDamage, DamageType.Physical, attacker);
+    protected override void ExecuteAttack(Entity target)
+    {
+        target.ApplyDamage(user.attackDamage, DamageType.Physical, user);
+    }
+
+    public void Update()
+    {
+        
     }
 }
