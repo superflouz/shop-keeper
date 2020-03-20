@@ -112,8 +112,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4031105964604272618}
   - component: {fileID: 3841581462555977770}
-  - component: {fileID: 6345508307524988181}
+  - component: {fileID: 5381352878874037374}
   - component: {fileID: 8071236482192922007}
+  - component: {fileID: 8833601086607716461}
   - component: {fileID: 6002299548632894560}
   m_Layer: 0
   m_Name: Swordman
@@ -158,12 +159,10 @@ MonoBehaviour:
   abilityPower: 0
   physicArmor: 10
   magicArmor: 0
-  attack: {fileID: 2460282837792225157, guid: f5fef0c8c863eab458133fcad057f311, type: 3}
   range: 0
-  abilities: []
   icon: {fileID: 0}
   price: 0
---- !u!114 &6345508307524988181
+--- !u!114 &5381352878874037374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,7 +171,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2726437483417585661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab50c5c427165f84e8bd063b5f7fd54a, type: 3}
+  m_Script: {fileID: 11500000, guid: f694d29b057d73c4fbbb81dd17315d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8071236482192922007
@@ -188,6 +187,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   constantMovingAnimation: 0
+--- !u!114 &8833601086607716461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726437483417585661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4dc3b16d869514ba4cbb098d12a67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!61 &6002299548632894560
 BoxCollider2D:
   m_ObjectHideFlags: 0

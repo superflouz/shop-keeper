@@ -17,10 +17,26 @@ public class Attack : MonoBehaviour
     protected float timerAnimation;
 
 
-    public Entity user;
+    protected Entity user;
     protected Entity currentTarget;
 
-    public Animator animator;
+    protected Animator animator;
+
+    public void Awake()
+    {
+        user = GetComponent<Entity>();
+        foreach (Transform child in transform) {
+            if (child.CompareTag("Body")) {
+                animator = child.GetComponent<Animator>();
+                break;
+            }
+        }
+    }
+
+    public void Start()
+    {
+        state = State.Idle;
+    }
 
     public void Update()
     {
@@ -56,13 +72,12 @@ public class Attack : MonoBehaviour
         if (timerAttack > 0) {
             return false;
         }
-
         currentTarget = target;
 
         state = State.Preparing;
         timerAttack = 1 / user.attackSpeed;
-        timerPreparation = timerAttack / 3;
-        timerAnimation = timerAttack / 3;
+        timerPreparation = timerAttack / 5;
+        timerAnimation = timerAttack / 5;
         animator.SetTrigger("Prepare Attack");
 
         return true;

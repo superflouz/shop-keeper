@@ -10,8 +10,8 @@ public class MeleeAttack : Attack
         target.ApplyDamage(user.attackDamage, DamageType.Physical, user);
     }
 
-    public void Update()
+    new public void Update()
     {
-        
+        base.Update();
     }
 }

@@ -24,7 +24,7 @@ public class BasicAttackController : Controller
                 // Check the first enemy in front of the entity
                 if (enemy.faction != entity.faction)
                 {
-                    entity.attack.PrepareAttack(enemy);
+                    attack.PrepareAttack(enemy);
                 }
             }
         }

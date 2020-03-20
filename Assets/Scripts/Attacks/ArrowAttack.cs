@@ -6,15 +6,15 @@ public class ArrowAttack : Attack
 {
 
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
-        
+        base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    new void Update()
     {
-       
+        base.Update();
     }
 
     private Vector2 CalculateQuadraticBezierCurve(float t, Vector2 P0, Vector2 P1, Vector2 P2)

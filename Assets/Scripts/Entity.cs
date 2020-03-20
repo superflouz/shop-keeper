@@ -38,12 +38,9 @@ public class Entity : MonoBehaviour, IBuyable
     public int physicArmor;
     public int magicArmor;
     
-    public Attack attack;
 
     public float range;
     public float Range { get { return range; } }
-
-    public List<EntityAbility> abilities;
 
     public Sprite icon;
     public Sprite Icon { get { return icon; } }
@@ -57,21 +54,7 @@ public class Entity : MonoBehaviour, IBuyable
 
     public State CurrentState { get; set; }
 
-    private float timerAttack;
     private int currentHealth;
-
-    void Awake()
-    {
-        if (attack != null) {
-            attack.user = this;
-            foreach (Transform child in transform) {
-                if (child.CompareTag("Body")) {
-                    attack.animator = child.GetComponent<Animator>();
-                    break;
-                }
-            }
-        }
-    }
 
     // Start is called before the first frame update
     void Start()
