@@ -15,10 +15,17 @@ public class Entity : MonoBehaviour, IBuyable
         Idle,
         Swapping
     }
+    public int slotCount;
+    public Team team;
 
     public int health;
-
-    public Action action;
+    public int attackDamage;
+    public float attackSpeed;
+    public int abilityPower;
+    public int physicArmor;
+    public int magicArmor;
+    
+    public Attack attack;
     public List<EntityAbility> abilities;
 
     public Sprite icon;
@@ -27,13 +34,13 @@ public class Entity : MonoBehaviour, IBuyable
     public int price;
     public int Price { get { return price; } }
 
-    public int slotCount;
-    public Team team;
-    
+
     public delegate void KillEvent(Entity killed, Entity killer);
     public KillEvent killEvent;
 
     public State CurrentState { get; set; }
+
+    private float timerAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -49,10 +56,21 @@ public class Entity : MonoBehaviour, IBuyable
     // Update is called once per frame
     void Update()
     {
-        
+        if (timerAttack > 0) {
+            timerAttack -= Time.deltaTime;
+        }
     }
 
-    public void ApplyDamage(int amount, Action.DamageType type)
+    public bool CanAttack()
+    {
+        if (timerAttack <= 0) {
+            timerAttack = 1 / attackSpeed;
+            return true;
+        }
+        return false;
+    }
+
+    public void ApplyDamage(int amount, Attack.DamageType type)
     {
 
     }

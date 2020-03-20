@@ -55,8 +55,11 @@ public class EntityMovement : MonoBehaviour
             else {
                 // The entity doesn't move
                 if (!constantMovingAnimation)
-                    animator.SetBool("Moving", false);
+                    animator.SetBool("Moving", Party.IsMoving);
                 transform.localScale = new Vector3(1, 1, 1);
+
+                // Tell the entity it's idle
+                entity.CurrentState = Entity.State.Idle;
             }
         }
     }
