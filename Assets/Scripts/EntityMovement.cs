@@ -16,12 +16,7 @@ public class EntityMovement : MonoBehaviour
     private void Awake()
     {
         entity = GetComponent<Entity>();
-        foreach (Transform child in transform) {
-            if (child.CompareTag("Legs")) {
-                animator = child.GetComponent<Animator>();
-                break;
-            }
-        }
+        animator = GetComponent<Animator>();
     }
 
     public void Start()

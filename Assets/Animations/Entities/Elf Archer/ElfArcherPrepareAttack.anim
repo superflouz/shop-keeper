@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SwordmanPrepareAttack
+  m_Name: ElfArcherPrepareAttack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 6078737269672455974, guid: 0684c79ab66e71b44bd5d1da160b18f8,
+      value: {fileID: -6770483989546019881, guid: dd96f636d23d5b642a5ece482dfc8cdb,
         type: 3}
     attribute: m_Sprite
     path: Body
@@ -41,7 +41,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 6078737269672455974, guid: 0684c79ab66e71b44bd5d1da160b18f8, type: 3}
+    - {fileID: -6770483989546019881, guid: dd96f636d23d5b642a5ece482dfc8cdb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

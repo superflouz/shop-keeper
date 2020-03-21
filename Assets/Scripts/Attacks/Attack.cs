@@ -25,12 +25,7 @@ public class Attack : MonoBehaviour
     public void Awake()
     {
         user = GetComponent<Entity>();
-        foreach (Transform child in transform) {
-            if (child.CompareTag("Body")) {
-                animator = child.GetComponent<Animator>();
-                break;
-            }
-        }
+        animator = GetComponent<Animator>();
     }
 
     public void Start()
