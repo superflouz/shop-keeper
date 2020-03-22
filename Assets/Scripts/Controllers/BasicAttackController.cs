@@ -17,7 +17,7 @@ public class BasicAttackController : Controller
         {
             Vector2 a = entity.transform.position;
             Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotSize / 2f + entity.range);
-            Collider2D[] hits = Physics2D.OverlapAreaAll(a, b, LayerMask.NameToLayer("Entity"));
+            Collider2D[] hits = Physics2D.OverlapAreaAll(a, b, 1 << LayerMask.NameToLayer("Entities"));
             foreach (Collider2D hit in hits)
             {
                 Entity enemy = hit.GetComponent<Entity>();

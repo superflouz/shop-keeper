@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6226663984015524436}
   - component: {fileID: 3184061873611813333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8833601086607716461}
   - component: {fileID: 6002299548632894560}
   - component: {fileID: 1787278921821685899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Swordman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,6 +135,7 @@ MonoBehaviour:
   slotSize: 1
   faction: 0
   health: 200
+  mana: 0
   attackDamage: 20
   attackSpeed: 1
   abilityPower: 0
@@ -235,7 +236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4427797102311937850}
   - component: {fileID: 4249720997393570500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}

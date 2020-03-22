@@ -26,18 +26,21 @@ public class Entity : MonoBehaviour, IBuyable
     public enum State
     {
         Idle,
-        Swapping
+        Swapping,
+        Attacking,
+        Casting
     }
     public int slotSize;
     public Faction faction;
 
     public int health;
+    public int mana;
     public int attackDamage;
     public float attackSpeed;
     public int abilityPower;
     public int physicArmor;
     public int magicArmor;
-    
+
 
     public float range;
     public float Range { get { return range; } }
@@ -55,6 +58,23 @@ public class Entity : MonoBehaviour, IBuyable
     public State CurrentState { get; set; }
 
     private int currentHealth;
+    public int CurrentHealth {
+        get {
+            return currentHealth;
+        }
+        set {
+            currentHealth = value;
+        }
+    }
+    private float currentMana;
+    public int CurrentMana {
+        get {
+            return Mathf.RoundToInt(currentMana);
+        }
+        set {
+            currentMana = value;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +85,9 @@ public class Entity : MonoBehaviour, IBuyable
     // Update is called once per frame
     void Update()
     {
-
+        if (currentMana < mana) {
+            currentMana = Mathf.MoveTowards(currentMana, mana, 1 * Time.deltaTime);
+        }
     }
 
     public void ApplyDamage(int amount, DamageType type, Entity source)
@@ -88,13 +110,21 @@ public class Entity : MonoBehaviour, IBuyable
                 break;
         }
 
-        string s = name + " take " + Mathf.RoundToInt(amountFloat) + " " + dmgType + " damage(s) from " + source.name;
-        Debug.Log(s);
+        //string s = name + " take " + Mathf.RoundToInt(amountFloat) + " " + dmgType + " damage(s) from " + source.name;
+        //Debug.Log(s);
 
-        currentHealth -= Mathf.RoundToInt(amountFloat);
+        CurrentHealth -= Mathf.RoundToInt(amountFloat);
         if (currentHealth <= 0) {
             Kill(source);
         }
+    }
+
+    public void Heal(int amount, Entity source)
+    {
+        CurrentHealth = Mathf.Clamp(CurrentHealth + amount, 0, health);
+
+        //string s = name + " heal " + amount + " health from " + source.name;
+        //Debug.Log(s);
     }
 
     public void Kill(Entity killer = null)

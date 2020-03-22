@@ -7,10 +7,14 @@ public class Party : MonoBehaviour
     public float scrollSpeed;
     public float swapSpeed;
     public int maxSlots;
+    public bool inversed;
     public List<EntityMovement> entities;
 
     private bool isMoving;
     public bool IsMoving { get { return isMoving; } }
+
+    public float delayMovement;
+    private float timerDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -24,18 +28,25 @@ public class Party : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Check if there is an ennemy in the front of the party
-        isMoving = true;
-        Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position + (Vector3.left * 0.5f), Vector2.one, 0);
-        foreach (Collider2D hit in hits) {
-            EntityMovement entity = hit.GetComponent<EntityMovement>();
-            if (entity != null && entity.Team != Faction.Ally) {
-                isMoving = false;
-            }
+        if (timerDelay > 0) {
+            timerDelay -= Time.deltaTime;
         }
 
-        if (isMoving) {
-            transform.Translate(Vector3.right * scrollSpeed * Time.deltaTime);
+        if (!inversed && timerDelay <= 0) {
+            // Check if there is an ennemy in the front of the party
+            isMoving = true;
+            Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position + (Vector3.left * 0.5f), Vector2.one, 0);
+            foreach (Collider2D hit in hits) {
+                EntityMovement entity = hit.GetComponent<EntityMovement>();
+                if (entity != null && entity.Team != Faction.Ally) {
+                    isMoving = false;
+                    timerDelay = delayMovement;
+                }
+            }
+
+            if (isMoving) {
+                transform.Translate(Vector3.right * scrollSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -83,14 +94,19 @@ public class Party : MonoBehaviour
             return entity.transform.localPosition;
         }
 
-        float offset = -(entity.SlotCount / 2);
+        float offset = (entity.SlotCount / 2);
         foreach (EntityMovement listEntity in entities) {
             if (listEntity == entity) {
                 break;
             }
-            offset -= listEntity.SlotCount;
+            offset += listEntity.SlotCount;
         }
 
-        return new Vector3(offset, 0, 0);
+        if (inversed) {
+            return new Vector3(offset, 0, 0);
+        }
+        else {
+            return new Vector3(-offset, 0, 0);
+        }  
     }
 }

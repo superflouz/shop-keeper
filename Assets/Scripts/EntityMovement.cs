@@ -57,7 +57,12 @@ public class EntityMovement : MonoBehaviour
                 // The entity doesn't move
                 if (!constantMovingAnimation)
                     animator.SetBool("Moving", Party.IsMoving);
-                transform.localScale = new Vector3(1, 1, 1);
+
+                // Look in the party direction
+                if (!Party.inversed)
+                    transform.localScale = new Vector3(1, 1, 1);
+                else
+                    transform.localScale = new Vector3(-1, 1, 1);
 
                 // Tell the entity it's idle
                 entity.CurrentState = Entity.State.Idle;

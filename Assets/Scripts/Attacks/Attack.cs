@@ -35,7 +35,7 @@ public class Attack : MonoBehaviour
 
     public void Update()
     {
-        if (timerAttack > 0) {
+        if (timerAttack > 0 && user.CurrentState != Entity.State.Swapping) {
             timerAttack -= Time.deltaTime;
         }
 
@@ -57,6 +57,7 @@ public class Attack : MonoBehaviour
                 if (timerAnimation <= 0) {
                     animator.SetTrigger("End Attack");
                     state = State.Idle;
+                    user.CurrentState = Entity.State.Idle;
                 }
                 break;
         }
@@ -64,6 +65,7 @@ public class Attack : MonoBehaviour
 
     public virtual bool PrepareAttack(Entity target)
     {
+        user.CurrentState = Entity.State.Attacking;
         if (timerAttack > 0) {
             return false;
         }
@@ -71,8 +73,8 @@ public class Attack : MonoBehaviour
 
         state = State.Preparing;
         timerAttack = 1 / user.attackSpeed;
-        timerPreparation = timerAttack / 5;
-        timerAnimation = timerAttack / 5;
+        timerPreparation = timerAttack / 8;
+        timerAnimation = timerAttack / 4;
         animator.SetTrigger("Prepare Attack");
 
         return true;
