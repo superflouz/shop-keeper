@@ -9,6 +9,9 @@ public class Heal : Ability
 
     protected override void CastAbility(Entity target)
     {
+        if (target == null) {
+            return;
+        }
         Instantiate(particle, target.transform.position + Vector3.up * 1f, Quaternion.identity);
 
         int amount = Mathf.RoundToInt(healValue * (1 + (user.abilityPower / 100f)));

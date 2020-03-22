@@ -7,6 +7,9 @@ public class MeleeAttack : Attack
 
     protected override void ExecuteAttack(Entity target)
     {
+        if (target == null) {
+            return;
+        }
         target.ApplyDamage(user.attackDamage, DamageType.Physical, user);
     }
 
