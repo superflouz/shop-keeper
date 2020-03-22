@@ -16,7 +16,7 @@ public class BasicAttackController : Controller
         if (entity.CurrentState == Entity.State.Idle)
         {
             Vector2 a = entity.transform.position;
-            Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotSize / 2f + entity.range);
+            Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotSize / 2f + entity.range + 0.5f) + Vector2.up * entity.range;
             Collider2D[] hits = Physics2D.OverlapAreaAll(a, b, 1 << LayerMask.NameToLayer("Entities"));
             foreach (Collider2D hit in hits)
             {

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6021140900084197284}
   - component: {fileID: 7007514850988165154}
   - component: {fileID: 1023605501687963869}
+  - component: {fileID: 2656264220861295253}
   m_Layer: 8
   m_Name: Priest
   m_TagString: Untagged
@@ -99,8 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaCost: 2
-  preparationTime: 0.1
-  animationTime: 0.6
+  preparationTime: 0.2
+  animationTime: 0.5
   particle: {fileID: 922094455198945850, guid: 6019d73c52e205745a8f63a4a3e6556d, type: 3}
   healValue: 20
 --- !u!95 &1023605501687963869
@@ -122,6 +123,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &2656264220861295253
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368493013701016583}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2344848080592406958
 GameObject:
   m_ObjectHideFlags: 0

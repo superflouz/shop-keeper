@@ -35,7 +35,7 @@ public class Party : MonoBehaviour
         if (!inversed && timerDelay <= 0) {
             // Check if there is an ennemy in the front of the party
             isMoving = true;
-            Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position + (Vector3.left * 0.5f), Vector2.one, 0);
+            Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position, Vector2.one, 0);
             foreach (Collider2D hit in hits) {
                 EntityMovement entity = hit.GetComponent<EntityMovement>();
                 if (entity != null && entity.Team != Faction.Ally) {
