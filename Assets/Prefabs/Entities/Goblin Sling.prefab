@@ -54,7 +54,7 @@ MonoBehaviour:
   faction: 1
   health: 50
   mana: 0
-  attackDamage: 3
+  attackDamage: 2
   attackSpeed: 1
   abilityPower: 0
   physicArmor: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7504935882607404479}
   - component: {fileID: 137349550845888853}
   m_Layer: 8
-  m_Name: Goblin club
+  m_Name: Goblin Club
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotSize: 1
   faction: 1
-  health: 100
+  health: 75
   mana: 0
   attackDamage: 10
   attackSpeed: 1.2
