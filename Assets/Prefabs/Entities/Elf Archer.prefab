@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: -4061616950287929439, guid: 059e16867cb9aea459db1131f220fbd1, type: 3}
-  projectileSpeed: 5
+  projectileSpeed: 10
 --- !u!61 &2191661024495378311
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class Controller : MonoBehaviour
     // Start is called before the first frame update
     protected void Awake()
     {
+        // Get Components
         entity = GetComponent<Entity>();
         attack = GetComponent<Attack>();
     }
