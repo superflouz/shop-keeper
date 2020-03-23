@@ -57,7 +57,7 @@ MonoBehaviour:
   attackDamage: 10
   attackSpeed: 1.2
   abilityPower: 0
-  physicArmor: 5
+  physicArmor: 10
   magicArmor: 0
   range: 0
   icon: {fileID: 0}

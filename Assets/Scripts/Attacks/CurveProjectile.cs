@@ -6,7 +6,23 @@ public class CurveProjectile : MonoBehaviour
 {
     protected float t;
     public Vector2 Origin { get; set; }
-    public Vector2 Destination { get; set; }
+    private Vector2 destination;
+    public Vector2 Destination { 
+        get {
+            return destination;
+        }
+        set {
+            if (Mathf.Abs(value.x - Origin.x) < 1) {
+                if (value.x - Origin.x < 0) {
+                    value.x = Origin.x - 1;
+                }
+                else {
+                    value.x = Origin.x + 1;
+                }
+            }
+            destination = value;
+        }
+    }
     public Vector2 MiddlePoint { get; set; }
 
     public Entity Source { get; set; }

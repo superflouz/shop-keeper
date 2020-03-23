@@ -31,11 +31,12 @@ public class SlingAttack : Attack
             projectile = Instantiate(scrap, transform.position + Vector3.up * 0.5f, Quaternion.identity);
 
             projectile.Origin = transform.position + Vector3.up * 1f;
-            projectile.Destination = target.transform.position + Vector3.up * 0.5f + Vector3.right * Random.Range(-2f, 1f);
+            projectile.Destination = target.transform.position + Vector3.up * 0.5f + Vector3.right * Random.Range(-1f, 1f);
+
 
             Vector2 middlePoint;
             middlePoint.x = (projectile.Origin.x + projectile.Destination.x) / 2;
-            middlePoint.y = projectile.Origin.y + Mathf.Max(1f, Mathf.Abs(projectile.Origin.x - projectile.Destination.x) + Random.Range(-4f, -1f));
+            middlePoint.y = projectile.Origin.y + Mathf.Max(1f, Mathf.Abs(projectile.Origin.x - projectile.Destination.x) + Random.Range(-2f, -1f));
             projectile.MiddlePoint = middlePoint;
 
             projectile.ProjectileSpeed = projectileSpeed;
