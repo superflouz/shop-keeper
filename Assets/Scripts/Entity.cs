@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Faction of the Entity
+/// </summary>
 public enum Faction
 {
     Ally,
     Enemy
 }
 
+/// <summary>
+/// Type of damage done or received
+/// </summary>
 public enum DamageType
 {   
     Physical,
@@ -15,6 +21,9 @@ public enum DamageType
     Piercing
 }
 
+/// <summary>
+/// Range type of the Entity
+/// </summary>
 public enum Range
 {
     Melee, 
@@ -23,6 +32,9 @@ public enum Range
 
 public class Entity : MonoBehaviour, IBuyable
 {
+    /// <summary>
+    /// State of action of the Entity
+    /// </summary>
     public enum State
     {
         Idle,
@@ -30,6 +42,7 @@ public class Entity : MonoBehaviour, IBuyable
         Attacking,
         Casting
     }
+
     public int slotSize;
     public Faction faction;
 
@@ -79,24 +92,34 @@ public class Entity : MonoBehaviour, IBuyable
     // Start is called before the first frame update
     void Start()
     {
+        // Default Values
         currentHealth = health;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentMana < mana) {
+        if (currentMana < mana)
+        {
             currentMana = Mathf.MoveTowards(currentMana, mana, 1 * Time.deltaTime);
         }
     }
 
+    /// <summary>
+    /// Calculates and apply damages to the Entity
+    /// </summary>
+    /// <param name="amount">amount of damage</param>
+    /// <param name="type">type of damage</param>
+    /// <param name="source">Entity that send those damages</param>
     public void ApplyDamage(int amount, DamageType type, Entity source)
     {
         float amountFloat = amount;
 
         string dmgType = "unknown";
 
-        switch (type) {
+        // Applies damage based on resistances
+        switch (type)
+        {
             case DamageType.Physical:
                 amountFloat -= (amountFloat * (physicArmor / 100f));
                 dmgType = "physical";
@@ -119,6 +142,11 @@ public class Entity : MonoBehaviour, IBuyable
         }
     }
 
+    /// <summary>
+    /// Heal the entity
+    /// </summary>
+    /// <param name="amount">amount to heal</param>
+    /// <param name="source">Entity that healed</param>
     public void Heal(int amount, Entity source)
     {
         CurrentHealth = Mathf.Clamp(CurrentHealth + amount, 0, health);
@@ -127,6 +155,10 @@ public class Entity : MonoBehaviour, IBuyable
         //Debug.Log(s);
     }
 
+    /// <summary>
+    /// Kill the Entity
+    /// </summary>
+    /// <param name="killer">Entity that killed</param>
     public void Kill(Entity killer = null)
     {
         killEvent?.Invoke(this, killer);

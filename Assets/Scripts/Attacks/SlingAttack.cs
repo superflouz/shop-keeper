@@ -20,10 +20,10 @@ public class SlingAttack : Attack
         base.Update();
     }
 
-    protected override void ExecuteAttack(Entity target)
+    protected override bool ExecuteAttack(Entity target)
     {
         if (target == null) {
-            return;
+            return false;
         }
 
         for (int i = 0; i < projectileCount; i++) {
@@ -45,5 +45,7 @@ public class SlingAttack : Attack
             projectile.Source = user;
         }
 
+        return true;
     }
+
 }

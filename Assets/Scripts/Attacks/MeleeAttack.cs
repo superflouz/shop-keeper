@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class MeleeAttack : Attack
 {
-
-    protected override void ExecuteAttack(Entity target)
+    /// <summary>
+    /// Launches an attack to the target
+    /// </summary>
+    /// <param name="target">Entity to attack</param>
+    protected override bool ExecuteAttack(Entity target)
     {
-        if (target == null) {
-            return;
+        if (target == null)
+        {
+            return false;
         }
+
+        // Do Damage to the target
         target.ApplyDamage(user.attackDamage, DamageType.Physical, user);
+        return true;
     }
 
     new public void Update()

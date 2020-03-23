@@ -9,22 +9,24 @@ public class EntityMovement : MonoBehaviour
     public Faction Team { get { return entity.faction; } }
 
     public Party Party { get; set; }
-
     private Entity entity;
     private Animator animator;
 
     private void Awake()
     {
+        // Get Components
         entity = GetComponent<Entity>();
         animator = GetComponent<Animator>();
     }
 
     public void Start()
     {
+        // Set Default Values
         animator.logWarnings = false;
+        if (constantMovingAnimation) animator.SetBool("Moving", true);
+
+        // Subscribe to the event
         entity.killEvent += EntityKilled;
-        if (constantMovingAnimation)
-            animator.SetBool("Moving", true);
     }
 
     // Update is called once per frame
@@ -72,8 +74,12 @@ public class EntityMovement : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0)) {
-            if (Party != null) {
+        // When you click on an entity
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Party != null)
+            {
+                // Swap the clicked entity
                 Party.SwapEntity(this);
             }
         }
@@ -81,7 +87,9 @@ public class EntityMovement : MonoBehaviour
 
     public void EntityKilled(Entity killed, Entity killer)
     {
-        if (Party != null) {
+        // Remove the entity from the party
+        if (Party != null)
+        {
             Party.RemoveFromParty(this);
         }
         Destroy(gameObject);

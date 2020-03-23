@@ -7,14 +7,22 @@ public class Heal : Ability
     public TimedGameObject particle;
     public int healValue;
 
-    protected override void CastAbility(Entity target)
+    /// <summary>
+    /// Cast the heal
+    /// </summary>
+    /// <param name="target">Target of the ability</param>
+    /// <returns>sucess</returns>
+    protected override bool CastAbility(Entity target)
     {
-        if (target == null) {
-            return;
+        if (target == null)
+        {
+            return false; ;
         }
         Instantiate(particle, target.transform.position + Vector3.up * 1f, Quaternion.identity, target.transform);
 
         int amount = Mathf.RoundToInt(healValue * (1 + (user.abilityPower / 100f)));
         target.Heal(amount, user);
+
+        return true;
     }
 }
