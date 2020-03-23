@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotSize: 2
   faction: 1
-  health: 750
+  health: 500
   mana: 100
   attackDamage: 50
   attackSpeed: 0.5
