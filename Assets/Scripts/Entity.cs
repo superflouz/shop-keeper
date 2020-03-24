@@ -64,6 +64,8 @@ public class Entity : MonoBehaviour, IBuyable
     public int price;
     public int Price { get { return price; } }
 
+    public Party Party { get; set; }
+
 
     public delegate void KillEvent(Entity killed, Entity killer);
     public KillEvent killEvent;
@@ -101,7 +103,7 @@ public class Entity : MonoBehaviour, IBuyable
     {
         if (currentMana < mana)
         {
-            currentMana = Mathf.MoveTowards(currentMana, mana, 1 * Time.deltaTime);
+            currentMana = Mathf.MoveTowards(currentMana, mana, 10 * Time.deltaTime);
         }
     }
 

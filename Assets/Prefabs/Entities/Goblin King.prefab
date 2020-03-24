@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7616927506501009132}
   - component: {fileID: 1028214789930253380}
   - component: {fileID: 4167313511581697769}
-  - component: {fileID: 8335922273480757451}
+  - component: {fileID: 8923444318620741892}
   - component: {fileID: 1206908590908993241}
+  - component: {fileID: 4172475330852763006}
   - component: {fileID: 7504935882607404479}
   - component: {fileID: 137349550845888853}
   m_Layer: 8
@@ -54,8 +55,8 @@ MonoBehaviour:
   faction: 1
   health: 500
   mana: 100
-  attackDamage: 50
-  attackSpeed: 0.5
+  attackDamage: 10
+  attackSpeed: 0.3
   abilityPower: 0
   physicArmor: 10
   magicArmor: 10
@@ -75,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   constantMovingAnimation: 0
---- !u!114 &8335922273480757451
+--- !u!114 &8923444318620741892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,7 +85,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5851387864386417813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f694d29b057d73c4fbbb81dd17315d12, type: 3}
+  m_Script: {fileID: 11500000, guid: e08771b02554cb14c82b0120e38d5ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1206908590908993241
@@ -99,6 +100,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4dc3b16d869514ba4cbb098d12a67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4172475330852763006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5851387864386417813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37999ff9a4abe0640ae15d5523dc90db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaCost: 20
+  preparationTime: 1
+  animationTime: 1
+  projectileList:
+  - {fileID: 6216536482114220939, guid: 0a5420198edd9a24787f8975d949f023, type: 3}
+  - {fileID: 2683410272905668047, guid: e948aac2048f48d49abc78dee3e373cf, type: 3}
+  - {fileID: 312910711097219456, guid: 957799202e2b8c340ae3aefa70919eac, type: 3}
+  - {fileID: 2595828378712254543, guid: 3b4072f427686c549aa7b7fe22d7914b, type: 3}
 --- !u!95 &7504935882607404479
 Animator:
   serializedVersion: 3

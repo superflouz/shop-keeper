@@ -8,7 +8,17 @@ public class EntityMovement : MonoBehaviour
     public float SlotCount { get { return entity.slotSize; } }
     public Faction Team { get { return entity.faction; } }
 
-    public Party Party { get; set; }
+    public Party Party 
+    { 
+        get
+        {
+            return entity.Party;
+        } 
+        set
+        {
+            entity.Party = value;
+        } 
+    }
     private Entity entity;
     private Animator animator;
 

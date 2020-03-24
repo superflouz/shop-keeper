@@ -34,7 +34,7 @@ public class CurveProjectile : MonoBehaviour
     }
 
     private float ratioSpeed;
-    public float ProjectileSpeed;
+    public float ProjectileSpeed { get; set; }
 
     // Start is called before the first frame update
     protected void Start()
@@ -53,14 +53,9 @@ public class CurveProjectile : MonoBehaviour
         foreach (Collider2D hit in hits)
         {
             Entity entity = hit.GetComponent<Entity>();
-            if (entity.faction != Source.faction)
-            {
-                // Make the recipient of the projectile take damage
-                entity.ApplyDamage(Source.attackDamage, DamageType.Physical, Source);
-
-                // Destroy this projectile
-                Destroy(gameObject);
-            }
+            
+            // Something got hit
+            Hit(entity);
         }
 
         // Move projectile with time and speed
@@ -68,6 +63,21 @@ public class CurveProjectile : MonoBehaviour
         else { Destroy(gameObject); }
 
         transform.position = CalculateQuadraticBezierCurve(t, Origin, MiddlePoint, Destination);
+    }
+
+    /// <summary>
+    /// Overridable function called when an entity is hit by a projectile
+    /// </summary>
+    /// <param name="entity">Entity hit</param>
+    virtual protected void Hit(Entity entity)
+    {
+        if (entity.faction != Source.faction) {
+            // Make the recipient of the projectile take damage
+            entity.ApplyDamage(Source.attackDamage, DamageType.Physical, Source);
+
+            // Destroy this projectile
+            Destroy(gameObject);
+        }
     }
 
     /// <summary>

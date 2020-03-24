@@ -20,7 +20,7 @@ public class Ability : MonoBehaviour
     protected float timerPreparation;
     protected float timerAnimation;
 
-    protected Entity user;
+    protected Entity source;
     protected Entity currentTarget;
     protected Vector2 currentPosition;
 
@@ -29,7 +29,7 @@ public class Ability : MonoBehaviour
     public void Awake()
     {
         // Get Components
-        user = GetComponent<Entity>();
+        source = GetComponent<Entity>();
         animator = GetComponent<Animator>();
     }
 
@@ -64,7 +64,7 @@ public class Ability : MonoBehaviour
                 if (timerAnimation <= 0) {
                     animator.SetTrigger("End Ability");
                     state = State.Idle;
-                    user.CurrentState = Entity.State.Idle;
+                    source.CurrentState = Entity.State.Idle;
                 }
                 break;
         }
@@ -76,8 +76,8 @@ public class Ability : MonoBehaviour
     /// <returns>success</returns>
     public virtual bool PrepareAbility()
     {
-        user.CurrentState = Entity.State.Casting;
-        user.CurrentMana -= manaCost;
+        source.CurrentState = Entity.State.Casting;
+        source.CurrentMana -= manaCost;
 
         state = State.Preparing;
         timerPreparation = preparationTime;

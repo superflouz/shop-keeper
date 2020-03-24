@@ -22,11 +22,13 @@ public class SlingAttack : Attack
 
     protected override bool ExecuteAttack(Entity target)
     {
-        if (target == null) {
+        if (target == null) 
+        {
             return false;
         }
 
-        for (int i = 0; i < projectileCount; i++) {
+        for (int i = 0; i < projectileCount; i++) 
+        {
             RotatingProjectile projectile;
             projectile = Instantiate(scrap, transform.position + Vector3.up * 0.5f, Quaternion.identity);
 
