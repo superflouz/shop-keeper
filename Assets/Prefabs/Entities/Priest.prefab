@@ -53,7 +53,7 @@ MonoBehaviour:
   slotSize: 1
   faction: 0
   health: 75
-  mana: 2
+  mana: 100
   attackDamage: 0
   attackSpeed: 0
   abilityPower: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d7d056f1829d047a449bacf885df7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 2
+  manaCost: 20
   preparationTime: 0.2
   animationTime: 0.5
   particle: {fileID: 922094455198945850, guid: 6019d73c52e205745a8f63a4a3e6556d, type: 3}
