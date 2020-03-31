@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class resourceBar : MonoBehaviour
+public class ResourceBar : MonoBehaviour
 {
     Entity entity;
-    Transform health;
-    Transform mana;
     Transform healthBar;
     Transform manaBar;
 
     bool hasMana;
-
     float maxHP;
     float maxMana;
     float currentHP;
@@ -22,11 +19,8 @@ public class resourceBar : MonoBehaviour
     {
         entity = GetComponentInParent<Entity>();
 
-        health = transform.Find("Health");
-        healthBar = health.transform.Find("HealthBar");
-
-        mana = transform.Find("Mana");
-        manaBar = mana.transform.Find("ManaBar");
+        healthBar = transform.Find("Health_ResourceBar");
+        manaBar = transform.Find("Mana_ResourceBar");
 
         maxHP = entity.health;
         maxMana = entity.mana;
@@ -34,7 +28,6 @@ public class resourceBar : MonoBehaviour
         if (maxMana == 0)
         {
             hasMana = false;
-            mana.gameObject.SetActive(false);
         }
         else
         {
@@ -51,6 +44,5 @@ public class resourceBar : MonoBehaviour
         healthBar.localScale = new Vector3(currentHP / maxHP, 1f);
         if (hasMana) manaBar.localScale = new Vector3(currentMana / maxMana, 1f);
     }
-
 
 }
