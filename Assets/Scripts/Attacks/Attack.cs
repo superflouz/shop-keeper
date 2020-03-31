@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
@@ -19,7 +17,7 @@ public class Attack : MonoBehaviour
     protected float timerPreparation;
     protected float timerAnimation;
 
-    protected Entity user;
+    protected Entity entity;
     protected Entity currentTarget;
 
     protected Animator animator;
@@ -27,7 +25,7 @@ public class Attack : MonoBehaviour
     public void Awake()
     {
         // Get the components
-        user = GetComponent<Entity>();
+        entity = GetComponent<Entity>();
         animator = GetComponent<Animator>();
     }
 
@@ -40,7 +38,7 @@ public class Attack : MonoBehaviour
     public void Update()
     {
         // Let the attack timer go down if the Entity is not doing an other action
-        if (timerAttack > 0 && user.CurrentState != Entity.State.Swapping)
+        if (timerAttack > 0 && entity.CurrentState != Entity.State.Swapping)
             timerAttack -= Time.deltaTime;
 
         switch (state)
@@ -58,6 +56,14 @@ public class Attack : MonoBehaviour
                     animator.SetTrigger("Attack");
                     state = State.Attacking;
                 }
+                // Cancel the attack if the entity move
+                if (entity.CurrentState == Entity.State.Swapping)
+                {
+                    animator.SetTrigger("End Attack");
+                    state = State.Idle;
+                    entity.CurrentState = Entity.State.Idle;
+                }
+
                 break;
             // End the attack and go back to idle status
             case State.Attacking:
@@ -65,7 +71,7 @@ public class Attack : MonoBehaviour
                 if (timerAnimation <= 0) {
                     animator.SetTrigger("End Attack");
                     state = State.Idle;
-                    user.CurrentState = Entity.State.Idle;
+                    entity.CurrentState = Entity.State.Idle;
                 }
                 break;
         }
@@ -79,7 +85,7 @@ public class Attack : MonoBehaviour
     public virtual bool PrepareAttack(Entity target)
     {
         // Attack only if the cooldown is at 0 and the state allows it
-        user.CurrentState = Entity.State.Attacking;
+        entity.CurrentState = Entity.State.Attacking;
         if (timerAttack > 0)
         {
             return false;
@@ -90,7 +96,7 @@ public class Attack : MonoBehaviour
 
         //  Set state, timer and animations
         state = State.Preparing;
-        timerAttack = 1 / user.attackSpeed;
+        timerAttack = 1 / entity.attackSpeed;
         timerPreparation = timerAttack / 8;
         timerAnimation = timerAttack / 4;
         animator.SetTrigger("Prepare Attack");

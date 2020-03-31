@@ -594,7 +594,7 @@ PrefabInstance:
     - target: {fileID: 7616927506501009132, guid: 4048a228a4664864e93d32ef680509d2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.453974
+      value: 21.46
       objectReference: {fileID: 0}
     - target: {fileID: 7616927506501009132, guid: 4048a228a4664864e93d32ef680509d2,
         type: 3}
@@ -971,14 +971,14 @@ MonoBehaviour:
   - {fileID: 1042438526}
   - {fileID: 959881078}
   - {fileID: 1101537289}
-  - {fileID: 1475171428}
+  - {fileID: 592017200}
   - {fileID: 1119070609}
   - {fileID: 909838685}
   - {fileID: 1298668474}
   - {fileID: 764379636}
   - {fileID: 232996589}
   - {fileID: 1058800130}
-  - {fileID: 592017200}
+  - {fileID: 1475171428}
   delayMovement: 0
 --- !u!1001 &1407682883
 PrefabInstance:
@@ -1423,7 +1423,7 @@ PrefabInstance:
     - target: {fileID: 7616927506501009132, guid: 8206fc17005308f488a364533e4a2c6c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.43
+      value: 11.48
       objectReference: {fileID: 0}
     - target: {fileID: 7616927506501009132, guid: 8206fc17005308f488a364533e4a2c6c,
         type: 3}

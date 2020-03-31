@@ -34,14 +34,17 @@ public class ArrowAttack : Attack
         projectile = Instantiate(arrow, transform.position + Vector3.up * 1f, Quaternion.identity);
 
         // Calculate Origin and Destination
-        projectile.Origin = transform.position + Vector3.up * 1f;
+        projectile.Origin = transform.position + Vector3.right * transform.localScale.x * entity.slotSize / 4 + Vector3.up * entity.slotSize;
         projectile.Destination = target.transform.position + Vector3.up * 0.5f + Vector3.right * Random.Range(-0.2f, 0.2f);
 
         // Set Speed
         projectile.ProjectileSpeed = projectileSpeed;
 
+        // Set damage
+        projectile.Damage = entity.AttackDamage;
+
         // Set user of the attack
-        projectile.Source = user;
+        projectile.Source = entity;
 
         return true;
     }

@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class LuckyProjectile : CurvedSlottedProjectile
 {
-    public int damage;
-    public int goldValue;
+    public int GoldValue;
 
     protected override void Hit(Entity entity)
     {
         if (entity.faction != Source.faction)
         {
             // Make the recipient of the projectile take damage
-            int amount = Mathf.RoundToInt(damage * (1 + (Source.abilityPower / 100f)));
-            entity.ApplyDamage(amount, DamageType.Magical, Source);
+            entity.ApplyDamage(Damage, DamageType.Physical, Source);
+
+            // Give gold
 
             // Destroy this projectile
             Destroy(gameObject);

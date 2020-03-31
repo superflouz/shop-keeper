@@ -16,30 +16,7 @@ public class GoblinKingController : Controller
     // Update is called once per frame
     void Update()
     {
-        float spellRange = 5;
-
-        // Checks if spell can be cast
-        if (entity.CurrentState == Entity.State.Idle && entity.CurrentMana >= ability.manaCost)
-        {
-            // Maths for overlap
-            Vector2 a = entity.transform.position;
-            Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotSize / 2f + spellRange + 0.5f) + Vector2.up * entity.range;
-
-            // Overlap to find ennemy
-            Collider2D[] hits = Physics2D.OverlapAreaAll(a, b, 1 << LayerMask.NameToLayer("Entities"));
-            foreach (Collider2D hit in hits)
-            {
-                Entity enemy = hit.GetComponent<Entity>();
-                // Check the first enemy in front of the entity
-                if (enemy.faction != entity.faction)
-                {
-                    ability.PrepareAbility(enemy);
-                }
-            }
-        }
-
-        // Check if can attack
-        else if (entity.CurrentState == Entity.State.Idle)
+        if (entity.CurrentState == Entity.State.Idle)
         {
             // Maths for overlap
             Vector2 a = entity.transform.position;

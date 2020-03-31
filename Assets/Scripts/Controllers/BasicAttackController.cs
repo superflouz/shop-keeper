@@ -20,17 +20,27 @@ public class BasicAttackController : Controller
             Vector2 a = entity.transform.position;
             Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotSize / 2f + entity.range + 0.5f) + Vector2.up * entity.range;
 
+            Entity target = null;
+
             // Overlap to find ennemy
             Collider2D[] hits = Physics2D.OverlapAreaAll(a, b, 1 << LayerMask.NameToLayer("Entities"));
             foreach (Collider2D hit in hits)
             {
-                Entity enemy = hit.GetComponent<Entity>();
+                Entity hitEntity = hit.GetComponent<Entity>();
                 // Check the first enemy in front of the entity
-                if (enemy.faction != entity.faction)
+                if (hitEntity.faction != entity.faction)
                 {
-                    attack.PrepareAttack(enemy);
+                    // Check if the new one is closer
+                    if (target == null)
+                        target = hitEntity;
+                    else if (Vector3.Distance(entity.transform.position, hitEntity.transform.position) < Vector3.Distance(entity.transform.position, target.transform.position))
+                        target = hitEntity;
                 }
             }
+
+            // Trigger attack if a target is found
+            if (target != null)
+                attack.PrepareAttack(target);
         }
     }
 }

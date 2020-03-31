@@ -64,11 +64,27 @@ public class Party : MonoBehaviour
         int freeSlotsCount = maxSlots;
         foreach (EntityMovement entity in entities)
         {
-            maxSlots -= Mathf.RoundToInt(entity.SlotCount);
+            freeSlotsCount -= Mathf.RoundToInt(entity.SlotCount);
         }
 
         return freeSlotsCount;
     }
+
+    /// <summary>
+    /// Check the number of occupied slots in the party
+    /// </summary>
+    /// <returns>Number of occupied slots</returns>
+    public int GetOccupiedSlotsCount()
+    {
+        int occupiedSlotsCount = 0;
+        foreach (EntityMovement entity in entities)
+        {
+            occupiedSlotsCount += Mathf.RoundToInt(entity.SlotCount);
+        }
+
+        return occupiedSlotsCount;
+    }
+
 
     /// <summary>
     /// Add an Entity to your party

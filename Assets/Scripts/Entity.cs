@@ -91,6 +91,13 @@ public class Entity : MonoBehaviour, IBuyable
         }
     }
 
+    public int AttackDamage { 
+        get {
+            // Apply modifier here
+            return attackDamage;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

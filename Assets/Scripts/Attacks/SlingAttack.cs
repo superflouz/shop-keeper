@@ -32,15 +32,21 @@ public class SlingAttack : Attack
             CurvedProjectile projectile;
             projectile = Instantiate(scrap, transform.position + Vector3.up * 0.5f, Quaternion.identity);
 
-            projectile.Origin = transform.position + Vector3.up * 1f;
-            projectile.Destination = target.transform.position + Vector3.up * 0.5f + Vector3.right * Random.Range(-1f, 1f);
+            // Calculate Origin and Destination
+            projectile.Origin = transform.position + Vector3.right * transform.localScale.x * entity.slotSize / 4 + Vector3.up * entity.slotSize;
+            projectile.Destination = target.transform.position + Vector3.up * 0.5f + Vector3.right * entity.transform.localScale.x * Random.Range(0f, i);
 
+            // Set Speed
             projectile.ProjectileSpeed = projectileSpeed;
 
+            // Set damage
+            projectile.Damage = Mathf.RoundToInt((float)entity.AttackDamage / projectileCount);
+
+            // Set rotation
             Rotation rotation = projectile.GetComponent<Rotation>();
             rotation.RotationAngle = Random.Range(-90f, 90f);
 
-            projectile.Source = user;
+            projectile.Source = entity;
         }
 
         return true;

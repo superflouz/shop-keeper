@@ -16,7 +16,7 @@ public class MeleeAttack : Attack
         }
 
         // Do Damage to the target
-        target.ApplyDamage(user.attackDamage, DamageType.Physical, user);
+        target.ApplyDamage(entity.AttackDamage, DamageType.Physical, entity);
         return true;
     }
 

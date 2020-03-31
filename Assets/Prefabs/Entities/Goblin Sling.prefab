@@ -54,7 +54,7 @@ MonoBehaviour:
   faction: 1
   health: 50
   mana: 0
-  attackDamage: 2
+  attackDamage: 6
   attackSpeed: 0.75
   abilityPower: 0
   physicArmor: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrap: {fileID: -4404792028517138254, guid: 29e90a7521f64dd47955be2c128c9d80, type: 3}
   projectileSpeed: 2
-  projectileCount: 3
+  projectileCount: 2
 --- !u!95 &7504935882607404479
 Animator:
   serializedVersion: 3

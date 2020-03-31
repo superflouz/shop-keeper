@@ -20,7 +20,7 @@ public class Ability : MonoBehaviour
     protected float timerPreparation;
     protected float timerAnimation;
 
-    protected Entity source;
+    protected Entity entity;
     protected Entity currentTarget;
     protected Vector2 currentPosition;
 
@@ -29,7 +29,7 @@ public class Ability : MonoBehaviour
     public void Awake()
     {
         // Get Components
-        source = GetComponent<Entity>();
+        entity = GetComponent<Entity>();
         animator = GetComponent<Animator>();
     }
 
@@ -57,6 +57,15 @@ public class Ability : MonoBehaviour
                     animator.SetTrigger("Cast Ability");
                     state = State.Casting;
                 }
+
+                // Cancel the ability if the entity move
+                if (entity.CurrentState == Entity.State.Swapping)
+                {
+                    animator.SetTrigger("End Attack");
+                    state = State.Idle;
+                    entity.CurrentState = Entity.State.Idle;
+                }
+
                 break;
             //End the ability and go back to idle status
             case State.Casting:
@@ -64,7 +73,7 @@ public class Ability : MonoBehaviour
                 if (timerAnimation <= 0) {
                     animator.SetTrigger("End Ability");
                     state = State.Idle;
-                    source.CurrentState = Entity.State.Idle;
+                    entity.CurrentState = Entity.State.Idle;
                 }
                 break;
         }
@@ -76,8 +85,8 @@ public class Ability : MonoBehaviour
     /// <returns>success</returns>
     public virtual bool PrepareAbility()
     {
-        source.CurrentState = Entity.State.Casting;
-        source.CurrentMana -= manaCost;
+        entity.CurrentState = Entity.State.Casting;
+        entity.CurrentMana -= manaCost;
 
         state = State.Preparing;
         timerPreparation = preparationTime;

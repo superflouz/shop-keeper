@@ -44,6 +44,11 @@ public class CurvedSlottedProjectile : CurvedProjectile
             }
 
             transform.position = transform.position + (Vector3.down * FallSpeed * 0.5f * Time.deltaTime);
+
+            if (transform.position.y < -2)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
