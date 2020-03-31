@@ -48,7 +48,7 @@ public class LuckyToss : Ability
                 secondaryProjectileCount = 4;
                 break;
             case 2:
-                secondaryProjectileCount = 4;
+                secondaryProjectileCount = 3;
                 break;
             case 3:
                 secondaryProjectileCount = 1;
