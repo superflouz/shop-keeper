@@ -39,6 +39,7 @@ public class ResourceBar : MonoBehaviour
     void Update()
     {
         currentHP = entity.CurrentHealth;
+        currentMana = entity.CurrentMana;
 
         healthBar.localScale = new Vector3(currentHP / maxHP, 1f);
         if (hasMana) manaBar.localScale = new Vector3(currentMana / maxMana, 1f);
