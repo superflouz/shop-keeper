@@ -698,7 +698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3290d40eaa31a3641a33189b04e82a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: -4061616950287929439, guid: 059e16867cb9aea459db1131f220fbd1, type: 3}
+  arrow: {fileID: 780387246298754671, guid: 059e16867cb9aea459db1131f220fbd1, type: 3}
   projectileSpeed: 10
 --- !u!61 &2191661024495378311
 BoxCollider2D:

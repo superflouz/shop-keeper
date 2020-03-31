@@ -2,22 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotatingProjectile : CurveProjectile
+public class Rotation : MonoBehaviour
 {
     public float RotationAngle { get; set; }
 
     // Start is called before the first frame update
-    new void Start()
+    void Start()
     {
-        base.Start();
+        
     }
 
     // Update is called once per frame
-    new void Update()
+    void Update()
     {
-        base.Update();
-
-        // Rotate the scrap
+        // Rotate the projectile
         transform.Rotate(Vector3.forward, RotationAngle * Time.deltaTime);
     }
 }

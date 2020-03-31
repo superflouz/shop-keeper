@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CurveProjectile : MonoBehaviour
+public class CurvedProjectile : MonoBehaviour
 {
     protected float t;
     public Entity Source { get; set; }

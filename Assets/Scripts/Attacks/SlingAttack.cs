@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlingAttack : Attack
 {
-    public RotatingProjectile scrap;
+    public CurvedProjectile scrap;
     public float projectileSpeed;
     public int projectileCount;
 
@@ -29,7 +29,7 @@ public class SlingAttack : Attack
 
         for (int i = 0; i < projectileCount; i++) 
         {
-            RotatingProjectile projectile;
+            CurvedProjectile projectile;
             projectile = Instantiate(scrap, transform.position + Vector3.up * 0.5f, Quaternion.identity);
 
             projectile.Origin = transform.position + Vector3.up * 1f;
@@ -42,7 +42,9 @@ public class SlingAttack : Attack
             projectile.MiddlePoint = middlePoint;
 
             projectile.ProjectileSpeed = projectileSpeed;
-            projectile.RotationAngle = Random.Range(-90f, 90f);
+
+            Rotation rotation = projectile.GetComponent<Rotation>();
+            rotation.RotationAngle = Random.Range(-90f, 90f);
 
             projectile.Source = user;
         }

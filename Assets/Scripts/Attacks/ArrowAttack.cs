@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowAttack : Attack
 {
-    public ArrowProjectile arrow;
+    public CurvedProjectile arrow;
     public float projectileSpeed;
 
     // Start is called before the first frame update
@@ -30,7 +30,7 @@ public class ArrowAttack : Attack
         }
 
         // Instantiate arrow
-        ArrowProjectile projectile; 
+        CurvedProjectile projectile; 
         projectile = Instantiate(arrow, transform.position + Vector3.up * 1f, Quaternion.identity);
 
         // Calculate Origin and Destination

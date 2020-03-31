@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8889755313358905780}
-  - component: {fileID: 7216934976528713342}
+  - component: {fileID: -4404792028517138254}
+  - component: {fileID: 4323589672306679367}
+  - component: {fileID: 779447739809290182}
   - component: {fileID: 5066358671628116130}
   m_Layer: 0
   m_Name: Scrap
@@ -32,7 +34,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7216934976528713342
+--- !u!114 &-4404792028517138254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089186564573239381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa92eba2ac58e540a66b5a9fc13e60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4323589672306679367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089186564573239381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b962466382b834aadec9099885b1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &779447739809290182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,7 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f6e5f37503f254e9af621a0c4364e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 4
   spritesList:
   - {fileID: 8096459312978753757, guid: 5bd92f610c8905a4e97e325970e49505, type: 3}
   - {fileID: 27633964883060691, guid: 5bd92f610c8905a4e97e325970e49505, type: 3}

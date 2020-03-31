@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LuckyProjectile : RotatingProjectile
+public class LuckyProjectile : CurvedSlottedProjectile
 {
     public int damage;
     public int goldValue;

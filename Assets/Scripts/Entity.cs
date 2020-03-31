@@ -117,21 +117,21 @@ public class Entity : MonoBehaviour, IBuyable
     {
         float amountFloat = amount;
 
-        string dmgType = "unknown";
+        //string dmgType = "unknown";
 
         // Applies damage based on resistances
         switch (type)
         {
             case DamageType.Physical:
                 amountFloat -= (amountFloat * (physicArmor / 100f));
-                dmgType = "physical";
+                //dmgType = "physical";
                 break;
             case DamageType.Magical:
                 amountFloat -= (amountFloat * (magicArmor / 100f));
-                dmgType = "magical";
+                //dmgType = "magical";
                 break;
             case DamageType.Piercing:
-                dmgType = "piercing";
+                //dmgType = "piercing";
                 break;
         }
 
