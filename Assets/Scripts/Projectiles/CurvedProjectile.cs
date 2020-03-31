@@ -43,13 +43,19 @@ public class CurvedProjectile : MonoBehaviour
         t = 0;
         // The projectile will have the same speed regardless of the distance
         ratioSpeed = 1 / (Mathf.Abs(Origin.x - Destination.x) + 1.5f * Mathf.Abs(Origin.y - MiddlePoint.y));
+
+        // Calculate the middle point
+        Vector2 middlePoint;
+        middlePoint.x = (Origin.x + Destination.x) / 2;
+        middlePoint.y = Origin.y + Mathf.Abs(Origin.x - Destination.x) + Random.Range(0, 0.4f);
+        MiddlePoint = middlePoint;
     }
 
     // Update is called once per frame
     protected void Update()
     {
         // Overlap detection
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 0.01f, 1 << LayerMask.NameToLayer("Entities"));
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 0.05f, 1 << LayerMask.NameToLayer("Entities"));
         foreach (Collider2D hit in hits)
         {
             Entity entity = hit.GetComponent<Entity>();

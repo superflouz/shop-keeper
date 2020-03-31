@@ -37,12 +37,6 @@ public class ArrowAttack : Attack
         projectile.Origin = transform.position + Vector3.up * 1f;
         projectile.Destination = target.transform.position + Vector3.up * 0.5f + Vector3.right * Random.Range(-0.2f, 0.2f);
 
-        // Calculate middle point for height
-        Vector2 middlePoint;
-        middlePoint.x = (projectile.Origin.x + projectile.Destination.x) / 2;
-        middlePoint.y = projectile.Origin.y + Mathf.Abs(projectile.Origin.x - projectile.Destination.x) + Random.Range(0, 0.4f);
-        projectile.MiddlePoint = middlePoint;
-
         // Set Speed
         projectile.ProjectileSpeed = projectileSpeed;
 

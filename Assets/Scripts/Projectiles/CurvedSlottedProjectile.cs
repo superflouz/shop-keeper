@@ -4,6 +4,22 @@ using UnityEngine;
 
 public class CurvedSlottedProjectile : CurvedProjectile
 {
+    public float FallSpeed { get; set; }
+    public float Delay { get; set; }
+
+    new void Start()
+    {
+        base.Start();
+
+        // Calculate the middle point
+        Vector2 middlePoint;
+        middlePoint.x = (Origin.x + Destination.x) / 2;
+        middlePoint.y = Origin.y + 6f;
+        MiddlePoint = middlePoint;
+
+        Destination +=  Vector2.up * 5;
+    }
+
     // Update is called once per frame
     new void Update()
     {
@@ -11,10 +27,14 @@ public class CurvedSlottedProjectile : CurvedProjectile
         {
             base.Update();
         }
+        else if (Delay > 0)
+        {
+            Delay -= Time.deltaTime;
+        }
         else
         {
             // Overlap detection
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 0.01f, 1 << LayerMask.NameToLayer("Entities"));
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 0.05f, 1 << LayerMask.NameToLayer("Entities"));
             foreach (Collider2D hit in hits)
             {
                 Entity entity = hit.GetComponent<Entity>();
@@ -23,7 +43,7 @@ public class CurvedSlottedProjectile : CurvedProjectile
                 Hit(entity);
             }
 
-            transform.position = transform.position + (Vector3.down * ProjectileSpeed * 0.5f * Time.deltaTime);
+            transform.position = transform.position + (Vector3.down * FallSpeed * 0.5f * Time.deltaTime);
         }
     }
 }
