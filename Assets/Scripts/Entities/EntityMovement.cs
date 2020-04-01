@@ -43,7 +43,7 @@ public class EntityMovement : MonoBehaviour
     void Update()
     {
         // How the entity move if it's on the party
-        if (Party != null) {
+        if (Party != null && entity.CurrentState != Entity.State.Transitioning) {
             Vector3 wantedPosition = Party.GetEntityLocalPosition(this);
 
             // It's not where it's supposed to be

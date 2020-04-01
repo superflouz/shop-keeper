@@ -35,11 +35,13 @@ public class Attack : MonoBehaviour
         state = State.Idle;
     }
 
-    public void Update()
+    protected void Update()
     {
         // Let the attack timer go down if the Entity is not doing an other action
         if (timerAttack > 0 && entity.CurrentState != Entity.State.Swapping)
+        {
             timerAttack -= Time.deltaTime;
+        }
 
         switch (state)
         {
@@ -77,6 +79,14 @@ public class Attack : MonoBehaviour
         }
     }
 
+    public void ResetAttack()
+    {
+        state = State.Idle;
+        timerAttack = 0;
+        timerPreparation = 0;
+        timerAnimation = 0;
+    }
+
     /// <summary>
     /// Set Up for an Attack
     /// </summary>
@@ -100,6 +110,9 @@ public class Attack : MonoBehaviour
         timerPreparation = timerAttack / 8;
         timerAnimation = timerAttack / 4;
         animator.SetTrigger("Prepare Attack");
+
+        string s = name + " - Timer Attack: " + timerAttack + " - Timer Preparation: " + timerPreparation;
+        Debug.Log(s);
 
         return true;
     }

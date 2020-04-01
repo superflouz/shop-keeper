@@ -20,6 +20,60 @@ TextureImporter:
   - first:
       213: -8581610320509320641
     second: LuckyToss_5
+  - first:
+      213: -4745524131098719145
+    second: LuckyToss_0
+  - first:
+      213: 4286405951828041503
+    second: LuckyToss_1
+  - first:
+      213: 6980221381004189789
+    second: LuckyToss_2
+  - first:
+      213: 404994459530017042
+    second: LuckyToss_3
+  - first:
+      213: -6720407612602785304
+    second: LuckyToss_4
+  - first:
+      213: 1055096935068382811
+    second: LuckyToss_5
+  - first:
+      213: 1469735079088218452
+    second: LuckyToss_6
+  - first:
+      213: 2718259698296236803
+    second: LuckyToss_7
+  - first:
+      213: -6365974090291333893
+    second: LuckyToss_8
+  - first:
+      213: -1968030006305419973
+    second: LuckyToss_9
+  - first:
+      213: 1309011704069921894
+    second: LuckyToss_10
+  - first:
+      213: 6210243976046115689
+    second: LuckyToss_11
+  - first:
+      213: 1841982333673420456
+    second: LuckyToss_12
+  - first:
+      213: 5822693722840773676
+    second: LuckyToss_13
+  - first:
+      213: 4053852619214163079
+    second: LuckyToss_14
+  - first:
+      213: -5709661203512956779
+    second: LuckyToss_15
+  - first:
+      213: 9114675878537834079
+    second: LuckyToss_16
+  - first:
+      213: 6528162263649671750
+    second: LuckyToss_17
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -118,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f2a87cefeb3c18b0800000000000000
-      internalID: -5180199569732361486
+      spriteID: 75c01d412f2842eb0800000000000000
+      internalID: -4745524131098719145
       vertices: []
       indices: 
       edges: []
@@ -139,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98b761e39fd77ef50800000000000000
-      internalID: 6910630662665304969
+      spriteID: f1f94d9b08f5c7b30800000000000000
+      internalID: 4286405951828041503
       vertices: []
       indices: 
       edges: []
@@ -160,8 +214,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85c24a1bb20aa5660800000000000000
-      internalID: 7375383449296972888
+      spriteID: d50675cfc5abed060800000000000000
+      internalID: 6980221381004189789
       vertices: []
       indices: 
       edges: []
@@ -181,8 +235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5ede99408296edd0800000000000000
-      internalID: -2457115466995409314
+      spriteID: 219b940b054de9500800000000000000
+      internalID: 404994459530017042
       vertices: []
       indices: 
       edges: []
@@ -202,8 +256,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9921cdb34db224bc0800000000000000
-      internalID: -3800426945009937767
+      spriteID: 8e1eaf0f1e05cb2a0800000000000000
+      internalID: -6720407612602785304
       vertices: []
       indices: 
       edges: []
@@ -223,8 +277,260 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f32473d71eef7e880800000000000000
-      internalID: -8581610320509320641
+      spriteID: b56ba52821574ae00800000000000000
+      internalID: 1055096935068382811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451ebf6744c856410800000000000000
+      internalID: 1469735079088218452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b253c2bc239b520800000000000000
+      internalID: 2718259698296236803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf438d21b4487a7a0800000000000000
+      internalID: -6365974090291333893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d0bd6e22720b4e0800000000000000
+      internalID: -1968030006305419973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c9aeb953b8a2210800000000000000
+      internalID: 1309011704069921894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96bfcb03ef73f2650800000000000000
+      internalID: 6210243976046115689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a636295c29009910800000000000000
+      internalID: 1841982333673420456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2432d9471d5ec050800000000000000
+      internalID: 5822693722840773676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c0c0c9a7d224830800000000000000
+      internalID: 4053852619214163079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598e7c0f26533c0b0800000000000000
+      internalID: -5709661203512956779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_16
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ea11f7b65dd7e70800000000000000
+      internalID: 9114675878537834079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuckyToss_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ad2f8bdf0b89a50800000000000000
+      internalID: 6528162263649671750
       vertices: []
       indices: 
       edges: []
