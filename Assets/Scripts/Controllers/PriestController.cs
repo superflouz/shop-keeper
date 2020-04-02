@@ -17,11 +17,11 @@ public class PriestController : Controller
     void Update()
     {
         // Checks if spell can be cast
-        if (entity.CurrentState == Entity.State.Idle && entity.CurrentMana >= ability.manaCost)
+        if (entity.State == EntityState.Idle && entity.CurrentMana >= ability.manaCost)
         {
             // Maths for the position of the overlap
             Vector2 a = entity.transform.position;
-            Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotSize / 2f + 0.5f);
+            Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotCount / 2f + 0.5f);
 
             // Overlap to check hits
             Collider2D[] hits = Physics2D.OverlapAreaAll(a, b, 1 << LayerMask.NameToLayer("Entities"));
@@ -35,7 +35,7 @@ public class PriestController : Controller
                 Entity ally = hit.GetComponent<Entity>();
 
                 // Check the first ally in front of the entity
-                if (ally.faction == entity.faction && ally.CurrentHealth < ally.health)
+                if (ally.Party.faction == entity.Party.faction && ally.CurrentHealth < ally.MaxHealth)
                 {
                     ability.PrepareAbility(ally);
                     break;

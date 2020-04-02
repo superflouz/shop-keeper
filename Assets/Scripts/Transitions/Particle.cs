@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TransitionParticle : MonoBehaviour
+public class Particle : MonoBehaviour
 {
     public virtual void Execute() { }
 }

@@ -20,7 +20,7 @@ public class Heal : Ability
         }
         Instantiate(particle, target.transform.position + Vector3.up * 1f, Quaternion.identity, target.transform);
 
-        int amount = Mathf.RoundToInt(healValue * (1 + (entity.abilityPower / 100f)));
+        int amount = Mathf.RoundToInt(healValue * entity.AbilityFactor);
         target.Heal(amount, entity);
 
         return true;

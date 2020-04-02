@@ -12,6 +12,8 @@ public class Attack : MonoBehaviour
         Attacking
     }
 
+    public float attackSpeed;
+
     protected State state;
     protected float timerAttack;
     protected float timerPreparation;
@@ -38,7 +40,7 @@ public class Attack : MonoBehaviour
     protected void Update()
     {
         // Let the attack timer go down if the Entity is not doing an other action
-        if (timerAttack > 0 && entity.CurrentState != Entity.State.Swapping)
+        if (timerAttack > 0 && entity.State != EntityState.Swapping)
         {
             timerAttack -= Time.deltaTime;
         }
@@ -66,7 +68,7 @@ public class Attack : MonoBehaviour
 
                 }
                 // Cancel the attack if the entity move
-                if (entity.CurrentState == Entity.State.Swapping)
+                if (entity.State == EntityState.Swapping)
                 {
                     ResetAttack();
                 }
@@ -78,7 +80,6 @@ public class Attack : MonoBehaviour
                 if (timerAnimation <= 0) {
                     animator.SetTrigger("End Attack");
                     state = State.Idle;
-                    entity.CurrentState = Entity.State.Idle;
                 }
                 break;
         }
@@ -107,8 +108,7 @@ public class Attack : MonoBehaviour
     /// <returns>action success</returns>
     public virtual bool PrepareAttack(Entity target)
     {
-        // Attack only if the cooldown is at 0 and the state allows it
-        entity.CurrentState = Entity.State.Attacking;
+        // Attack only if the cooldown is at 0
         if (timerAttack > 0)
         {
             return false;
@@ -119,14 +119,11 @@ public class Attack : MonoBehaviour
 
         //  Set state, timer and animations
         state = State.Preparing;
-        timerAttack = 1 / entity.attackSpeed;
+        timerAttack = 1 / (attackSpeed * entity.AttackSpeedFactor);
         timerPreparation = timerAttack / 4;
         timerAnimation = timerAttack / 4;
         animator.ResetTrigger("End Attack");
         animator.SetTrigger("Prepare Attack");
-
-        string s = name + " - Timer Attack: " + timerAttack + " - Timer Preparation: " + timerPreparation;
-        Debug.Log(s);
 
         return true;
     }

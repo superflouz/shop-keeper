@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ArrowAttack : Attack
 {
+    public int baseDamage;
+
     public CurvedProjectile arrow;
     public float projectileSpeed;
 
@@ -34,14 +36,14 @@ public class ArrowAttack : Attack
         projectile = Instantiate(arrow, transform.position + Vector3.up * 1f, Quaternion.identity);
 
         // Calculate Origin and Destination
-        projectile.Origin = transform.position + Vector3.right * transform.localScale.x * entity.slotSize / 4 + Vector3.up * entity.slotSize;
+        projectile.Origin = transform.position + Vector3.right * transform.localScale.x * entity.slotCount / 4 + Vector3.up * entity.slotCount;
         projectile.Destination = target.transform.position + Vector3.up * 0.5f + Vector3.right * Random.Range(-0.2f, 0.2f);
 
         // Set Speed
         projectile.ProjectileSpeed = projectileSpeed;
 
         // Set damage
-        projectile.Damage = entity.AttackDamage;
+        projectile.Damage = Mathf.RoundToInt(baseDamage * entity.AttackFactor);
 
         // Set user of the attack
         projectile.Source = entity;

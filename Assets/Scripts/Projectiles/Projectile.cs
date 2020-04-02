@@ -5,7 +5,22 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public int Damage { get; set; }
-    public Entity Source { get; set; }
+
+    private Entity source;
+    public Entity Source { 
+        get
+        {
+            return source;
+        }
+        set
+        {
+            source = value;
+            if (source != null && source.Party != null)
+                Faction = source.Party.faction;
+        }
+    }
+
+    public Faction Faction { get; set; }
 
 
     // Start is called before the first frame update
@@ -35,7 +50,7 @@ public class Projectile : MonoBehaviour
     /// <param name="entity">Entity hit</param>
     virtual protected void Hit(Entity entity)
     {
-        if (entity.faction != Source.faction)
+        if (entity.Party.faction != Faction)
         {
             // Make the recipient of the projectile take damage
             entity.ApplyDamage(Damage, DamageType.Physical, Source);

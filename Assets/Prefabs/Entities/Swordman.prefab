@@ -92,9 +92,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4031105964604272618}
   - component: {fileID: 3841581462555977770}
-  - component: {fileID: 8071236482192922007}
-  - component: {fileID: 5381352878874037374}
   - component: {fileID: 8833601086607716461}
+  - component: {fileID: 5381352878874037374}
   - component: {fileID: 6002299548632894560}
   - component: {fileID: 1787278921821685899}
   m_Layer: 8
@@ -133,43 +132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187f2a00ad9be7a4abc4016acd54c60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotSize: 1
-  faction: 0
-  health: 200
-  mana: 0
-  attackDamage: 10
-  attackSpeed: 1
-  abilityPower: 0
-  physicArmor: 10
-  magicArmor: 0
-  range: 0
-  icon: {fileID: 0}
-  price: 0
---- !u!114 &8071236482192922007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2726437483417585661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc8de5fbe40484488763d060ea72014, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  constantMovingAnimation: 0
---- !u!114 &5381352878874037374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2726437483417585661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f694d29b057d73c4fbbb81dd17315d12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  slotCount: 1
+  startingLevel: 1
+  baseHealth: 200
+  baseMana: 0
+  armor: 10
+  magicResistance: 0
 --- !u!114 &8833601086607716461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +150,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4dc3b16d869514ba4cbb098d12a67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSpeed: 1
+  baseDamage: 10
+--- !u!114 &5381352878874037374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726437483417585661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f694d29b057d73c4fbbb81dd17315d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
 --- !u!61 &6002299548632894560
 BoxCollider2D:
   m_ObjectHideFlags: 0

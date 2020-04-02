@@ -8,7 +8,7 @@ public class LuckyProjectile : CurvedSlottedProjectile
 
     protected override void Hit(Entity entity)
     {
-        if (entity.faction != Source.faction)
+        if (entity.Party.faction != Faction)
         {
             // Make the recipient of the projectile take damage
             entity.ApplyDamage(Damage, DamageType.Physical, Source);

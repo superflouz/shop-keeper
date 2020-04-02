@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MeleeAttack : Attack
 {
+    public int baseDamage;
+
     /// <summary>
     /// Launches an attack to the target
     /// </summary>
@@ -16,7 +18,7 @@ public class MeleeAttack : Attack
         }
 
         // Do Damage to the target
-        target.ApplyDamage(entity.AttackDamage, DamageType.Physical, entity);
+        target.ApplyDamage(Mathf.RoundToInt(baseDamage * entity.AttackFactor), DamageType.Physical, entity);
         return true;
     }
 

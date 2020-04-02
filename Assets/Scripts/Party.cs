@@ -2,13 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Faction of the party
+/// </summary>
+public enum Faction
+{
+    Ally,
+    Enemy
+}
+
 public class Party : MonoBehaviour
 {
     public float scrollSpeed;
     public float swapSpeed;
     public int maxSlots;
-    public bool inversed;
-    public List<EntityMovement> entities;
+    public Faction faction;
+    public List<Entity> entities;
 
     private bool isMoving;
     public bool IsMoving { get { return isMoving; } }
@@ -20,7 +29,7 @@ public class Party : MonoBehaviour
     void Start()
     {
         // Set the transform of the child to the one of the party
-        foreach (EntityMovement entity in entities)
+        foreach (Entity entity in entities)
         {
             entity.Party = this;
             entity.transform.parent = transform;
@@ -32,15 +41,15 @@ public class Party : MonoBehaviour
     {
         if (timerDelay > 0) timerDelay -= Time.deltaTime;
 
-        if (!inversed && timerDelay <= 0)
+        if (faction == Faction.Ally && timerDelay <= 0)
         {
             // Check if there is an ennemy in the front of the party
             isMoving = true;
             Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position, Vector2.one, 0);
             foreach (Collider2D hit in hits)
             {
-                EntityMovement entity = hit.GetComponent<EntityMovement>();
-                if (entity != null && entity.Team != Faction.Ally)
+                Entity entity = hit.GetComponent<Entity>();
+                if (entity != null && entity.Party.faction != Faction.Ally)
                 {
                     isMoving = false;
                     timerDelay = delayMovement;
@@ -62,9 +71,9 @@ public class Party : MonoBehaviour
     public int GetFreeSlotsCount()
     {
         int freeSlotsCount = maxSlots;
-        foreach (EntityMovement entity in entities)
+        foreach (Entity entity in entities)
         {
-            freeSlotsCount -= Mathf.RoundToInt(entity.SlotCount);
+            freeSlotsCount -= Mathf.RoundToInt(entity.slotCount);
         }
 
         return freeSlotsCount;
@@ -77,9 +86,9 @@ public class Party : MonoBehaviour
     public int GetOccupiedSlotsCount()
     {
         int occupiedSlotsCount = 0;
-        foreach (EntityMovement entity in entities)
+        foreach (Entity entity in entities)
         {
-            occupiedSlotsCount += Mathf.RoundToInt(entity.SlotCount);
+            occupiedSlotsCount += Mathf.RoundToInt(entity.slotCount);
         }
 
         return occupiedSlotsCount;
@@ -90,7 +99,7 @@ public class Party : MonoBehaviour
     /// Add an Entity to your party
     /// </summary>
     /// <param name="entity">Entity to add</param>
-    public void AddToParty(EntityMovement entity)
+    public void AddToParty(Entity entity)
     {
         entities.Add(entity);
         entity.Party = this;
@@ -101,7 +110,7 @@ public class Party : MonoBehaviour
     /// Remove an Entity from your party
     /// </summary>
     /// <param name="entity">Entity to remove</param>
-    public void RemoveFromParty(EntityMovement entity)
+    public void RemoveFromParty(Entity entity)
     {
         entities.Remove(entity);
         entity.Party = null;
@@ -113,7 +122,7 @@ public class Party : MonoBehaviour
     /// </summary>
     /// <param name="entity">Entity to swap</param>
     /// <returns>Entity can be swapped</returns>
-    public bool SwapEntity(EntityMovement entity)
+    public bool SwapEntity(Entity entity)
     {
         int index = entities.IndexOf(entity);
         if (index < 0)
@@ -121,13 +130,20 @@ public class Party : MonoBehaviour
             return false;
         }
 
+
+
         if (entities.Count > index + 1)
         {
+            if (entities[index].State == EntityState.Stunned || entities[index + 1].State == EntityState.Stunned)
+                return false;
+
             entities[index] = entities[index + 1];
             entities[index + 1] = entity;
+
+            return true;
         }
 
-        return true;
+        return false;
     }
 
     /// <summary>
@@ -135,7 +151,7 @@ public class Party : MonoBehaviour
     /// </summary>
     /// <param name="entity">Entity to get</param>
     /// <returns>Position of the Entity</returns>
-    public Vector3 GetEntityLocalPosition(EntityMovement entity)
+    public Vector3 GetEntityLocalPosition(Entity entity)
     {
         // Get the position
         if (!entities.Contains(entity))
@@ -144,18 +160,18 @@ public class Party : MonoBehaviour
         }
 
         // Calculate offset
-        float offset = (entity.SlotCount / 2);
-        foreach (EntityMovement listEntity in entities)
+        float offset = (entity.slotCount / 2f);
+        foreach (Entity listEntity in entities)
         {
             if (listEntity == entity)
             {
                 break;
             }
-            offset += listEntity.SlotCount;
+            offset += listEntity.slotCount;
         }
 
-        // Ennemy Party position
-        if (inversed)
+        // Enemy Party position
+        if (faction == Faction.Enemy)
         {
             return new Vector3(offset, 0, 0);
         }

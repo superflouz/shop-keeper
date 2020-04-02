@@ -64,7 +64,7 @@ public class Ability : MonoBehaviour
                 }
 
                 // Cancel the ability if the entity move
-                if (entity.CurrentState == Entity.State.Swapping)
+                if (entity.State == EntityState.Swapping)
                 {
                     ResetAbility();
                 }
@@ -76,7 +76,6 @@ public class Ability : MonoBehaviour
                 if (timerAnimation <= 0) {
                     animator.SetTrigger("End Ability");
                     state = State.Idle;
-                    entity.CurrentState = Entity.State.Idle;
                 }
                 break;
         }
@@ -104,7 +103,9 @@ public class Ability : MonoBehaviour
     /// <returns>success</returns>
     public virtual bool PrepareAbility()
     {
-        entity.CurrentState = Entity.State.Casting;
+        if (manaCost > entity.CurrentMana)
+            return false;
+
         entity.CurrentMana -= manaCost;
 
         state = State.Preparing;

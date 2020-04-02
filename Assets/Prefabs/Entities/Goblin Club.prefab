@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7616927506501009132}
   - component: {fileID: 1028214789930253380}
-  - component: {fileID: 4167313511581697769}
   - component: {fileID: 8335922273480757451}
   - component: {fileID: 1206908590908993241}
   - component: {fileID: 7504935882607404479}
@@ -50,31 +49,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187f2a00ad9be7a4abc4016acd54c60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotSize: 1
-  faction: 1
-  health: 75
-  mana: 0
-  attackDamage: 10
-  attackSpeed: 1.2
-  abilityPower: 0
-  physicArmor: 10
-  magicArmor: 0
-  range: 0
-  icon: {fileID: 0}
-  price: 0
---- !u!114 &4167313511581697769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5851387864386417813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc8de5fbe40484488763d060ea72014, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  constantMovingAnimation: 0
+  slotCount: 1
+  startingLevel: 1
+  baseHealth: 75
+  baseMana: 0
+  armor: 10
+  magicResistance: 0
 --- !u!114 &8335922273480757451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f694d29b057d73c4fbbb81dd17315d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 0
 --- !u!114 &1206908590908993241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4dc3b16d869514ba4cbb098d12a67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSpeed: 1.2
+  baseDamage: 10
 --- !u!95 &7504935882607404479
 Animator:
   serializedVersion: 3

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinKingTransition : TransitionParticle
+public class GoblinKingPhaseChangeParticle : Particle
 {
     public FallingObject coin;
     public List<FallingObject> goblins = new List<FallingObject>(4);

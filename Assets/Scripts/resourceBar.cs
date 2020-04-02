@@ -22,8 +22,8 @@ public class ResourceBar : MonoBehaviour
         healthBar = transform.Find("Health_ResourceBar");
         manaBar = transform.Find("Mana_ResourceBar");
 
-        maxHP = entity.health;
-        maxMana = entity.mana;
+        maxHP = entity.MaxHealth;
+        maxMana = entity.MaxMana;
 
         if (maxMana == 0)
         {
@@ -38,6 +38,9 @@ public class ResourceBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        maxHP = entity.MaxHealth;
+        maxMana = entity.MaxMana;
+
         currentHP = entity.CurrentHealth;
         currentMana = entity.CurrentMana;
 

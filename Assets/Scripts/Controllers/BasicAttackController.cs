@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class BasicAttackController : Controller
 {
+    public float range;
+    protected Attack attack;
+
     // Start is called before the first frame update
-    void Start()
+    new void Awake()
     {
-        
+        base.Awake();
+        attack = GetComponent<Attack>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Check if can attack
-        if (entity.CurrentState == Entity.State.Idle)
+        if (entity.State == EntityState.Idle)
         {
             // Maths for overlap
             Vector2 a = entity.transform.position;
-            Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotSize / 2f + entity.range + 0.5f) + Vector2.up * entity.range;
+            Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotCount / 2f + range + 0.5f) + Vector2.up * range;
 
             Entity target = null;
 
@@ -28,7 +32,7 @@ public class BasicAttackController : Controller
             {
                 Entity hitEntity = hit.GetComponent<Entity>();
                 // Check the first enemy in front of the entity
-                if (hitEntity.faction != entity.faction)
+                if (hitEntity.Party.faction != entity.Party.faction)
                 {
                     // Check if the new one is closer
                     if (target == null)
