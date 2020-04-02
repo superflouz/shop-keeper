@@ -95,9 +95,9 @@ public class Attack : MonoBehaviour
         timerAnimation = 0;
 
         // Reset the triggers to avoid animation bug
+        animator.SetTrigger("End Attack");
         animator.ResetTrigger("Prepare Attack");
         animator.ResetTrigger("Attack");
-        animator.ResetTrigger("End Attack");
     }
 
     /// <summary>
@@ -120,8 +120,9 @@ public class Attack : MonoBehaviour
         //  Set state, timer and animations
         state = State.Preparing;
         timerAttack = 1 / entity.attackSpeed;
-        timerPreparation = timerAttack / 8;
+        timerPreparation = timerAttack / 4;
         timerAnimation = timerAttack / 4;
+        animator.ResetTrigger("End Attack");
         animator.SetTrigger("Prepare Attack");
 
         string s = name + " - Timer Attack: " + timerAttack + " - Timer Preparation: " + timerPreparation;

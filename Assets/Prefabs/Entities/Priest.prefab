@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaCost: 20
-  preparationTime: 0.2
+  preparationTime: 0.3
   animationTime: 0.5
   particle: {fileID: 922094455198945850, guid: 6019d73c52e205745a8f63a4a3e6556d, type: 3}
   healValue: 20

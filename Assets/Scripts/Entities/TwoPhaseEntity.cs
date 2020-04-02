@@ -42,15 +42,6 @@ public class TwoPhaseEntity : Entity
             timerTransition -= Time.deltaTime;
             if (timerTransition <= 0)
             {
-                // Reset the trigger to avoid animation bug
-                animator.ResetTrigger("Prepare Attack");
-                animator.ResetTrigger("Attack");
-                animator.ResetTrigger("End Attack");
-
-                animator.ResetTrigger("Prepare Ability");
-                animator.ResetTrigger("Cast Ability");
-                animator.ResetTrigger("End Abiltiy");
-
                 animator.SetTrigger("End Transition");
                 CurrentState = State.Idle;
                 attackSpeed = 0.35f;

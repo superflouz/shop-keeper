@@ -93,9 +93,9 @@ public class Ability : MonoBehaviour
         timerAnimation = 0;
 
         // Reset the triggers to avoid animation bug
+        animator.SetTrigger("End Ability");
         animator.ResetTrigger("Prepare Ability");
         animator.ResetTrigger("Cast Ability");
-        animator.ResetTrigger("End Abiltiy");
     }
 
     /// <summary>
@@ -110,6 +110,7 @@ public class Ability : MonoBehaviour
         state = State.Preparing;
         timerPreparation = preparationTime;
         timerAnimation = animationTime;
+        animator.ResetTrigger("End Abiltiy");
         animator.SetTrigger("Prepare Ability");
 
         return true;
