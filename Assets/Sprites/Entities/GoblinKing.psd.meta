@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c06a8f6d7a8ab4489ad4ac57bcb45ec
+guid: 68deb8bb86e40544ea2bb51e60bb3c99
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -34,39 +34,6 @@ TextureImporter:
     second: GoblinKing_9
   - first:
       213: 1070906368558700026
-    second: GoblinKing_10
-  - first:
-      213: -837902890789335002
-    second: GoblinKing_0
-  - first:
-      213: 8421020774170295893
-    second: GoblinKing_1
-  - first:
-      213: 6512763132455817129
-    second: GoblinKing_2
-  - first:
-      213: -1694597714440855149
-    second: GoblinKing_3
-  - first:
-      213: -4815459663798018291
-    second: GoblinKing_4
-  - first:
-      213: -6280064490417128580
-    second: GoblinKing_5
-  - first:
-      213: -4882632657883029753
-    second: GoblinKing_6
-  - first:
-      213: 8773190805858668562
-    second: GoblinKing_7
-  - first:
-      213: 3689642009762695624
-    second: GoblinKing_8
-  - first:
-      213: -8696892555909704763
-    second: GoblinKing_9
-  - first:
-      213: -7270915306264096721
     second: GoblinKing_10
   - first:
       213: -622126268783075220
@@ -110,54 +77,6 @@ TextureImporter:
   - first:
       213: -4036505146268447938
     second: GoblinKing_24
-  - first:
-      213: 5692083061899032982
-    second: GoblinKing_11
-  - first:
-      213: -914469717521716176
-    second: GoblinKing_12
-  - first:
-      213: -356963450531676068
-    second: GoblinKing_13
-  - first:
-      213: -9059598859180266906
-    second: GoblinKing_14
-  - first:
-      213: -6726977331472971085
-    second: GoblinKing_15
-  - first:
-      213: -5440186141970737841
-    second: GoblinKing_16
-  - first:
-      213: -7531327155191286940
-    second: GoblinKing_17
-  - first:
-      213: -3618594377811760725
-    second: GoblinKing_18
-  - first:
-      213: 2128867649596821423
-    second: GoblinKing_19
-  - first:
-      213: 8108229123765527814
-    second: GoblinKing_20
-  - first:
-      213: 4301325665574588211
-    second: GoblinKing_21
-  - first:
-      213: 2685228489438538752
-    second: GoblinKing_22
-  - first:
-      213: 2233918524188931318
-    second: GoblinKing_23
-  - first:
-      213: -6996242795171338522
-    second: GoblinKing_24
-  - first:
-      213: -6075219120851773569
-    second: GoblinKing_25
-  - first:
-      213: 8747118494371036817
-    second: GoblinKing_26
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -198,7 +117,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -256,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6209a3e92cb2f54f0800000000000000
-      internalID: -837902890789335002
+      spriteID: 883d723835ce2c210800000000000000
+      internalID: 1351902681591436168
       vertices: []
       indices: 
       edges: []
@@ -277,8 +196,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55efa9217c97dd470800000000000000
-      internalID: 8421020774170295893
+      spriteID: a4beef5da946142b0800000000000000
+      internalID: -5602085845294191798
       vertices: []
       indices: 
       edges: []
@@ -298,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9af0a48109bf16a50800000000000000
-      internalID: 6512763132455817129
+      spriteID: c42db1502dc56ac70800000000000000
+      internalID: 8981968563935629900
       vertices: []
       indices: 
       edges: []
@@ -319,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39160996b549b78e0800000000000000
-      internalID: -1694597714440855149
+      spriteID: a6c251b5bc17fa790800000000000000
+      internalID: -7516664134837654422
       vertices: []
       indices: 
       edges: []
@@ -340,8 +259,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0fd81df2fc0c2db0800000000000000
-      internalID: -4815459663798018291
+      spriteID: 71bffa028985126b0800000000000000
+      internalID: -5322875874168538345
       vertices: []
       indices: 
       edges: []
@@ -361,8 +280,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7b74228e9ab8d8a0800000000000000
-      internalID: -6280064490417128580
+      spriteID: 2c0142b01d80deb50800000000000000
+      internalID: 6623960320859967682
       vertices: []
       indices: 
       edges: []
@@ -382,8 +301,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70f192a87776d3cb0800000000000000
-      internalID: -4882632657883029753
+      spriteID: ea49613e54d9a3db0800000000000000
+      internalID: -4811360328403741522
       vertices: []
       indices: 
       edges: []
@@ -403,8 +322,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 210dde93e82a0c970800000000000000
-      internalID: 8773190805858668562
+      spriteID: ba2af617df4f57910800000000000000
+      internalID: 1834641792590389931
       vertices: []
       indices: 
       edges: []
@@ -424,8 +343,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c9834cfbdd343330800000000000000
-      internalID: 3689642009762695624
+      spriteID: a7a62af5c72b957c0800000000000000
+      internalID: -4082035339984475526
       vertices: []
       indices: 
       edges: []
@@ -445,8 +364,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c3534b6c4e6e4780800000000000000
-      internalID: -8696892555909704763
+      spriteID: eaa51838765dbbab0800000000000000
+      internalID: -4991161121445422418
       vertices: []
       indices: 
       edges: []
@@ -455,8 +374,8 @@ TextureImporter:
       name: GoblinKing_10
       rect:
         serializedVersion: 2
-        x: 480
-        y: 448
+        x: 0
+        y: 352
         width: 96
         height: 96
       alignment: 7
@@ -466,8 +385,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f209d2a4d05881b90800000000000000
-      internalID: -7270915306264096721
+      spriteID: af515a51baf9cde00800000000000000
+      internalID: 1070906368558700026
       vertices: []
       indices: 
       edges: []
@@ -476,7 +395,7 @@ TextureImporter:
       name: GoblinKing_11
       rect:
         serializedVersion: 2
-        x: 0
+        x: 96
         y: 352
         width: 96
         height: 96
@@ -487,8 +406,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 699728803675efe40800000000000000
-      internalID: 5692083061899032982
+      spriteID: c60eeb76473cd57f0800000000000000
+      internalID: -622126268783075220
       vertices: []
       indices: 
       edges: []
@@ -497,7 +416,7 @@ TextureImporter:
       name: GoblinKing_12
       rect:
         serializedVersion: 2
-        x: 96
+        x: 192
         y: 352
         width: 96
         height: 96
@@ -508,8 +427,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03c244113a62f43f0800000000000000
-      internalID: -914469717521716176
+      spriteID: a69f0853a76466da0800000000000000
+      internalID: -5951992366825932438
       vertices: []
       indices: 
       edges: []
@@ -518,7 +437,7 @@ TextureImporter:
       name: GoblinKing_13
       rect:
         serializedVersion: 2
-        x: 192
+        x: 288
         y: 352
         width: 96
         height: 96
@@ -529,8 +448,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c50034d02afcb0bf0800000000000000
-      internalID: -356963450531676068
+      spriteID: 46b54260ddf7f8d10800000000000000
+      internalID: 2130061736037079908
       vertices: []
       indices: 
       edges: []
@@ -539,7 +458,7 @@ TextureImporter:
       name: GoblinKing_14
       rect:
         serializedVersion: 2
-        x: 288
+        x: 384
         y: 352
         width: 96
         height: 96
@@ -550,8 +469,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66aa60f56d6d54280800000000000000
-      internalID: -9059598859180266906
+      spriteID: fe6d6a4b3a305b680800000000000000
+      internalID: -8740075500197194001
       vertices: []
       indices: 
       edges: []
@@ -560,8 +479,8 @@ TextureImporter:
       name: GoblinKing_15
       rect:
         serializedVersion: 2
-        x: 384
-        y: 352
+        x: 0
+        y: 256
         width: 96
         height: 96
       alignment: 7
@@ -571,8 +490,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bac27112c9f4a2a0800000000000000
-      internalID: -6726977331472971085
+      spriteID: 77781f49034772ea0800000000000000
+      internalID: -5897617435012266121
       vertices: []
       indices: 
       edges: []
@@ -581,8 +500,8 @@ TextureImporter:
       name: GoblinKing_16
       rect:
         serializedVersion: 2
-        x: 480
-        y: 352
+        x: 96
+        y: 256
         width: 96
         height: 96
       alignment: 7
@@ -592,8 +511,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f45d4d7f6839084b0800000000000000
-      internalID: -5440186141970737841
+      spriteID: 5d2997aedb06e00a0800000000000000
+      internalID: -6913482009168211243
       vertices: []
       indices: 
       edges: []
@@ -602,7 +521,7 @@ TextureImporter:
       name: GoblinKing_17
       rect:
         serializedVersion: 2
-        x: 0
+        x: 192
         y: 256
         width: 96
         height: 96
@@ -613,8 +532,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 463f193ead95b7790800000000000000
-      internalID: -7531327155191286940
+      spriteID: abf7f23a211e19590800000000000000
+      internalID: -7669101220271784006
       vertices: []
       indices: 
       edges: []
@@ -623,48 +542,6 @@ TextureImporter:
       name: GoblinKing_18
       rect:
         serializedVersion: 2
-        x: 96
-        y: 256
-        width: 96
-        height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba9ed44e59b28cdc0800000000000000
-      internalID: -3618594377811760725
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoblinKing_19
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 256
-        width: 96
-        height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: faf0a0c19d14b8d10800000000000000
-      internalID: 2128867649596821423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoblinKing_20
-      rect:
-        serializedVersion: 2
         x: 288
         y: 256
         width: 96
@@ -676,14 +553,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6056587cd67368070800000000000000
-      internalID: 8108229123765527814
+      spriteID: a2d82e96c1985ef60800000000000000
+      internalID: 8063001463005285674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoblinKing_21
+      name: GoblinKing_19
       rect:
         serializedVersion: 2
         x: 384
@@ -697,14 +574,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33f08d747e061bb30800000000000000
-      internalID: 4301325665574588211
+      spriteID: 4430d8bf71535bb60800000000000000
+      internalID: 7761167909963760452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoblinKing_22
+      name: GoblinKing_20
       rect:
         serializedVersion: 2
         x: 0
@@ -718,14 +595,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c2ebd8519d34520800000000000000
-      internalID: 2685228489438538752
+      spriteID: 8960ba07de0c94b60800000000000000
+      internalID: 7730922361388205720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoblinKing_23
+      name: GoblinKing_21
       rect:
         serializedVersion: 2
         x: 96
@@ -739,14 +616,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f4327bdf09700f10800000000000000
-      internalID: 2233918524188931318
+      spriteID: b5c0508a43eb0ce10800000000000000
+      internalID: 2215980150032763995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoblinKing_24
+      name: GoblinKing_22
       rect:
         serializedVersion: 2
         x: 192
@@ -760,14 +637,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e62d67de3a58ee90800000000000000
-      internalID: -6996242795171338522
+      spriteID: c04bf25c65f78a6a0800000000000000
+      internalID: -6437755656673971188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoblinKing_25
+      name: GoblinKing_23
       rect:
         serializedVersion: 2
         x: 288
@@ -781,14 +658,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7718f0c56c70bba0800000000000000
-      internalID: -6075219120851773569
+      spriteID: cb44375571a041400800000000000000
+      internalID: 293870971020068028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoblinKing_26
+      name: GoblinKing_24
       rect:
         serializedVersion: 2
         x: 384
@@ -802,8 +679,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19e3c392de1046970800000000000000
-      internalID: 8747118494371036817
+      spriteID: e3b02aea4f37bf7c0800000000000000
+      internalID: -4036505146268447938
       vertices: []
       indices: 
       edges: []

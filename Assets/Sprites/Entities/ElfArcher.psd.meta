@@ -26,6 +26,36 @@ TextureImporter:
   - first:
       213: -2707002744511518061
     second: ElfArcher_7
+  - first:
+      213: 1940744147071328656
+    second: ElfArcher_0
+  - first:
+      213: -392860981489246147
+    second: ElfArcher_1
+  - first:
+      213: 706351949779747642
+    second: ElfArcher_2
+  - first:
+      213: 8304447791542512404
+    second: ElfArcher_3
+  - first:
+      213: -5235260015870012531
+    second: ElfArcher_4
+  - first:
+      213: -7397479577846981459
+    second: ElfArcher_5
+  - first:
+      213: -3215812530914951069
+    second: ElfArcher_6
+  - first:
+      213: 766317987320852179
+    second: ElfArcher_7
+  - first:
+      213: -4232532822216760695
+    second: ElfArcher_8
+  - first:
+      213: -1133449703534611572
+    second: ElfArcher_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -124,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40b15787be62e8ea0800000000000000
-      internalID: -5868710471637067004
+      spriteID: 091ea1ee488eeea10800000000000000
+      internalID: 1940744147071328656
       vertices: []
       indices: 
       edges: []
@@ -145,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d3d3addea86a02a0800000000000000
-      internalID: -6770483989546019881
+      spriteID: d30e830d4074c8af0800000000000000
+      internalID: -392860981489246147
       vertices: []
       indices: 
       edges: []
@@ -166,14 +196,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c32126e143cdff30800000000000000
-      internalID: 4611056281298478022
+      spriteID: a33c60d1b577dc900800000000000000
+      internalID: 706351949779747642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: ElfArcher_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b2bae74435f3370800000000000000
+      internalID: 8304447791542512404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElfArcher_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83134fc0ce9857b0800000000000000
+      internalID: -5235260015870012531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElfArcher_5
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +259,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3f223a803582ea90800000000000000
-      internalID: -7286114803608572102
+      spriteID: dac5939748fd65990800000000000000
+      internalID: -7397479577846981459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ElfArcher_4
+      name: ElfArcher_6
       rect:
         serializedVersion: 2
         x: 64
@@ -208,14 +280,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0acf694dd58cc29e0800000000000000
-      internalID: -1644719458572895072
+      spriteID: 360809e8a832f53d0800000000000000
+      internalID: -3215812530914951069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ElfArcher_5
+      name: ElfArcher_7
       rect:
         serializedVersion: 2
         x: 128
@@ -229,14 +301,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4040af87ede28f80800000000000000
-      internalID: -8105654800510599089
+      spriteID: 3de604b362282aa00800000000000000
+      internalID: 766317987320852179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ElfArcher_6
+      name: ElfArcher_8
       rect:
         serializedVersion: 2
         x: 192
@@ -250,14 +322,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea823a89d23e1d9e0800000000000000
-      internalID: -1598246607765952338
+      spriteID: 982a697b2d50345c0800000000000000
+      internalID: -4232532822216760695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ElfArcher_7
+      name: ElfArcher_9
       rect:
         serializedVersion: 2
         x: 256
@@ -271,8 +343,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39a226f985bce6ad0800000000000000
-      internalID: -2707002744511518061
+      spriteID: c833c0aff7d2540f0800000000000000
+      internalID: -1133449703534611572
       vertices: []
       indices: 
       edges: []

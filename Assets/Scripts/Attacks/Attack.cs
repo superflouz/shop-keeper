@@ -52,18 +52,23 @@ public class Attack : MonoBehaviour
                 timerPreparation -= Time.deltaTime;
                 if (timerPreparation <= 0)
                 {
-                    ExecuteAttack(currentTarget);
-                    currentTarget = null;
+                    if (ExecuteAttack(currentTarget))
+                    {
+                        currentTarget = null;
 
-                    animator.SetTrigger("Attack");
-                    state = State.Attacking;
+                        animator.SetTrigger("Attack");
+                        state = State.Attacking;
+                    }
+                    else
+                    {
+                        ResetAttack();
+                    }
+
                 }
                 // Cancel the attack if the entity move
                 if (entity.CurrentState == Entity.State.Swapping)
                 {
-                    animator.SetTrigger("End Attack");
-                    state = State.Idle;
-                    entity.CurrentState = Entity.State.Idle;
+                    ResetAttack();
                 }
 
                 break;
@@ -79,12 +84,20 @@ public class Attack : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Reset the attack and the cooldown
+    /// </summary>
     public void ResetAttack()
     {
         state = State.Idle;
         timerAttack = 0;
         timerPreparation = 0;
         timerAnimation = 0;
+
+        // Reset the triggers to avoid animation bug
+        animator.ResetTrigger("Prepare Attack");
+        animator.ResetTrigger("Attack");
+        animator.ResetTrigger("End Attack");
     }
 
     /// <summary>

@@ -26,6 +26,36 @@ TextureImporter:
   - first:
       213: 8099874905172277693
     second: GoblinClub_7
+  - first:
+      213: -44040407474652694
+    second: GoblinClub_0
+  - first:
+      213: 3388921920834868312
+    second: GoblinClub_1
+  - first:
+      213: -631609504026462589
+    second: GoblinClub_2
+  - first:
+      213: -3074825958388881529
+    second: GoblinClub_3
+  - first:
+      213: 956266287768778544
+    second: GoblinClub_4
+  - first:
+      213: 2057582304005179030
+    second: GoblinClub_5
+  - first:
+      213: 3131098051726600013
+    second: GoblinClub_6
+  - first:
+      213: 8569427150036223106
+    second: GoblinClub_7
+  - first:
+      213: 190935123856527086
+    second: GoblinClub_8
+  - first:
+      213: 8695756818251467850
+    second: GoblinClub_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -124,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8134ccfc4de3f47b0800000000000000
-      internalID: -5237898757868338408
+      spriteID: ae9b5b49b79836ff0800000000000000
+      internalID: -44040407474652694
       vertices: []
       indices: 
       edges: []
@@ -145,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f5f8074a5c5ff400800000000000000
-      internalID: 360108038021510642
+      spriteID: 85495ee188ed70f20800000000000000
+      internalID: 3388921920834868312
       vertices: []
       indices: 
       edges: []
@@ -166,8 +196,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c5645952f611f780800000000000000
-      internalID: -8651108179065412157
+      spriteID: 386fdb3a0821c37f0800000000000000
+      internalID: -631609504026462589
       vertices: []
       indices: 
       edges: []
@@ -187,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 046e5f6cee1736b40800000000000000
-      internalID: 5432310845893109312
+      spriteID: 787a41cf4160455d0800000000000000
+      internalID: -3074825958388881529
       vertices: []
       indices: 
       edges: []
@@ -208,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95cbf08c3fa935540800000000000000
-      internalID: 4995506783508216921
+      spriteID: 037b3294f17554d00800000000000000
+      internalID: 956266287768778544
       vertices: []
       indices: 
       edges: []
@@ -229,8 +259,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb1d1d76b36663af0800000000000000
-      internalID: -417033510154284609
+      spriteID: 696cb5634300e8c10800000000000000
+      internalID: 2057582304005179030
       vertices: []
       indices: 
       edges: []
@@ -250,8 +280,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bc37cc032f9bed30800000000000000
-      internalID: 4461834828727663792
+      spriteID: d47e41ab615e37b20800000000000000
+      internalID: 3131098051726600013
       vertices: []
       indices: 
       edges: []
@@ -271,8 +301,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db9f4efaf49886070800000000000000
-      internalID: 8099874905172277693
+      spriteID: 2844f761798bce670800000000000000
+      internalID: 8569427150036223106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinClub_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee0d98cb7656a200800000000000000
+      internalID: 190935123856527086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinClub_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c4f0d01c88da870800000000000000
+      internalID: 8695756818251467850
       vertices: []
       indices: 
       edges: []

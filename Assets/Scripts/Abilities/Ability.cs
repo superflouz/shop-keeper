@@ -48,22 +48,25 @@ public class Ability : MonoBehaviour
             // Prepare ability and go to the casting state
             case State.Preparing:
                 timerPreparation -= Time.deltaTime;
-                if (timerPreparation <= 0) {
-                    CastAbility();
-                    CastAbility(currentTarget);
-                    CastAbility(currentPosition);
-                    currentTarget = null;
+                if (timerPreparation <= 0) 
+                {
+                    if (CastAbility() || CastAbility(currentTarget) || CastAbility(currentPosition))
+                    {
+                        currentTarget = null;
 
-                    animator.SetTrigger("Cast Ability");
-                    state = State.Casting;
+                        animator.SetTrigger("Cast Ability");
+                        state = State.Casting;
+                    }
+                    else
+                    {
+                        ResetAbility();
+                    }
                 }
 
                 // Cancel the ability if the entity move
                 if (entity.CurrentState == Entity.State.Swapping)
                 {
-                    animator.SetTrigger("End Attack");
-                    state = State.Idle;
-                    entity.CurrentState = Entity.State.Idle;
+                    ResetAbility();
                 }
 
                 break;
@@ -77,6 +80,22 @@ public class Ability : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    /// <summary>
+    /// Reset the ability and the mana
+    /// </summary>
+    public void ResetAbility()
+    {
+        entity.CurrentMana += manaCost;
+        state = State.Idle;
+        timerPreparation = 0;
+        timerAnimation = 0;
+
+        // Reset the triggers to avoid animation bug
+        animator.ResetTrigger("Prepare Ability");
+        animator.ResetTrigger("Cast Ability");
+        animator.ResetTrigger("End Abiltiy");
     }
 
     /// <summary>
@@ -126,7 +145,7 @@ public class Ability : MonoBehaviour
     protected virtual bool CastAbility()
     {
         // Default action, override in heritage to change it
-        return true;
+        return false;
     }
 
     /// <summary>

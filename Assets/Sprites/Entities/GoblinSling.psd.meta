@@ -26,6 +26,36 @@ TextureImporter:
   - first:
       213: -8280068126088848372
     second: GoblinSling_7
+  - first:
+      213: 5907367616936166837
+    second: GoblinSling_0
+  - first:
+      213: 8983960557851786156
+    second: GoblinSling_1
+  - first:
+      213: -3422064981526001585
+    second: GoblinSling_2
+  - first:
+      213: 2437272469403918229
+    second: GoblinSling_3
+  - first:
+      213: -7348873999457675194
+    second: GoblinSling_4
+  - first:
+      213: -8085386256535590609
+    second: GoblinSling_5
+  - first:
+      213: 1519268916224129871
+    second: GoblinSling_6
+  - first:
+      213: 8871630438339477113
+    second: GoblinSling_7
+  - first:
+      213: 3066819910968764541
+    second: GoblinSling_8
+  - first:
+      213: 359077275123399014
+    second: GoblinSling_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -124,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d87a3e0611cf8e70800000000000000
-      internalID: 9119720070920698068
+      spriteID: 5b5402d8c8f2bf150800000000000000
+      internalID: 5907367616936166837
       vertices: []
       indices: 
       edges: []
@@ -145,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34929f7cd9edf5cc0800000000000000
-      internalID: -3720009997938513597
+      spriteID: cab30ee37807dac70800000000000000
+      internalID: 8983960557851786156
       vertices: []
       indices: 
       edges: []
@@ -166,8 +196,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a6f5eb2e9537d480800000000000000
-      internalID: -8874565587252676952
+      spriteID: f48c6d9b7026280d0800000000000000
+      internalID: -3422064981526001585
       vertices: []
       indices: 
       edges: []
@@ -187,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 286eb4e6ccc8a3180800000000000000
-      internalID: -9134834084515944830
+      spriteID: 59fd8afc56ee2d120800000000000000
+      internalID: 2437272469403918229
       vertices: []
       indices: 
       edges: []
@@ -208,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57b68abfb2790f7e0800000000000000
-      internalID: -1733719641376134283
+      spriteID: 6489833980e830a90800000000000000
+      internalID: -7348873999457675194
       vertices: []
       indices: 
       edges: []
@@ -229,8 +259,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3aaa05caffd2f3070800000000000000
-      internalID: 8088234031911578275
+      spriteID: f29ee53b900facf80800000000000000
+      internalID: -8085386256535590609
       vertices: []
       indices: 
       edges: []
@@ -250,8 +280,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 868f2cfc399da2260800000000000000
-      internalID: 7073705393607866472
+      spriteID: f4bf4d5a707851510800000000000000
+      internalID: 1519268916224129871
       vertices: []
       indices: 
       edges: []
@@ -271,8 +301,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0c9074b8e9471d80800000000000000
-      internalID: -8280068126088848372
+      spriteID: 97e74c731ec5e1b70800000000000000
+      internalID: 8871630438339477113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinSling_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d786367d5788f8a20800000000000000
+      internalID: 3066819910968764541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinSling_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66935a611e2bbf400800000000000000
+      internalID: 359077275123399014
       vertices: []
       indices: 
       edges: []

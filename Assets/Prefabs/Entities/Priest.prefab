@@ -56,7 +56,7 @@ MonoBehaviour:
   health: 75
   mana: 100
   attackDamage: 0
-  attackSpeed: 0
+  attackSpeed: 1
   abilityPower: 0
   physicArmor: 0
   magicArmor: 10
