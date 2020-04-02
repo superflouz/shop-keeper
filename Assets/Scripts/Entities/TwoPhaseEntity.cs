@@ -53,7 +53,7 @@ public class TwoPhaseEntity : Entity
 
                 animator.SetTrigger("End Transition");
                 CurrentState = State.Idle;
-                attackSpeed = 0.5f;
+                attackSpeed = 0.35f;
                 Attack attack = GetComponent<Attack>();
                 attack.ResetAttack();
                 BoxCollider2D collider = GetComponent<BoxCollider2D>();
