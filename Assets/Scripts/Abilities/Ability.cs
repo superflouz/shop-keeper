@@ -111,7 +111,7 @@ public class Ability : MonoBehaviour
         state = State.Preparing;
         timerPreparation = preparationTime;
         timerAnimation = animationTime;
-        animator.ResetTrigger("End Abiltiy");
+        animator.ResetTrigger("End Ability");
         animator.SetTrigger("Prepare Ability");
 
         return true;
