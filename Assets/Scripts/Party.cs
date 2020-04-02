@@ -134,7 +134,8 @@ public class Party : MonoBehaviour
 
         if (entities.Count > index + 1)
         {
-            if (entities[index].State == EntityState.Stunned || entities[index + 1].State == EntityState.Stunned)
+            // Can only swap two idle entities
+            if (entities[index].State != EntityState.Idle || entities[index + 1].State != EntityState.Idle)
                 return false;
 
             entities[index] = entities[index + 1];
