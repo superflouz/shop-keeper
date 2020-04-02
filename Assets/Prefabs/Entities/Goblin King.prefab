@@ -64,8 +64,8 @@ MonoBehaviour:
   range: 0
   icon: {fileID: 0}
   price: 0
-  healthRatioTransition: 0.9
-  transitionTime: 2
+  healthRatioTransition: 0.5
+  transitionTime: 3
 --- !u!114 &4172475330852763006
 MonoBehaviour:
   m_ObjectHideFlags: 0

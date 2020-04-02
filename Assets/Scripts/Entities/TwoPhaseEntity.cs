@@ -53,14 +53,12 @@ public class TwoPhaseEntity : Entity
 
                 animator.SetTrigger("End Transition");
                 CurrentState = State.Idle;
-                slotSize = 1;
-                attackSpeed = 0.75f;
+                attackSpeed = 0.5f;
                 Attack attack = GetComponent<Attack>();
                 attack.ResetAttack();
                 BoxCollider2D collider = GetComponent<BoxCollider2D>();
-
+                 
                 Vector2 size = collider.size;
-                size.x = 0.5f;
                 size.y = 1.5f;
                 collider.size = size;
 
