@@ -7,6 +7,7 @@ public class ResourceBar : MonoBehaviour
     Entity entity;
     Transform healthBar;
     Transform manaBar;
+    Transform manaBarBorder;
 
     bool hasMana;
     float maxHP;
@@ -17,22 +18,24 @@ public class ResourceBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Get the objects we need to affect
         entity = GetComponentInParent<Entity>();
-
         healthBar = transform.Find("Health_ResourceBar");
         manaBar = transform.Find("Mana_ResourceBar");
+        manaBarBorder = transform.Find("Mana_ResourceBarBorder");
 
         maxHP = entity.MaxHealth;
         maxMana = entity.MaxMana;
 
+        // Defines if this entity has mana
         if (maxMana == 0)
-        {
             hasMana = false;
-        }
         else
-        {
-            hasMana = true;          
-        }      
+            hasMana = true;
+
+        // Disable Mana Bar if it doesn't have mana
+        manaBarBorder.gameObject.SetActive(hasMana);
+        manaBar.gameObject.SetActive(hasMana);
     }
 
     // Update is called once per frame
@@ -41,9 +44,11 @@ public class ResourceBar : MonoBehaviour
         maxHP = entity.MaxHealth;
         maxMana = entity.MaxMana;
 
+        // Get current resources
         currentHP = entity.CurrentHealth;
         currentMana = entity.CurrentMana;
 
+        // Set health and mana bar based on current resources
         healthBar.localScale = new Vector3(currentHP / maxHP, 1f);
         if (hasMana) manaBar.localScale = new Vector3(currentMana / maxMana, 1f);
     }
