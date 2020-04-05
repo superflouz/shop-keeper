@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 930800385808126525}
   m_Layer: 0
   m_Name: ResourceBar
-  m_TagString: Untagged
+  m_TagString: ResourceBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

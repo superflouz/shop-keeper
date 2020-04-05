@@ -4,34 +4,34 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 2903848411162822477
-    second: Heal_0
+    second: Regeneration_0
   - first:
       213: -893675218100121079
-    second: Heal_1
+    second: Regeneration_1
   - first:
       213: 2928916444087662039
-    second: Heal_2
+    second: Regeneration_2
   - first:
       213: -1398132742003509683
-    second: Heal_3
+    second: Regeneration_3
   - first:
       213: 5238786112167760410
-    second: Heal_4
+    second: Regeneration_4
   - first:
       213: 332964804848594829
-    second: Heal_0
+    second: Regeneration_0
   - first:
       213: 3203864007261490772
-    second: Heal_1
+    second: Regeneration_1
   - first:
       213: 3917753129509562424
-    second: Heal_2
+    second: Regeneration_2
   - first:
       213: -455030273487387813
-    second: Heal_3
+    second: Regeneration_3
   - first:
       213: 743346920578487867
-    second: Heal_4
+    second: Regeneration_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heal_0
+      name: Regeneration_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,7 +124,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -137,7 +137,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heal_1
+      name: Regeneration_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,7 +145,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,7 +158,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heal_2
+      name: Regeneration_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,7 +166,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -179,7 +179,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heal_3
+      name: Regeneration_3
       rect:
         serializedVersion: 2
         x: 96
@@ -187,7 +187,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -200,7 +200,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heal_4
+      name: Regeneration_4
       rect:
         serializedVersion: 2
         x: 128
@@ -208,7 +208,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

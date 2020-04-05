@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3184061873611813333}
   m_Layer: 8
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1298038668157555853, guid: 0684c79ab66e71b44bd5d1da160b18f8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -138,6 +138,7 @@ MonoBehaviour:
   baseMana: 0
   armor: 10
   magicResistance: 0
+  statusEffects: []
 --- !u!114 &8833601086607716461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ GameObject:
   - component: {fileID: 4249720997393570500}
   m_Layer: 8
   m_Name: Legs
-  m_TagString: Untagged
+  m_TagString: Legs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

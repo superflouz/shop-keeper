@@ -28,7 +28,7 @@ public class ResourceBar : MonoBehaviour
         maxMana = entity.MaxMana;
 
         // Defines if this entity has mana
-        if (maxMana == 0)
+        if (entity.baseMana == 0)
             hasMana = false;
         else
             hasMana = true;

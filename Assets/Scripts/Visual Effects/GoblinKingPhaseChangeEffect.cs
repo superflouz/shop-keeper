@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinKingPhaseChangeParticle : Particle
+public class GoblinKingPhaseChangeEffect : VisualEffect
 {
     public FallingObject coin;
     public List<FallingObject> goblins = new List<FallingObject>(4);
@@ -18,7 +18,7 @@ public class GoblinKingPhaseChangeParticle : Particle
             float direction = Random.Range(-2f, 2f);
 
             newCoin.transform.position += Vector3.right * (direction / 2);
-            newCoin.Speed = Vector3.right * direction + Vector3.up * Random.Range(1f, 4f);
+            newCoin.Speed = Vector3.right * direction + Vector3.up * Random.Range(1f, 8f);
 
             Rotation rotation = newCoin.GetComponent<Rotation>();
             rotation.RotationAngle = Random.Range(-90, 90);

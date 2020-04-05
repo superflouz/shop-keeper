@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(CoinTossAttack))]
 [RequireComponent(typeof(MeleeAttack))]
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(GoblinKingPhaseChangeParticle))]
+[RequireComponent(typeof(GoblinKingPhaseChangeEffect))]
 #endregion
 public class GoblinKingController : Controller
 {
@@ -14,7 +14,7 @@ public class GoblinKingController : Controller
     public float phaseChangeTime;
 
 
-    protected Particle phaseChangeParticle;
+    protected VisualEffect phaseChangeParticle;
     protected CoinTossAttack coinTossAttack;
     protected MeleeAttack meleeAttack;
     bool SecondPhase;
@@ -29,7 +29,7 @@ public class GoblinKingController : Controller
         coinTossAttack = GetComponent<CoinTossAttack>();
         meleeAttack = GetComponent<MeleeAttack>();
         animator = GetComponent<Animator>();
-        phaseChangeParticle = GetComponent<GoblinKingPhaseChangeParticle>();
+        phaseChangeParticle = GetComponent<GoblinKingPhaseChangeEffect>();
     }
 
     void Start()

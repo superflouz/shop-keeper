@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 6680692821773480554}
   m_Layer: 0
   m_Name: ResourceBarBoss
-  m_TagString: Untagged
+  m_TagString: ResourceBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

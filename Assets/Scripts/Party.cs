@@ -49,7 +49,7 @@ public class Party : MonoBehaviour
             foreach (Collider2D hit in hits)
             {
                 Entity entity = hit.GetComponent<Entity>();
-                if (entity != null && entity.Party.faction != Faction.Ally)
+                if (entity != null && entity.Party != null && entity.Party.faction != Faction.Ally)
                 {
                     isMoving = false;
                     timerDelay = delayMovement;

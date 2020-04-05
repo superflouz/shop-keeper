@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8923444318620741892}
   - component: {fileID: 4172475330852763006}
   - component: {fileID: 6746522118164774798}
-  - component: {fileID: 6102142276484652309}
+  - component: {fileID: 8242642521789611955}
   - component: {fileID: 7504935882607404479}
   - component: {fileID: 137349550845888853}
   m_Layer: 8
@@ -58,6 +58,7 @@ MonoBehaviour:
   baseMana: 200
   armor: 20
   magicResistance: 20
+  statusEffects: []
 --- !u!114 &8923444318620741892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackSpeed: 0.75
   baseDamage: 80
---- !u!114 &6102142276484652309
+--- !u!114 &8242642521789611955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,7 +186,7 @@ GameObject:
   - component: {fileID: 8840711169877531846}
   m_Layer: 8
   m_Name: Legs
-  m_TagString: Untagged
+  m_TagString: Legs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,7 +268,7 @@ GameObject:
   - component: {fileID: 7203014730422435598}
   m_Layer: 8
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,7 +408,7 @@ PrefabInstance:
     - target: {fileID: 92906303452652470, guid: 62385c654096fd7469dc98f176517d2a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62385c654096fd7469dc98f176517d2a, type: 3}

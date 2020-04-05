@@ -15,7 +15,7 @@ public class Attack : MonoBehaviour
     public float attackSpeed;
 
     protected State state;
-    protected float timerAttack;
+    protected float timerCooldown;
     protected float timerPreparation;
     protected float timerAnimation;
 
@@ -39,10 +39,10 @@ public class Attack : MonoBehaviour
 
     protected void Update()
     {
-        // Let the attack timer go down if the Entity is not doing an other action
-        if (timerAttack > 0 && entity.State != EntityState.Swapping)
+        // Let the attack timer go down if the Entity is not swapping
+        if (timerCooldown > 0 && entity.State != EntityState.Swapping)
         {
-            timerAttack -= Time.deltaTime;
+            timerCooldown -= Time.deltaTime;
         }
 
         switch (state)
@@ -67,11 +67,13 @@ public class Attack : MonoBehaviour
                     }
 
                 }
+                /*
                 // Cancel the attack if the entity move
                 if (entity.State == EntityState.Swapping)
                 {
                     ResetAttack();
                 }
+                */
 
                 break;
             // End the attack and go back to idle status
@@ -91,7 +93,7 @@ public class Attack : MonoBehaviour
     public void ResetAttack()
     {
         state = State.Idle;
-        timerAttack = 0;
+        timerCooldown = 0;
         timerPreparation = 0;
         timerAnimation = 0;
 
@@ -109,7 +111,7 @@ public class Attack : MonoBehaviour
     public virtual bool PrepareAttack(Entity target)
     {
         // Attack only if the cooldown is at 0
-        if (timerAttack > 0)
+        if (timerCooldown > 0)
         {
             return false;
         }
@@ -119,9 +121,9 @@ public class Attack : MonoBehaviour
 
         //  Set state, timer and animations
         state = State.Preparing;
-        timerAttack = 1 / (attackSpeed * entity.AttackSpeedFactor);
-        timerPreparation = timerAttack / 4;
-        timerAnimation = timerAttack / 4;
+        timerCooldown = 1 / (attackSpeed * entity.AttackSpeedFactor);
+        timerPreparation = timerCooldown / 4;
+        timerAnimation = timerCooldown / 4;
         animator.ResetTrigger("End Attack");
         animator.SetTrigger("Prepare Attack");
 

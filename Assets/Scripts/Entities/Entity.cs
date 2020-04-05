@@ -20,7 +20,8 @@ public enum EntityState
 {
     Idle,
     Swapping,
-    Stunned
+    Stunned,
+    Dead
 }
 
 #endregion
@@ -57,13 +58,20 @@ public class Entity : MonoBehaviour
     public Party Party { get; set; }
     
     /// <summary>
-    /// The entities can't do anything when stunned
+    /// The entity can't do anything when stunned
     /// </summary>
     public bool Stun { get; set; }
+
+    /// <summary>
+    /// The entity is dead
+    /// </summary>
+    public bool Dead { get; set; }
 
     #endregion
     // =================================================
     #region Level and attributes
+    // List of the status effects currently active on the entity
+    public List<StatusEffect> statusEffects;
 
     // The level of the entity. Define the general power level of the entity.
     private int level;
@@ -90,7 +98,15 @@ public class Entity : MonoBehaviour
     {
         get
         {
-            return new Attributes(level); // + buff/debuff currently on (TODO)
+            Attributes attributes = new Attributes(level);
+            //AttributesFactors factors = AttributesFactors.One;
+            foreach (StatusEffect statusEffect in statusEffects)
+            {
+                attributes += statusEffect.bonusAttributes;
+                //factors *= statusEffect.attributesFactors;
+            }
+
+            return attributes;
         }
     }
 
@@ -158,7 +174,7 @@ public class Entity : MonoBehaviour
         }
     }
 
-    // The current factor to apply to the physaical damages of this entity
+    // The current factor to apply to the physical damages of this entity
     public float AttackFactor
     {
         get
@@ -195,17 +211,27 @@ public class Entity : MonoBehaviour
         switch (State)
         {
             case EntityState.Idle:
-                if (Stun)
+                if (Dead)
+                    State = EntityState.Dead;     
+                else if (Stun)
                     State = EntityState.Stunned;
                 else
                     State = MoveToRightPosition();
                 break;
             case EntityState.Swapping:
-                State = MoveToRightPosition();
+                if (Dead)
+                    State = EntityState.Dead;
+                else
+                    State = MoveToRightPosition();
                 break;
             case EntityState.Stunned:
-                if (!Stun)
+                if (Dead)
+                    State = EntityState.Dead;
+                else if (!Stun)
                     State = EntityState.Idle;
+                break;
+            case EntityState.Dead:
+                UpdateDeathAnimation();
                 break;
         }
     }
@@ -221,7 +247,23 @@ public class Entity : MonoBehaviour
             if (transform.localPosition != wantedPosition)
             {
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, wantedPosition, Party.swapSpeed * Time.deltaTime);
+            }
+            if (transform.localPosition == wantedPosition)
+            {
+                // The entity move only if the party is moving
+                animator.SetBool("Moving", Party.IsMoving);
 
+                // Look in the party direction
+                if (Party.faction == Faction.Ally)
+                    transform.localScale = new Vector3(1, 1, 1);
+                else
+                    transform.localScale = new Vector3(-1, 1, 1);
+
+                // Tell the entity it's idle
+                return EntityState.Idle;
+            }
+            else
+            {
                 // Moving Animation
                 animator.SetBool("Moving", true);
 
@@ -238,20 +280,6 @@ public class Entity : MonoBehaviour
                 // Tell the entity it's swapping
                 return EntityState.Swapping;
             }
-            else
-            {
-                // The entity move only if the party is moving
-                animator.SetBool("Moving", Party.IsMoving);
-
-                // Look in the party direction
-                if (Party.faction == Faction.Ally)
-                    transform.localScale = new Vector3(1, 1, 1);
-                else
-                    transform.localScale = new Vector3(-1, 1, 1);
-
-                // Tell the entity it's idle
-                return EntityState.Idle;
-            }
         }
 
         // If no party is found, do nothing
@@ -260,9 +288,13 @@ public class Entity : MonoBehaviour
     #endregion
     // =================================================
     #region Damages, heal and death
-
     public delegate void KillEvent(Entity killed, Entity killer);
     public KillEvent killEvent;
+
+    // Variables for the daeth animation
+    private Vector3 DeathSpeed = new Vector3(-1, 2, 0);
+    private float timerFade = 1;
+    private float rotationSpeed = 20;
 
     /// <summary>
     /// Calculates and apply damages to the Entity
@@ -297,9 +329,7 @@ public class Entity : MonoBehaviour
 
         CurrentHealth -= Mathf.RoundToInt(amountFloat);
         if (CurrentHealth <= 0)
-        {
             Kill(source);
-        }
     }
 
     /// <summary>
@@ -321,20 +351,79 @@ public class Entity : MonoBehaviour
     /// <param name="killer">Entity that killed</param>
     public void Kill(Entity killer = null)
     {
+        // Can't die two times
+        if (Dead)
+            return;
+
+        Dead = true;
         Party.RemoveFromParty(this);
 
+        // Disable all components
+        Controller controller = GetComponent<Controller>();
+        if (controller != null)
+            controller.enabled = false;
+        Attack[] attacks = GetComponents<Attack>();
+        foreach (Attack attack in attacks)
+            attack.enabled = false;
+        Ability[] abilities = GetComponents<Ability>();
+        foreach (Ability ability in abilities)
+            ability.enabled = false;
+
+        // Set the layer to dead
+        gameObject.layer = LayerMask.NameToLayer("Deads");
+
+        // Inverse the entity
+        transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, 1);
+        transform.position = new Vector3(transform.position.x, transform.position.y + slotCount, transform.position.z);
+        DeathSpeed = new Vector3(DeathSpeed.x * transform.localScale.x, DeathSpeed.y, 0);
+        rotationSpeed *= transform.localScale.x;
+
+        //Mask the resource bar
+        resourceBar.SetActive(false);
+
+        // Send the event
         killEvent?.Invoke(this, killer);
-        Destroy(gameObject);
+    }
+
+    private void UpdateDeathAnimation()
+    {
+        timerFade -= Time.deltaTime;
+        if (timerFade <= 0)
+            Destroy(gameObject);
+
+        Vector3 speed = DeathSpeed;
+        speed.y += Physics2D.gravity.y * Time.deltaTime;
+        DeathSpeed = speed;
+
+        transform.position += (DeathSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.forward, -20 * Time.deltaTime);
+        Color color = Color.white;
+        color.a = timerFade;
+        body.color = color;
+        legs.color = color;
+
     }
     #endregion
     // =================================================
     #region Components references and initialization
 
     protected Animator animator;
+    protected SpriteRenderer body;
+    protected SpriteRenderer legs;
+    protected GameObject resourceBar;
 
     protected void Awake()
     {
         animator = GetComponent<Animator>();
+        foreach (Transform child in transform)
+        {
+            if (child.CompareTag("Body"))
+                body = child.GetComponent<SpriteRenderer>();
+            if (child.CompareTag("Legs"))
+                legs = child.GetComponent<SpriteRenderer>();
+            if (child.CompareTag("ResourceBar"))
+                resourceBar = child.gameObject;
+        }
     }
 
     protected void Start()

@@ -12,11 +12,11 @@ public class Ability : MonoBehaviour
         Casting
     }
 
+    public float cooldown;
     public int manaCost;
-    public float preparationTime;
-    public float animationTime;
 
     protected State state;
+    protected float timerCooldown;
     protected float timerPreparation;
     protected float timerAnimation;
 
@@ -41,6 +41,12 @@ public class Ability : MonoBehaviour
 
     public void Update()
     {
+        // Let the attack timer go down if the Entity is not swapping
+        if (timerCooldown > 0 && entity.State != EntityState.Swapping)
+        {
+            timerCooldown -= Time.deltaTime;
+        }
+
         switch (state)
         {
             case State.Idle:
@@ -62,12 +68,13 @@ public class Ability : MonoBehaviour
                         ResetAbility();
                     }
                 }
-
+                /*
                 // Cancel the ability if the entity move
                 if (entity.State == EntityState.Swapping)
                 {
                     ResetAbility();
                 }
+                */
 
                 break;
             //End the ability and go back to idle status
@@ -103,14 +110,19 @@ public class Ability : MonoBehaviour
     /// <returns>success</returns>
     public virtual bool PrepareAbility()
     {
-        if (manaCost > entity.CurrentMana)
+
+        // Attack only if the cooldown is at 0
+        if (timerCooldown > 0 || manaCost > entity.CurrentMana)
+        {
             return false;
+        }
 
         entity.CurrentMana -= manaCost;
 
         state = State.Preparing;
-        timerPreparation = preparationTime;
-        timerAnimation = animationTime;
+        timerCooldown = cooldown;
+        timerPreparation = cooldown / 4;
+        timerAnimation = cooldown / 4;
         animator.ResetTrigger("End Ability");
         animator.SetTrigger("Prepare Ability");
 

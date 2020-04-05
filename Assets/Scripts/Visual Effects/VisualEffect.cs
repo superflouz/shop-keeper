@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Particle : MonoBehaviour
+public class VisualEffect : MonoBehaviour
 {
     public virtual void Execute() { }
 }

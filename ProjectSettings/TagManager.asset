@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Body
   - Legs
+  - ResourceBar
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - 
   - Entities
-  - 
+  - Deads
   - 
   - 
   - 

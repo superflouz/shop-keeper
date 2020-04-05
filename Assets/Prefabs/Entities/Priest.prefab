@@ -56,6 +56,7 @@ MonoBehaviour:
   baseMana: 200
   armor: 0
   magicResistance: 10
+  statusEffects: []
 --- !u!114 &6021140900084197284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,11 +81,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d7d056f1829d047a449bacf885df7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 20
-  preparationTime: 0.3
-  animationTime: 0.5
+  cooldown: 2
+  manaCost: 40
   particle: {fileID: 922094455198945850, guid: 6019d73c52e205745a8f63a4a3e6556d, type: 3}
-  healValue: 20
+  healValue: 40
 --- !u!95 &1023605501687963869
 Animator:
   serializedVersion: 3
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 7727775658300394804}
   m_Layer: 8
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +199,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -847035963281188344, guid: 1806f477cf198e3408d16193c596c88f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 3710997194303746460}
   m_Layer: 8
   m_Name: Legs
-  m_TagString: Untagged
+  m_TagString: Legs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
