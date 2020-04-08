@@ -48,6 +48,8 @@ public class Entity : MonoBehaviour
     public int armor;
     [SerializeField, Tooltip("The magic resistance of the entity without any modifier.")]
     public int magicResistance;
+    [SerializeField, Tooltip("The prefab for the floating text.")]
+    public FloatingText floatingText;
 
     #endregion
     // =================================================
@@ -306,26 +308,26 @@ public class Entity : MonoBehaviour
     {
         float amountFloat = amount;
 
-        //string dmgType = "unknown";
+        FloatingText text = Instantiate(floatingText, transform.position, Quaternion.identity);
+        text.transform.localPosition += Vector3.up * slotCount;
 
         // Applies damage based on resistances
         switch (type)
         {
             case DamageType.Physical:
                 amountFloat -= (amountFloat * (Armor / 100f));
-                //dmgType = "physical";
+                text.Color = Color.red;
                 break;
             case DamageType.Magical:
                 amountFloat -= (amountFloat * (MagicResistance / 100f));
-                //dmgType = "magical";
+                text.Color = Color.magenta;
                 break;
             case DamageType.Piercing:
-                //dmgType = "piercing";
+                text.Color = Color.white;
                 break;
         }
 
-        //string s = name + " take " + Mathf.RoundToInt(amountFloat) + " " + dmgType + " damage(s) from " + source.name;
-        //Debug.Log(s);
+        text.Text = "-" + Mathf.RoundToInt(amountFloat);
 
         CurrentHealth -= Mathf.RoundToInt(amountFloat);
         if (CurrentHealth <= 0)
@@ -339,7 +341,13 @@ public class Entity : MonoBehaviour
     /// <param name="source">Entity that healed</param>
     public void Heal(int amount, Entity source)
     {
+        int healAmount = Mathf.Min(amount, MaxHealth - CurrentHealth);
         CurrentHealth = Mathf.Clamp(CurrentHealth + amount, 0, MaxHealth);
+
+        FloatingText text = Instantiate(floatingText, transform);
+        text.Text = "+" + healAmount;
+        text.Color = Color.green;
+        text.transform.localPosition += Vector3.up * slotCount;
 
         //string s = name + " heal " + amount + " health from " + source.name;
         //Debug.Log(s);
@@ -396,7 +404,7 @@ public class Entity : MonoBehaviour
         DeathSpeed = speed;
 
         transform.position += (DeathSpeed * Time.deltaTime);
-        transform.Rotate(Vector3.forward, -20 * Time.deltaTime);
+        transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
         Color color = Color.white;
         color.a = timerFade;
         body.color = color;
@@ -440,6 +448,10 @@ public class Entity : MonoBehaviour
         // All entities get 10 mana each seconds.
         if (currentMana < MaxMana)
             currentMana = Mathf.MoveTowards(currentMana, MaxMana, 10 * Time.deltaTime);
+
+        // All entities get 2 health each seconds.
+        if (currentHealth < MaxHealth)
+            currentHealth = Mathf.MoveTowards(currentHealth, MaxHealth, 2 * Time.deltaTime);
 
         // Check if a click was buffered
         if (bufferClickTimer > 0)

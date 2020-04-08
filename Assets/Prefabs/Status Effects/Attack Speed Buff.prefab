@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7439105525294871547}
   - component: {fileID: 1965666682545478777}
   - component: {fileID: 1393501976644883670}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Attack Speed Buff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,13 +53,6 @@ MonoBehaviour:
     Constitution: 0
     BonusArmor: 0
     BonusMagicResistance: 0
-  attributesFactors:
-    StrengthRatio: 0
-    DexterityRatio: 0
-    IntelligenceRatio: 0
-    ConstitutionRatio: 0
-    BonusArmorRatio: 0
-    BonusMagicResistanceRatio: 0
 --- !u!212 &1965666682545478777
 SpriteRenderer:
   m_ObjectHideFlags: 0

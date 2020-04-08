@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3346442472273721773}
   - component: {fileID: 2683410272905668047}
   - component: {fileID: 3748584939753460129}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LuckyGem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,8 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 248b5444392c8d14489c609c457ef1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
-  goldValue: 5
+  GoldValue: 0
 --- !u!114 &3748584939753460129
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1637395708447705100}
   - component: {fileID: 4722640905511531819}
   - component: {fileID: 6531501652120093767}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Slave1Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

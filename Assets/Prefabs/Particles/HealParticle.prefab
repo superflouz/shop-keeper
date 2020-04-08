@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 922094455198945850}
   - component: {fileID: 2226089865042544634}
   - component: {fileID: 4417218220315116866}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HealParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

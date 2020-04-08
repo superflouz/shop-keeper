@@ -58,6 +58,8 @@ MonoBehaviour:
   baseMana: 200
   armor: 20
   magicResistance: 20
+  floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
+    type: 3}
   statusEffects: []
 --- !u!114 &8923444318620741892
 MonoBehaviour:
@@ -71,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e08771b02554cb14c82b0120e38d5ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthRatioTransition: 0.5
+  healthRatioTransition: 0.25
   phaseChangeTime: 3
 --- !u!114 &4172475330852763006
 MonoBehaviour:

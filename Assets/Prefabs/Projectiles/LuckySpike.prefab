@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8612523724192628239}
   - component: {fileID: 312910711097219456}
   - component: {fileID: 2301736979142375720}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LuckySpike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,8 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 248b5444392c8d14489c609c457ef1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
-  goldValue: 0
+  GoldValue: 0
 --- !u!114 &2301736979142375720
 MonoBehaviour:
   m_ObjectHideFlags: 0

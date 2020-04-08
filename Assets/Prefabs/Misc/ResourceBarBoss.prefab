@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92906301930461370}
   - component: {fileID: 92906301930461371}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BossCrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92906302067442525}
   - component: {fileID: 92906302067442526}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Health_ResourceBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92906303006303706}
   - component: {fileID: 92906303006303707}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Health_RedGauge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92906303192672535}
   - component: {fileID: 92906303192672552}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mana_ResourceBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92906303452652470}
   - component: {fileID: 6680692821773480554}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ResourceBarBoss
   m_TagString: ResourceBar
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4610611292963814135}
   - component: {fileID: 3514337188154090709}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Health_ResourceBarBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7233006039847486177}
   - component: {fileID: 8941132711076632474}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mana_ResourceBarBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
