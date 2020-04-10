@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 867802959980236440}
   - component: {fileID: 4611224508160081801}
   - component: {fileID: 2459297863732772537}
+  - component: {fileID: 827287757326477858}
   - component: {fileID: 2191661024495378311}
   - component: {fileID: 1344062735586239165}
   m_Layer: 8
@@ -170,6 +171,22 @@ MonoBehaviour:
   baseDamage: 15
   arrow: {fileID: 780387246298754671, guid: 059e16867cb9aea459db1131f220fbd1, type: 3}
   projectileSpeed: 5
+--- !u!114 &827287757326477858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134281853225055614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7b38163a8711848a0ede80254e796a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2130535880278150251, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
+  objectName: Elf Archer
+  description: Deal damages from range
+  price: 30
 --- !u!61 &2191661024495378311
 BoxCollider2D:
   m_ObjectHideFlags: 0

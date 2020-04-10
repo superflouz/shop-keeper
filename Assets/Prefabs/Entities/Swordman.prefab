@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 3841581462555977770}
   - component: {fileID: 8833601086607716461}
   - component: {fileID: 5381352878874037374}
+  - component: {fileID: 7009574840715704172}
   - component: {fileID: 6002299548632894560}
   - component: {fileID: 1787278921821685899}
   m_Layer: 8
@@ -168,6 +169,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 0
+--- !u!114 &7009574840715704172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726437483417585661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7b38163a8711848a0ede80254e796a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 1161201145128540330, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
+  objectName: Swordman
+  description: Durable melee character
+  price: 20
 --- !u!61 &6002299548632894560
 BoxCollider2D:
   m_ObjectHideFlags: 0

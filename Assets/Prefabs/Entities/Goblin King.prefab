@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4172475330852763006}
   - component: {fileID: 6746522118164774798}
   - component: {fileID: 8242642521789611955}
+  - component: {fileID: 3743864676579768084}
   - component: {fileID: 7504935882607404479}
   - component: {fileID: 137349550845888853}
   m_Layer: 8
@@ -131,6 +132,22 @@ MonoBehaviour:
   - {fileID: -4410671026263524310, guid: 41c3af66be15e9d44a79b9abf1a666e0, type: 3}
   - {fileID: -556312448965985573, guid: 541c45e5057396d409878de7f144cfd4, type: 3}
   - {fileID: 4669386335396649469, guid: cd651a9791fd94a4bb33c4c37fc8265e, type: 3}
+--- !u!114 &3743864676579768084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5851387864386417813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7b38163a8711848a0ede80254e796a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: -3862903190024489479, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
+  objectName: Goblin King
+  description: Greedy king of the goblins
+  price: 500
 --- !u!95 &7504935882607404479
 Animator:
   serializedVersion: 3
@@ -327,7 +344,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 6623960320859967682, guid: 68deb8bb86e40544ea2bb51e60bb3c99,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

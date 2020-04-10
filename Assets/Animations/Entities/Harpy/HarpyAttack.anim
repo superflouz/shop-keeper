@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GoblinKingLegsTransition
+  m_Name: HarpyAttack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -8740075500197194001, guid: 68deb8bb86e40544ea2bb51e60bb3c99,
+      value: {fileID: 5369752351355962252, guid: e839732dd5378324897074cbe916cba4,
         type: 3}
-    - time: 2.12
-      value: {fileID: -5897617435012266121, guid: 68deb8bb86e40544ea2bb51e60bb3c99,
+    - time: 0.16
+      value: {fileID: -2106065508612919830, guid: e839732dd5378324897074cbe916cba4,
         type: 3}
     attribute: m_Sprite
-    path: Legs
+    path: Body
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 25
@@ -37,21 +37,21 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1563094196
+      path: 2073732236
       attribute: 0
       script: {fileID: 0}
       typeID: 212
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -8740075500197194001, guid: 68deb8bb86e40544ea2bb51e60bb3c99, type: 3}
-    - {fileID: -5897617435012266121, guid: 68deb8bb86e40544ea2bb51e60bb3c99, type: 3}
+    - {fileID: 5369752351355962252, guid: e839732dd5378324897074cbe916cba4, type: 3}
+    - {fileID: -2106065508612919830, guid: e839732dd5378324897074cbe916cba4, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.1599998
+    m_StopTime: 0.19999999
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

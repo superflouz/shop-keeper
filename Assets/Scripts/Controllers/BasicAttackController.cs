@@ -21,7 +21,7 @@ public class BasicAttackController : Controller
         if (entity.State == EntityState.Idle)
         {
             // Maths for overlap
-            Vector2 a = entity.transform.position;
+            Vector2 a = entity.transform.position + Vector3.down * range;
             Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotCount / 2f + range + 0.5f) + Vector2.up * range;
 
             Entity target = null;

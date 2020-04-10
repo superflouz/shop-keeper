@@ -244,6 +244,7 @@ public class Entity : MonoBehaviour
         if (Party != null)
         {
             Vector3 wantedPosition = Party.GetEntityLocalPosition(this);
+            wantedPosition.y = transform.localPosition.y;
 
             // It's not where it's supposed to be
             if (transform.localPosition != wantedPosition)

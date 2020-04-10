@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 2973012737611988514}
   - component: {fileID: 5561930345095010833}
   - component: {fileID: 5034995612280187754}
+  - component: {fileID: 921909532621954835}
   - component: {fileID: 5701649342011484121}
   - component: {fileID: 2801597418757425971}
   m_Layer: 8
@@ -251,6 +252,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202243dec91a31c4d9e81ccd9de7e071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &921909532621954835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517150154929878771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7b38163a8711848a0ede80254e796a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2514988542215765323, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
+  objectName: Goblin Drummer
+  description: Boost allies attack speed
+  price: 60
 --- !u!95 &5701649342011484121
 Animator:
   serializedVersion: 3

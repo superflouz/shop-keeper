@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1028214789930253380}
   - component: {fileID: 8335922273480757451}
   - component: {fileID: 1206908590908993241}
+  - component: {fileID: 9081154625345176871}
   - component: {fileID: 7504935882607404479}
   - component: {fileID: 137349550845888853}
   m_Layer: 8
@@ -86,6 +87,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackSpeed: 1.2
   baseDamage: 10
+--- !u!114 &9081154625345176871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5851387864386417813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7b38163a8711848a0ede80254e796a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 3220665290143086019, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
+  objectName: Goblin Warrior
+  description: Weak melee character
+  price: 10
 --- !u!95 &7504935882607404479
 Animator:
   serializedVersion: 3

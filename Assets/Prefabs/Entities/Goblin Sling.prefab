@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1028214789930253380}
   - component: {fileID: 8335922273480757451}
   - component: {fileID: 3246439100745673430}
+  - component: {fileID: 2111015918050900656}
   - component: {fileID: 7504935882607404479}
   - component: {fileID: 137349550845888853}
   m_Layer: 8
@@ -89,6 +90,22 @@ MonoBehaviour:
   scrap: {fileID: -4404792028517138254, guid: 29e90a7521f64dd47955be2c128c9d80, type: 3}
   projectileSpeed: 2
   projectileCount: 2
+--- !u!114 &2111015918050900656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5851387864386417813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7b38163a8711848a0ede80254e796a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 3434086634727231013, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
+  objectName: Goblin Slinger
+  description: Weak ranged character
+  price: 20
 --- !u!95 &7504935882607404479
 Animator:
   serializedVersion: 3

@@ -14,10 +14,10 @@ public class CurvedSlottedProjectile : CurvedProjectile
         // Calculate the middle point
         Vector2 middlePoint;
         middlePoint.x = (Origin.x + Destination.x) / 2;
-        middlePoint.y = Origin.y + 6f;
+        middlePoint.y = Origin.y + 7f;
         MiddlePoint = middlePoint;
 
-        Destination +=  Vector2.up * 5;
+        Destination +=  Vector2.up * 6;
     }
 
     // Update is called once per frame
