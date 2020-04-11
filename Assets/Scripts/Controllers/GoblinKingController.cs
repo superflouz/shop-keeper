@@ -12,6 +12,7 @@ public class GoblinKingController : Controller
 {
     public float healthRatioTransition;
     public float phaseChangeTime;
+    public StatusEffect statusChange;
 
 
     protected VisualEffect phaseChangeParticle;
@@ -45,7 +46,10 @@ public class GoblinKingController : Controller
             animator.SetTrigger("Begin Phase Changement");
             timerPhaseChange = phaseChangeTime;
             SecondPhase = true;
-            entity.Stun = true;
+            StatusEffect newStatus = Instantiate(statusChange, transform);
+            newStatus.duration = phaseChangeTime;
+            newStatus.Source = entity;
+            entity.AddStatusEffect(newStatus);
             phaseChangeParticle.Execute();
         }
         else if (timerPhaseChange > 0)
@@ -54,7 +58,6 @@ public class GoblinKingController : Controller
             if (timerPhaseChange <= 0)
             {
                 animator.SetTrigger("End Phase Changement");
-                entity.Stun = false;
                 Attack attack = GetComponent<Attack>();
                 attack.ResetAttack();
                 BoxCollider2D collider = GetComponent<BoxCollider2D>();

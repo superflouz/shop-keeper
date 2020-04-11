@@ -2,13 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public enum StatusEffectType
+{
+    None,
+    Burn,
+    Stun,
+    Fear
+}
+
 public class StatusEffect : MonoBehaviour
 {
     public float duration;
     public Attributes bonusAttributes;
-    //public AttributesFactors attributesFactors;
+    public StatusEffectType statusEffectType;
+
     public float TimeRemaining { get; set; }
     public Entity Entity { get; set; }
+    public Entity Source { get; set; }
 
     private void Start()
     {
@@ -21,7 +32,7 @@ public class StatusEffect : MonoBehaviour
         TimeRemaining -= Time.deltaTime;
         if (TimeRemaining <= 0)
         {
-            Entity.statusEffects.Remove(this);
+            Entity.RemoveStatusEffect(this);
             Destroy(gameObject);
         }
     }

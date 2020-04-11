@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: eb24aea8e326cda44aa211476254ee5f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6992204321370920523
+    second: Red Lizard_0
+  - first:
+      213: -6560597436793016588
+    second: Red Lizard_1
+  - first:
+      213: 8248187387621804526
+    second: Red Lizard_2
+  - first:
+      213: 7333006297090235077
+    second: Red Lizard_3
+  - first:
+      213: 7462593760814907585
+    second: Red Lizard_4
+  - first:
+      213: -5319053234941899270
+    second: Red Lizard_5
+  - first:
+      213: 3681231422959246207
+    second: Red Lizard_6
+  - first:
+      213: -274662553529900877
+    second: Red Lizard_7
+  - first:
+      213: 7575231631907153064
+    second: Red Lizard_8
+  - first:
+      213: 8406112644308975503
+    second: Red Lizard_9
+  - first:
+      213: -1995257351450412069
+    second: Red Lizard_10
+  - first:
+      213: 5178740596705013523
+    second: Red Lizard_11
+  - first:
+      213: -8818165168647107907
+    second: Red Lizard_12
+  - first:
+      213: -4104843730372488101
+    second: Red Lizard_13
+  - first:
+      213: -1645236562965563116
+    second: Red Lizard_14
+  - first:
+      213: 6437542130704636235
+    second: Red Lizard_15
+  - first:
+      213: 8498416708419850798
+    second: Red Lizard_16
+  - first:
+      213: 9089074622147466107
+    second: Red Lizard_17
+  - first:
+      213: 8865932967233736507
+    second: Red Lizard_18
+  - first:
+      213: -3187405271963396385
+    second: Red Lizard_19
+  - first:
+      213: 734473438963417780
+    second: Red Lizard_20
+  - first:
+      213: -135281002081220866
+    second: Red Lizard_21
+  - first:
+      213: -4365961646415763546
+    second: Red Lizard_22
+  - first:
+      213: 3375657758710206122
+    second: Red Lizard_23
+  - first:
+      213: -5777558243794608234
+    second: Red Lizard_24
+  - first:
+      213: 4511192516771686430
+    second: Red Lizard_25
+  - first:
+      213: -4179673080661975068
+    second: Red Lizard_26
+  - first:
+      213: -854954579680117772
+    second: Red Lizard_27
+  - first:
+      213: -5620744783794052415
+    second: Red Lizard_28
+  - first:
+      213: -3565807957007514856
+    second: Red Lizard_29
+  - first:
+      213: -6504853325854222217
+    second: Red Lizard_30
+  - first:
+      213: 570918608997383509
+    second: Red Lizard_31
+  - first:
+      213: -4926005231986986459
+    second: Red Lizard_32
+  - first:
+      213: 2194050618232939553
+    second: Red Lizard_33
+  - first:
+      213: 1920243129753081951
+    second: Red Lizard_34
+  - first:
+      213: -3693665678619443152
+    second: Red Lizard_35
+  - first:
+      213: 1374048228413446344
+    second: Red Lizard_36
+  - first:
+      213: 1790619078440465148
+    second: Red Lizard_37
+  - first:
+      213: 5683146615248175281
+    second: Red Lizard_38
+  - first:
+      213: -1986044689483593299
+    second: Red Lizard_39
+  - first:
+      213: -3991152453026017873
+    second: Red Lizard_40
+  - first:
+      213: 2124664195145863273
+    second: Red Lizard_41
+  - first:
+      213: -7981228909320003230
+    second: Red Lizard_42
+  - first:
+      213: -2221068213378946436
+    second: Red Lizard_43
+  - first:
+      213: 3846681769208028608
+    second: Red Lizard_44
+  - first:
+      213: -592630544547797710
+    second: Red Lizard_45
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Red Lizard_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46d344b8cc490160800000000000000
+      internalID: 6992204321370920523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe2d99046314f4a0800000000000000
+      internalID: -6560597436793016588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee90e007ab2777270800000000000000
+      internalID: 8248187387621804526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca14c1106214c560800000000000000
+      internalID: 7333006297090235077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c04b68ac75709760800000000000000
+      internalID: 7462593760814907585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd45eda34dee26b0800000000000000
+      internalID: -5319053234941899270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bdd75a97c561330800000000000000
+      internalID: 3681231422959246207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0afbfdcd3303cf0800000000000000
+      internalID: -274662553529900877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4e02fa801a02960800000000000000
+      internalID: 7575231631907153064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fb4f999e288a470800000000000000
+      internalID: 8406112644308975503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbbf4b920c6f44e0800000000000000
+      internalID: -1995257351450412069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f2f7272259ed740800000000000000
+      internalID: 5178740596705013523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba0110ff759f9580800000000000000
+      internalID: -8818165168647107907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Lizard_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5498a8206aa807c0800000000000000
+      internalID: -4104843730372488101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

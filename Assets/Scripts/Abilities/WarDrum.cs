@@ -22,9 +22,10 @@ public class WarDrum : Ability
                 continue;
 
             StatusEffect newStatus = Instantiate(statusEffect, partyMember.transform);
+            newStatus.duration = 3;
             newStatus.bonusAttributes *= entity.AbilityFactor;
-            newStatus.Entity = partyMember;
-            partyMember.statusEffects.Add(newStatus);
+            newStatus.Source = entity;
+            partyMember.AddStatusEffect(newStatus);
         }
 
         return true;

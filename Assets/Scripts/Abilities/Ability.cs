@@ -19,6 +19,13 @@ public class Ability : MonoBehaviour
     protected float timerCooldown;
     protected float timerPreparation;
     protected float timerAnimation;
+    public bool IsCasting
+    {
+        get
+        {
+            return state != State.Idle;
+        }
+    }
 
     protected Entity entity;
     protected Entity currentTarget;

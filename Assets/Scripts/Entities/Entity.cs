@@ -58,11 +58,6 @@ public class Entity : MonoBehaviour
     /// The party containing this entity
     /// </summary>
     public Party Party { get; set; }
-    
-    /// <summary>
-    /// The entity can't do anything when stunned
-    /// </summary>
-    public bool Stun { get; set; }
 
     /// <summary>
     /// The entity is dead
@@ -71,9 +66,70 @@ public class Entity : MonoBehaviour
 
     #endregion
     // =================================================
-    #region Level and attributes
+    #region Status effect
     // List of the status effects currently active on the entity
-    public List<StatusEffect> statusEffects;
+    protected List<StatusEffect> statusEffects = new List<StatusEffect>();
+
+
+    /// <summary>
+    /// List of active status
+    /// </summary>
+    protected float stunTimer;
+    protected float burnTimer;
+    protected float burnTick;
+    protected Entity burnSource;
+    protected float fearTimer;
+
+    public void AddStatusEffect(StatusEffect status)
+    {
+        status.Entity = this;
+        statusEffects.Add(status);
+        switch (status.statusEffectType)
+        {
+            case StatusEffectType.Burn:
+                burnTimer = Mathf.Max(burnTimer, status.duration);
+                burnSource = status.Source;
+                burnTick = 1;
+                break;
+            case StatusEffectType.Fear:
+                fearTimer = Mathf.Max(fearTimer, status.duration);
+                break;
+            case StatusEffectType.Stun:
+                stunTimer = Mathf.Max(stunTimer, status.duration);
+                break;
+        }
+    }
+
+    public void RemoveStatusEffect(StatusEffect status)
+    {
+        statusEffects.Remove(status);
+    }
+
+    private void UpdateStatusEffect()
+    {
+        if (stunTimer > 0)
+            stunTimer -= Time.deltaTime;
+        if (burnTimer > 0)
+        {
+            burnTimer -= Time.deltaTime;
+            burnTick -= Time.deltaTime;
+            if (burnTick <= 0)
+            {
+                ApplyDamage(Mathf.RoundToInt(10 * burnSource.AbilityFactor), DamageType.Magical, burnSource);
+                burnTick = 1;
+            }
+
+        }
+        if (fearTimer > 0)
+        {
+            fearTimer -= Time.deltaTime;
+            Party.SwapEntity(this);
+        }
+    }
+
+    #endregion
+    // =================================================
+    #region Level and attributes
 
     // The level of the entity. Define the general power level of the entity.
     private int level;
@@ -215,7 +271,7 @@ public class Entity : MonoBehaviour
             case EntityState.Idle:
                 if (Dead)
                     State = EntityState.Dead;     
-                else if (Stun)
+                else if (stunTimer > 0)
                     State = EntityState.Stunned;
                 else
                     State = MoveToRightPosition();
@@ -229,7 +285,7 @@ public class Entity : MonoBehaviour
             case EntityState.Stunned:
                 if (Dead)
                     State = EntityState.Dead;
-                else if (!Stun)
+                else if (stunTimer <= 0)
                     State = EntityState.Idle;
                 break;
             case EntityState.Dead:
@@ -294,7 +350,11 @@ public class Entity : MonoBehaviour
     public delegate void KillEvent(Entity killed, Entity killer);
     public KillEvent killEvent;
 
-    // Variables for the daeth animation
+    // Variable for the damage animation
+    private readonly float redTime = 0.25f;
+    private float timerRed;
+
+    // Variables for the death animation
     private Vector3 DeathSpeed = new Vector3(-1, 2, 0);
     private float timerFade = 1;
     private float rotationSpeed = 20;
@@ -329,6 +389,10 @@ public class Entity : MonoBehaviour
         }
 
         text.Text = "-" + Mathf.RoundToInt(amountFloat);
+
+        timerRed = redTime;
+        legs.color = Color.red;
+        body.color = Color.red;
 
         CurrentHealth -= Mathf.RoundToInt(amountFloat);
         if (CurrentHealth <= 0)
@@ -392,6 +456,19 @@ public class Entity : MonoBehaviour
 
         // Send the event
         killEvent?.Invoke(this, killer);
+    }
+
+    private void UpdateDamageAnimation()
+    {
+        if (timerRed > 0)
+        {
+            timerRed -= Time.deltaTime;
+
+            Color color = new Color(1, (redTime - timerRed) / redTime, (redTime - timerRed) / redTime);
+
+            legs.color = color;
+            body.color = color;
+        }
     }
 
     private void UpdateDeathAnimation()
@@ -462,9 +539,12 @@ public class Entity : MonoBehaviour
             else
                 bufferClickTimer -= Time.deltaTime;
         }
-
+        // Update the status effect applied to the entity
+        UpdateStatusEffect();
         // Update the state machine and the entity movements
         UpdateStateMachine();
+        // Update red effect for damage
+        UpdateDamageAnimation();
     }
     #endregion
     // =================================================

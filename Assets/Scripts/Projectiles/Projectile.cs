@@ -39,7 +39,8 @@ public class Projectile : MonoBehaviour
             Entity entity = hit.GetComponent<Entity>();
 
             // Something got hit
-            Hit(entity);
+            if (entity != null)
+                Hit(entity);
         }
     }
 
