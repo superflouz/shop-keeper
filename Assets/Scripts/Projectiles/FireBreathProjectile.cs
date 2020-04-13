@@ -30,7 +30,7 @@ public class FireBreathProjectile : Projectile
 
     protected override void Hit(Entity entity)
     {
-        if (entity.Party.faction != Faction)
+        if (entity != null && entity.Party != null && entity.Party.faction != Faction)
         {
             // Make the recipient of the projectile take damage
             entity.ApplyDamage(Damage, damageType, Source);
