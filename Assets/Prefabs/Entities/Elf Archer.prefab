@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9033857126132502998}
   - component: {fileID: 867802959980236440}
-  - component: {fileID: 4611224508160081801}
+  - component: {fileID: 7747846153296991978}
   - component: {fileID: 2459297863732772537}
   - component: {fileID: 827287757326477858}
   - component: {fileID: 2191661024495378311}
@@ -141,8 +141,7 @@ MonoBehaviour:
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
-  statusEffects: []
---- !u!114 &4611224508160081801
+--- !u!114 &7747846153296991978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,10 +150,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6134281853225055614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f694d29b057d73c4fbbb81dd17315d12, type: 3}
+  m_Script: {fileID: 11500000, guid: 76edc1023bee8ad4cbe55a45f0fa5e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 6
+  range: 7
 --- !u!114 &2459297863732772537
 MonoBehaviour:
   m_ObjectHideFlags: 0

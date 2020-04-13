@@ -27,10 +27,6 @@ public class ArrowAttack : Attack
     /// <param name="target">Target to attack</param>
     protected override bool ExecuteAttack(Entity target)
     {
-        if (target == null) {
-            return false;
-        }
-
         // Instantiate arrow
         CurvedProjectile projectile; 
         projectile = Instantiate(arrow, transform.position + Vector3.up * 1f, Quaternion.identity);

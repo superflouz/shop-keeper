@@ -75,21 +75,28 @@ public class Entity : MonoBehaviour
     /// List of active status
     /// </summary>
     protected float stunTimer;
-    protected float burnTimer;
-    protected float burnTick;
-    protected Entity burnSource;
-    protected float fearTimer;
 
+    protected float statusTick;
+    protected Entity statusSource;
+    protected StatusEffectType statusType;
+
+    protected float fearTimer;
+    
     public void AddStatusEffect(StatusEffect status)
     {
-        status.Entity = this;
-        statusEffects.Add(status);
         switch (status.statusEffectType)
         {
             case StatusEffectType.Burn:
-                burnTimer = Mathf.Max(burnTimer, status.duration);
-                burnSource = status.Source;
-                burnTick = 1;
+                ClearCommonStatus();
+                statusSource = status.Source;
+                statusTick = 1;
+                statusType = StatusEffectType.Burn;
+                break;
+            case StatusEffectType.Poison:
+                ClearCommonStatus();
+                statusSource = status.Source;
+                statusTick = 1;
+                statusType = StatusEffectType.Poison;
                 break;
             case StatusEffectType.Fear:
                 fearTimer = Mathf.Max(fearTimer, status.duration);
@@ -98,25 +105,52 @@ public class Entity : MonoBehaviour
                 stunTimer = Mathf.Max(stunTimer, status.duration);
                 break;
         }
+        status.Entity = this;
+        statusEffects.Add(status);
+    }
+
+    public void ClearCommonStatus()
+    {
+        List<StatusEffect> toRemove = new List<StatusEffect>();
+        foreach (StatusEffect status in statusEffects)
+        {
+            if (status.statusEffectType == StatusEffectType.Burn ||
+                status.statusEffectType == StatusEffectType.Poison)
+            {
+                toRemove.Add(status);
+            }
+        }
+        foreach (StatusEffect status in toRemove)
+        {
+            RemoveStatusEffect(status);
+        }
     }
 
     public void RemoveStatusEffect(StatusEffect status)
     {
+        if (status.statusEffectType == StatusEffectType.Burn ||
+                status.statusEffectType == StatusEffectType.Poison)
+        {
+            statusType = StatusEffectType.None;
+        }
         statusEffects.Remove(status);
+        Destroy(status.gameObject);
     }
 
     private void UpdateStatusEffect()
     {
         if (stunTimer > 0)
             stunTimer -= Time.deltaTime;
-        if (burnTimer > 0)
+        if (statusType == StatusEffectType.Burn || statusType == StatusEffectType.Poison)
         {
-            burnTimer -= Time.deltaTime;
-            burnTick -= Time.deltaTime;
-            if (burnTick <= 0)
+            statusTick -= Time.deltaTime;
+            if (statusTick <= 0)
             {
-                ApplyDamage(Mathf.RoundToInt(10 * burnSource.AbilityFactor), DamageType.Magical, burnSource);
-                burnTick = 1;
+                if (statusType == StatusEffectType.Burn)
+                    ApplyDamage(Mathf.RoundToInt(10 * statusSource.AbilityFactor), DamageType.Magical, statusSource);
+                if (statusType == StatusEffectType.Poison)
+                    ApplyDamage(Mathf.RoundToInt(4 * statusSource.AbilityFactor), DamageType.Magical, statusSource);
+                statusTick = 1;
             }
 
         }

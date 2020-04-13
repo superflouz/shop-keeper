@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7616927506501009132}
   - component: {fileID: 1028214789930253380}
-  - component: {fileID: 8335922273480757451}
+  - component: {fileID: 2118077798845273310}
   - component: {fileID: 1206908590908993241}
   - component: {fileID: 9081154625345176871}
   - component: {fileID: 7504935882607404479}
@@ -53,14 +53,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotCount: 1
   startingLevel: 1
-  baseHealth: 75
+  baseHealth: 120
   baseMana: 0
   armor: 10
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
-  statusEffects: []
---- !u!114 &8335922273480757451
+--- !u!114 &2118077798845273310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,10 +68,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5851387864386417813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f694d29b057d73c4fbbb81dd17315d12, type: 3}
+  m_Script: {fileID: 11500000, guid: 76edc1023bee8ad4cbe55a45f0fa5e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
+  range: 1
 --- !u!114 &1206908590908993241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,8 +84,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4dc3b16d869514ba4cbb098d12a67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 1.2
-  baseDamage: 10
+  attackSpeed: 1
+  baseDamage: 7
 --- !u!114 &9081154625345176871
 MonoBehaviour:
   m_ObjectHideFlags: 0

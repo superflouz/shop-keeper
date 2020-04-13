@@ -8,7 +8,8 @@ public enum StatusEffectType
     None,
     Burn,
     Stun,
-    Fear
+    Fear,
+    Poison
 }
 
 public class StatusEffect : MonoBehaviour
@@ -29,11 +30,13 @@ public class StatusEffect : MonoBehaviour
 
     private void Update()
     {
-        TimeRemaining -= Time.deltaTime;
-        if (TimeRemaining <= 0)
+        if (TimeRemaining > 0)
         {
-            Entity.RemoveStatusEffect(this);
-            Destroy(gameObject);
+            TimeRemaining -= Time.deltaTime;
+            if (TimeRemaining <= 0)
+            {
+                Entity.RemoveStatusEffect(this);
+            }
         }
     }
 }

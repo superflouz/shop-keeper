@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a3ec427dd472d4d438d3c36a2035f677, type: 2}
+  m_Motion: {fileID: 7400000, guid: 43998ab2e37730d4685536c3ccb8773c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -48,7 +48,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5d61c78ec05971d4e915c0877b1cbebd, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7abc06b5c9eb85a498921021b8b85f90, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -178,7 +178,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 52245c7884f2a614db907946468922e3, type: 2}
+  m_Motion: {fileID: 7400000, guid: f73815ceb8409c0469e1991d1626e018, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -240,7 +240,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ElfArcher
+  m_Name: GreenLizard
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Prepare Attack
@@ -314,7 +314,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cf77751f7b7e8f644b17989d7b5b50ec, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5563ad353ffef3244aa34a9f9745e7f1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -341,7 +341,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: fec9293b9045d394eb47dd63b5df093c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 400cd9a2d7a08694fa3cac01c034228c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

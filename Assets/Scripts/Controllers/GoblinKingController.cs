@@ -86,7 +86,7 @@ public class GoblinKingController : Controller
             {
                 Entity enemy = hit.GetComponent<Entity>();
                 // Check the first enemy in front of the entity
-                if (enemy.Party.faction != entity.Party.faction)
+                if (enemy != null && enemy.Party != null && enemy.Party.faction != entity.Party.faction)
                 {
                     if (!SecondPhase)
                         coinTossAttack.PrepareAttack(enemy);

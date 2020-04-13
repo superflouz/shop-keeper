@@ -5,6 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public int Damage { get; set; }
+    public DamageType damageType;
+
 
     private Entity source;
     public Entity Source { 
@@ -54,7 +56,7 @@ public class Projectile : MonoBehaviour
         if (entity.Party.faction != Faction)
         {
             // Make the recipient of the projectile take damage
-            entity.ApplyDamage(Damage, DamageType.Physical, Source);
+            entity.ApplyDamage(Damage, damageType, Source);
 
             // Destroy this projectile
             Destroy(gameObject);

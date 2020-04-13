@@ -21,6 +21,7 @@ public class Attack : MonoBehaviour
 
     protected Entity entity;
     protected Entity currentTarget;
+    protected Vector2 currentPosition;
 
     protected Animator animator;
 
@@ -54,7 +55,7 @@ public class Attack : MonoBehaviour
                 timerPreparation -= Time.deltaTime;
                 if (timerPreparation <= 0)
                 {
-                    if (ExecuteAttack(currentTarget))
+                    if (ExecuteAttack(currentTarget) || ExecuteAttack(currentPosition))
                     {
                         currentTarget = null;
 
@@ -106,18 +107,14 @@ public class Attack : MonoBehaviour
     /// <summary>
     /// Set Up for an Attack
     /// </summary>
-    /// <param name="target">Entity to attack</param>
     /// <returns>action success</returns>
-    public virtual bool PrepareAttack(Entity target)
+    public virtual bool PrepareAttacke()
     {
         // Attack only if the cooldown is at 0
         if (timerCooldown > 0)
         {
             return false;
         }
-
-        // Set target
-        currentTarget = target;
 
         //  Set state, timer and animations
         state = State.Preparing;
@@ -129,7 +126,34 @@ public class Attack : MonoBehaviour
 
         return true;
     }
-    
+
+    /// <summary>
+    /// Set Up for an Attack
+    /// </summary>
+    /// <param name="target">Entity to attack</param>
+    /// <returns>action success</returns>
+    public virtual bool PrepareAttack(Entity target)
+    {
+        // Set target
+        currentTarget = target;
+
+        return PrepareAttacke();
+    }
+
+    /// <summary>
+    /// Set Up for an Attack
+    /// </summary>
+    /// <param name="position">Position to attack</param>
+    /// <returns>action success</returns>
+    public virtual bool PrepareAttack(Vector2 position)
+    {
+        // Set target
+        currentPosition = position;
+
+        return PrepareAttacke();
+    }
+
+
     /// <summary>
     /// Launches an attack to the target
     /// </summary>
@@ -137,6 +161,16 @@ public class Attack : MonoBehaviour
     protected virtual bool ExecuteAttack(Entity target)
     {
         // Default action, override in heritage to change it
-        return true;
+        return false;
+    }
+
+    /// <summary>
+    /// Launches an attack to the position
+    /// </summary>
+    /// <param name="position">Position to attack</param>
+    protected virtual bool ExecuteAttack(Vector2 position)
+    {
+        // Default action, override in heritage to change it
+        return false;
     }
 }

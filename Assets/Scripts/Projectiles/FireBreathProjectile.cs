@@ -33,11 +33,10 @@ public class FireBreathProjectile : Projectile
         if (entity.Party.faction != Faction)
         {
             // Make the recipient of the projectile take damage
-            entity.ApplyDamage(Damage, DamageType.Magical, Source);
+            entity.ApplyDamage(Damage, damageType, Source);
 
             StatusEffect effect = Instantiate(burnEffect, entity.transform);
             effect.Source = entity;
-            effect.duration = 5;
 
             entity.AddStatusEffect(effect);
 

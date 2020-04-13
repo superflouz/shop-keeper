@@ -22,9 +22,13 @@ public class RedLizardController : Controller
         // Check if can attack
         if (entity.State == EntityState.Idle)
         {
+            Vector2 positionTarget = (Vector2)entity.transform.position;
+            positionTarget.y = 0;
+            positionTarget += Vector2.right * entity.transform.localScale.x * (float)range;
+
             // Maths for overlap
-            Vector2 a = entity.transform.position + Vector3.down * range;
-            Vector2 b = (Vector2)transform.position + Vector2.right * transform.localScale.x * ((float)entity.slotCount / 2f + range + 0.5f) + Vector2.up * range;
+            Vector2 a = positionTarget + Vector2.left * 0.2f;
+            Vector2 b = positionTarget + Vector2.right * 0.2f + Vector2.up * (0.2f + range - 1 + entity.transform.position.y);
 
             Entity target = null;
 
@@ -36,11 +40,8 @@ public class RedLizardController : Controller
                 // Check the first enemy in front of the entity
                 if (hitEntity.Party.faction != entity.Party.faction)
                 {
-                    // Check if the new one is closer
-                    if (target == null)
-                        target = hitEntity;
-                    else if (Vector3.Distance(entity.transform.position, hitEntity.transform.position) < Vector3.Distance(entity.transform.position, target.transform.position))
-                        target = hitEntity;
+                    target = hitEntity;
+                    break;
                 }
             }
 

@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1538192036081418661}
   - component: {fileID: 8262118844601680653}
-  - component: {fileID: 1099766249275355010}
+  - component: {fileID: 6699358039483132647}
   - component: {fileID: 7805809421609357712}
   - component: {fileID: 210187811088464494}
   - component: {fileID: 1498258160844446454}
@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3303474943602953180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.81, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3183286808859211170}
@@ -223,8 +223,7 @@ MonoBehaviour:
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
-  statusEffects: []
---- !u!114 &1099766249275355010
+--- !u!114 &6699358039483132647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -233,7 +232,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3303474943602953180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f694d29b057d73c4fbbb81dd17315d12, type: 3}
+  m_Script: {fileID: 11500000, guid: 76edc1023bee8ad4cbe55a45f0fa5e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1

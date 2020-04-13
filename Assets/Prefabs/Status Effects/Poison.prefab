@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7090477291492805607
+--- !u!1 &6453707570994201293
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5429917781239429044}
-  - component: {fileID: 3391533427944995737}
-  - component: {fileID: -6253844154074969267}
-  - component: {fileID: 2074896723687350377}
-  - component: {fileID: 1665161688194772018}
+  - component: {fileID: 4938005254334170038}
+  - component: {fileID: 7185412417278533015}
+  - component: {fileID: 8567234766474385336}
+  - component: {fileID: 5888308302302662081}
   m_Layer: 0
-  m_Name: Fire Breath
+  m_Name: Poison
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5429917781239429044
+--- !u!4 &4938005254334170038
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7090477291492805607}
+  m_GameObject: {fileID: 6453707570994201293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,43 +33,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3391533427944995737
+--- !u!114 &7185412417278533015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7090477291492805607}
+  m_GameObject: {fileID: 6453707570994201293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 068a44f46969ad94680c03b2721926bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f2338d2daba64429fcf5b7a351c7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.96
-  fade: 0
---- !u!114 &-6253844154074969267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7090477291492805607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 707e865f9f9ac56468f204ac8edd6541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageType: 1
-  delayDamages: 0.64
-  burnEffect: {fileID: 7630699533952225226, guid: 0655b3a78d6ac444f853bdae33de9564,
-    type: 3}
---- !u!212 &2074896723687350377
+  duration: -1
+  bonusAttributes:
+    Strength: 0
+    Dexterity: 0
+    Intelligence: 0
+    Constitution: 0
+    BonusArmor: 0
+    BonusMagicResistance: 0
+  statusEffectType: 4
+--- !u!212 &8567234766474385336
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7090477291492805607}
+  m_GameObject: {fileID: 6453707570994201293}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -103,29 +93,29 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 6495046168732721388, guid: 5458bb71693219745a63242a4a780b52,
+  m_Sprite: {fileID: -4347532159779508366, guid: c08f7e7eb97641a4e97522b92242ef61,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3, y: 1}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1665161688194772018
+--- !u!95 &5888308302302662081
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7090477291492805607}
+  m_GameObject: {fileID: 6453707570994201293}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 09209fd1ac5d11941814bb463f7f0416, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8cfec99e7dbadfc4c9ce30792ec0047e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

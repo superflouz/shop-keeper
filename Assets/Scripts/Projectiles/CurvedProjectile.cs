@@ -40,14 +40,15 @@ public class CurvedProjectile : Projectile
     {
         // Set t (time) default value
         t = 0;
-        // The projectile will have the same speed regardless of the distance
-        ratioSpeed = 1 / (Mathf.Abs(Origin.x - Destination.x) + 1.5f * Mathf.Abs(Origin.y - MiddlePoint.y));
 
         // Calculate the middle point
         Vector2 middlePoint;
         middlePoint.x = (Origin.x + Destination.x) / 2;
-        middlePoint.y = Origin.y + Mathf.Abs(Origin.x - Destination.x) + Random.Range(0, 0.4f);
+        middlePoint.y = Origin.y + 6;
         MiddlePoint = middlePoint;
+
+        // The projectile will have the same speed regardless of the distance (grosso merdo)
+        ratioSpeed = 1 / (Mathf.Abs(Origin.x - Destination.x) + 1.5f * Mathf.Abs(Origin.y - MiddlePoint.y));
     }
 
     // Update is called once per frame

@@ -24,11 +24,6 @@ public class SlingAttack : Attack
 
     protected override bool ExecuteAttack(Entity target)
     {
-        if (target == null) 
-        {
-            return false;
-        }
-
         for (int i = 0; i < projectileCount; i++) 
         {
             CurvedProjectile projectile;
@@ -36,7 +31,7 @@ public class SlingAttack : Attack
 
             // Calculate Origin and Destination
             projectile.Origin = transform.position + Vector3.right * transform.localScale.x * entity.slotCount / 4 + Vector3.up * entity.slotCount;
-            projectile.Destination = target.transform.position + Vector3.up * 0.5f + Vector3.right * entity.transform.localScale.x * Random.Range(0f, i);
+            projectile.Destination = target.transform.position + Vector3.up * 0.5f + Vector3.right * ((i * transform.localScale.x) + Random.Range(-0.2f, 0.2f));
 
             // Set Speed
             projectile.ProjectileSpeed = projectileSpeed;
