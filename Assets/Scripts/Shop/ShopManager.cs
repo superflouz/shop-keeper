@@ -22,7 +22,8 @@ public class ShopManager : MonoBehaviour
             // Instantiate Entity and Add it to party
             if (party.GetFreeSlotsCount() >= entity.slotCount)
             {
-                Entity newEntity = Instantiate(entity);        
+                Entity newEntity = Instantiate(entity);
+                newEntity.transform.position = party.transform.position + Vector3.left * 10;
                 party.AddToParty(newEntity);
                 Currency = newCurrency;
 
