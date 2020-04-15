@@ -333,8 +333,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 92906303452652470}
-  - component: {fileID: 6680692821773480554}
-  m_Layer: 10
+  - component: {fileID: 4902064152525204708}
+  m_Layer: 0
   m_Name: ResourceBarBoss
   m_TagString: ResourceBar
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6680692821773480554
+--- !u!114 &4902064152525204708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
