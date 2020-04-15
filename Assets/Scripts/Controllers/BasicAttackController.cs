@@ -22,11 +22,11 @@ public class BasicAttackController : Controller
         {
             Vector2 positionTarget = (Vector2)entity.transform.position;
             positionTarget.y = 0;
-            positionTarget += Vector2.right * entity.transform.localScale.x * (float)range;
+            positionTarget += Vector2.right * entity.slotCount * entity.transform.localScale.x * (float)range;
 
             // Maths for overlap
             Vector2 a = entity.transform.position;
-            Vector2 b = positionTarget + Vector2.right * 0.2f + Vector2.up * (0.2f + range - 1 + entity.transform.position.y);
+            Vector2 b = positionTarget + Vector2.up * (0.2f + range - 1 + entity.transform.position.y);
 
             Entity target = null;
 
