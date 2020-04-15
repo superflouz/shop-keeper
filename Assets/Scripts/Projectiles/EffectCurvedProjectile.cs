@@ -14,7 +14,7 @@ public class EffectCurvedProjectile : CurvedProjectile
             entity.ApplyDamage(Damage, damageType, Source);
 
             StatusEffect effect = Instantiate(statusEffect, entity.transform);
-            effect.Source = entity;
+            effect.Source = Source;
 
             entity.AddStatusEffect(effect);
 

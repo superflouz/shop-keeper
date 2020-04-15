@@ -147,9 +147,10 @@ public class Entity : MonoBehaviour
             if (statusTick <= 0)
             {
                 if (statusType == StatusEffectType.Burn)
-                    ApplyDamage(Mathf.RoundToInt(10 * statusSource.AbilityFactor), DamageType.Magical, statusSource);
+                    ApplyDamage(Mathf.RoundToInt(MaxHealth / 15f), DamageType.Magical, statusSource);
                 if (statusType == StatusEffectType.Poison)
-                    ApplyDamage(Mathf.RoundToInt(4 * statusSource.AbilityFactor), DamageType.Magical, statusSource);
+                    ApplyDamage(Mathf.RoundToInt(MaxHealth / 50f), DamageType.Piercing, statusSource);
+
                 statusTick = 1;
             }
 
@@ -275,7 +276,7 @@ public class Entity : MonoBehaviour
         }
     }
 
-    // The current factor to apply to the values of the abilities used by this entity
+    // The current factor to apply to the values of the abilities used by this entity based on intelligence
     public float AbilityFactor
     {
         get
@@ -284,13 +285,29 @@ public class Entity : MonoBehaviour
         }
     }
 
-    // The current factor to apply to the attack speed of this entity
+    // The current factor to apply to the attack speed of this entity based on dexterity
     public float AttackSpeedFactor
     {
         get
         {
             return (float)Attributes.Dexterity / 10;
         }
+    }
+
+    public float HealthRegenerationFactor
+    {
+        get
+        {
+            return (float)Attributes.HealthRegeneration / 10;
+        }
+    }
+
+    public float ManaRegenerationFactor
+    {
+        get
+        {
+            return (float) Attributes.HealthRegeneration / 10;
+}
     }
     #endregion
     // =================================================
@@ -559,11 +576,11 @@ public class Entity : MonoBehaviour
     {
         // All entities get 10 mana each seconds.
         if (currentMana < MaxMana)
-            currentMana = Mathf.MoveTowards(currentMana, MaxMana, 10 * Time.deltaTime);
+            currentMana = Mathf.MoveTowards(currentMana, MaxMana, 10 * ManaRegenerationFactor * Time.deltaTime);
 
         // All entities get 2 health each seconds.
         if (currentHealth < MaxHealth)
-            currentHealth = Mathf.MoveTowards(currentHealth, MaxHealth, 2 * Time.deltaTime);
+            currentHealth = Mathf.MoveTowards(currentHealth, MaxHealth, 2 * HealthRegenerationFactor * Time.deltaTime);
 
         // Check if a click was buffered
         if (bufferClickTimer > 0)

@@ -16,6 +16,8 @@ public struct Attributes
         Dexterity = 10;
         Intelligence = 10 + (level - 1);
         Constitution = 10 + (level - 1);
+        HealthRegeneration = 10 + (level - 1);
+        ManaRegeneration = 10;
         BonusArmor = 0;
         BonusMagicResistance = 0;
     }
@@ -77,6 +79,14 @@ public struct Attributes
     /// The constitution changes the health of the entity (10 = 100%).
     /// </summary>
     public int Constitution;
+    /// <summary>
+    /// The health regeneration multiply the base health regeneration of the entity (10 = 100%).
+    /// </summary>
+    public int HealthRegeneration;
+    /// <summary>
+    /// The mana regeneration multiply the base mana regeneration of the entity (10 = 100%).
+    /// </summary>
+    public int ManaRegeneration;
     /// <summary>
     /// The bonus armor is added to the base armor of the entity.
     /// </summary>
