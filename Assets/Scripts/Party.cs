@@ -94,7 +94,6 @@ public class Party : MonoBehaviour
         return occupiedSlotsCount;
     }
 
-
     /// <summary>
     /// Add an Entity to your party
     /// </summary>
@@ -129,8 +128,6 @@ public class Party : MonoBehaviour
         {
             return false;
         }
-
-
 
         if (entities.Count > index + 1)
         {
