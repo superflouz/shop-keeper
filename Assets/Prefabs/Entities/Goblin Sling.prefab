@@ -59,7 +59,7 @@ MonoBehaviour:
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
---- !u!114 &1739679297798415288
+--- !u!114 &8335922273480757451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7b38163a8711848a0ede80254e796a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entity: {fileID: 1028214789930253380}
   icon: {fileID: 3434086634727231013, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Goblin Slinger
   description: Weak ranged character

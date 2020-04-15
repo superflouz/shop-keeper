@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7b38163a8711848a0ede80254e796a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entity: {fileID: 6318953682973651224}
   icon: {fileID: -168777754515822616, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Red Lizard
   description: Breath fire on enemies
