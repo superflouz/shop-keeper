@@ -174,11 +174,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1538192036081418661}
   - component: {fileID: 8262118844601680653}
-  - component: {fileID: 6699358039483132647}
   - component: {fileID: 7805809421609357712}
   - component: {fileID: 210187811088464494}
   - component: {fileID: 1498258160844446454}
   - component: {fileID: 9010563792637638172}
+  - component: {fileID: 1099766249275355010}
   m_Layer: 8
   m_Name: Harpy
   m_TagString: Untagged
@@ -223,19 +223,7 @@ MonoBehaviour:
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
---- !u!114 &1099766249275355010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3303474943602953180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76edc1023bee8ad4cbe55a45f0fa5e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 1
+  goldYield: 12
 --- !u!114 &7805809421609357712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +300,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1099766249275355010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303474943602953180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76edc1023bee8ad4cbe55a45f0fa5e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 1
 --- !u!1001 &4465373531735095780
 PrefabInstance:
   m_ObjectHideFlags: 0

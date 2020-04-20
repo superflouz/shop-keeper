@@ -92,11 +92,11 @@ GameObject:
   m_Component:
   - component: {fileID: 9033857126132502998}
   - component: {fileID: 867802959980236440}
-  - component: {fileID: 7747846153296991978}
   - component: {fileID: 2459297863732772537}
   - component: {fileID: 827287757326477858}
   - component: {fileID: 2191661024495378311}
   - component: {fileID: 1344062735586239165}
+  - component: {fileID: 4611224508160081801}
   m_Layer: 8
   m_Name: Elf Archer
   m_TagString: Untagged
@@ -141,19 +141,7 @@ MonoBehaviour:
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
---- !u!114 &4611224508160081801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6134281853225055614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76edc1023bee8ad4cbe55a45f0fa5e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 7
+  goldYield: 10
 --- !u!114 &2459297863732772537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +174,7 @@ MonoBehaviour:
   icon: {fileID: 2130535880278150251, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Elf Archer
   description: Deal damages from range
-  price: 30
+  price: 25
 --- !u!61 &2191661024495378311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -232,6 +220,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4611224508160081801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134281853225055614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76edc1023bee8ad4cbe55a45f0fa5e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 7
 --- !u!1 &7439100805852674686
 GameObject:
   m_ObjectHideFlags: 0

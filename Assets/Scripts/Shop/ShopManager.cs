@@ -4,14 +4,31 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
+    const int currencyCap = 99999;
     public Party party;
 
     private int currency;
     public int Currency
     {
         get { return currency; }
-        set { currency = value; }
+        set
+        {
+            if (currency > currencyCap)
+                currency = currencyCap;
+            else
+            {
+                currency = value;
+                currencySet?.Invoke(value);
+            }                             
+        }
     }
+
+    // Fire this event when the currency changes
+    public delegate void OnCurrencyChanged(int amount, int currency);
+    public OnCurrencyChanged currencyChanged;
+
+    public delegate void OnCurrencySet(int currency);
+    public OnCurrencySet currencySet;
 
     public void GainEntityReward(Entity killed, Entity killer)
     {
@@ -19,8 +36,9 @@ public class ShopManager : MonoBehaviour
     }
 
     public void AddCurrency(int amount)
-    {
+    {     
         Currency += amount;
+        currencyChanged?.Invoke(amount, currency);
     }
 
     public bool BuyEntity(Entity entity, Buyable buyable)
@@ -53,7 +71,7 @@ public class ShopManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Currency = 1000;        
+        Currency = 100;        
     }
 
     // Update is called once per frame

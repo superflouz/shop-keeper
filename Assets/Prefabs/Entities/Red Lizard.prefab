@@ -60,6 +60,7 @@ MonoBehaviour:
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
+  goldYield: 25
 --- !u!114 &631017698273966543
 MonoBehaviour:
   m_ObjectHideFlags: 0
