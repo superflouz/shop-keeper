@@ -13,6 +13,16 @@ public class ShopManager : MonoBehaviour
         set { currency = value; }
     }
 
+    public void GainEntityReward(Entity killed, Entity killer)
+    {
+        AddCurrency(killed.GoldYield);
+    }
+
+    public void AddCurrency(int amount)
+    {
+        Currency += amount;
+    }
+
     public bool BuyEntity(Entity entity, Buyable buyable)
     {
         int newCurrency = Currency - buyable.GetPrice();
@@ -22,8 +32,9 @@ public class ShopManager : MonoBehaviour
             // Instantiate Entity and Add it to party
             if (party.GetFreeSlotsCount() >= entity.slotCount)
             {
-                Entity newEntity = Instantiate(entity);
+                Entity newEntity = Instantiate(entity, party.transform.position, Quaternion.identity);
                 newEntity.transform.position = party.transform.position + Vector3.left * 10;
+                newEntity.killEvent += GainEntityReward;
                 party.AddToParty(newEntity);
                 Currency = newCurrency;
 
@@ -42,7 +53,7 @@ public class ShopManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Currency = 10000;
+        Currency = 1000;        
     }
 
     // Update is called once per frame

@@ -50,6 +50,8 @@ public class Entity : MonoBehaviour
     public int magicResistance;
     [SerializeField, Tooltip("The prefab for the floating text.")]
     public FloatingText floatingText;
+    [SerializeField, Tooltip("The gold yield from killing this entity.")]
+    public int goldYield;
 
     #endregion
     // =================================================
@@ -307,7 +309,15 @@ public class Entity : MonoBehaviour
         get
         {
             return (float) Attributes.HealthRegeneration / 10;
-}
+        }
+    }
+
+    public int GoldYield
+    {
+        get
+        {
+            return goldYield;
+        }
     }
     #endregion
     // =================================================
