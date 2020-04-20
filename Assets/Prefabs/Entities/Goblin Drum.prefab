@@ -223,6 +223,7 @@ MonoBehaviour:
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
+  goldYield: 10
 --- !u!114 &5561930345095010833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +268,7 @@ MonoBehaviour:
   icon: {fileID: 2514988542215765323, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Goblin Drummer
   description: Boost allies attack speed
-  price: 60
+  price: 25
 --- !u!95 &5701649342011484121
 Animator:
   serializedVersion: 3

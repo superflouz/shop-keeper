@@ -223,6 +223,7 @@ MonoBehaviour:
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
+  goldYield: 20
 --- !u!114 &2231272745146729095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7b38163a8711848a0ede80254e796a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entity: {fileID: 0}
   icon: {fileID: -8930018218856646630, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Green Lizard
   description: Launch poisonous projectile

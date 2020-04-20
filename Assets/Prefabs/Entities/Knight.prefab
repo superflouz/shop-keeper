@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187f2a00ad9be7a4abc4016acd54c60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotCount: 2
+  slotCount: 1
   startingLevel: 1
   baseHealth: 500
   baseMana: 0
@@ -59,6 +59,7 @@ MonoBehaviour:
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
+  goldYield: 40
 --- !u!114 &5501682625214188041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,11 +379,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4038990540222083961, guid: d6164bc224bca4543a23a5994f3056b6,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6164bc224bca4543a23a5994f3056b6, type: 3}

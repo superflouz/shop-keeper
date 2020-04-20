@@ -141,6 +141,7 @@ MonoBehaviour:
   magicResistance: 0
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
+  goldYield: 5
 --- !u!114 &8833601086607716461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +185,7 @@ MonoBehaviour:
   icon: {fileID: 1161201145128540330, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Swordman
   description: Standard melee character
-  price: 20
+  price: 10
 --- !u!61 &6002299548632894560
 BoxCollider2D:
   m_ObjectHideFlags: 0
