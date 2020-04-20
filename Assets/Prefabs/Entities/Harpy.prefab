@@ -254,7 +254,7 @@ MonoBehaviour:
   icon: {fileID: 3220665290143086019, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Harpy
   description: Flying fighter
-  price: 30
+  price: 25
 --- !u!95 &1498258160844446454
 Animator:
   serializedVersion: 3

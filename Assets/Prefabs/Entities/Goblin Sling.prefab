@@ -93,7 +93,7 @@ MonoBehaviour:
   icon: {fileID: 3434086634727231013, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Goblin Slinger
   description: Weak ranged character
-  price: 20
+  price: 15
 --- !u!95 &7504935882607404479
 Animator:
   serializedVersion: 3

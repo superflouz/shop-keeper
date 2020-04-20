@@ -121,7 +121,7 @@ MonoBehaviour:
   icon: {fileID: -168777754515822616, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Red Lizard
   description: Breath fire on enemies
-  price: 50
+  price: 25
 --- !u!95 &3590352339992029411
 Animator:
   serializedVersion: 3
