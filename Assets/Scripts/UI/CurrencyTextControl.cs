@@ -31,7 +31,7 @@ public class CurrencyTextControl : MonoBehaviour
     {
         FloatingText floatText = Instantiate(floatingText, text.transform.position, Quaternion.identity);
         floatText.Color = Color.yellow;
-        floatText.Text = amount.ToString() + " G";
+        floatText.Text = "+" + amount.ToString();
 
         text.text = currency.ToString();
     }
