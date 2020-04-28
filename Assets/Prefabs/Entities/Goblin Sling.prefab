@@ -72,10 +72,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9196246d5647c4ab2c8fa874e5e5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 0.5
-  baseDamage: 8
+  attackSpeed: 0.4
+  baseDamage: 10
   scrap: {fileID: -4404792028517138254, guid: 29e90a7521f64dd47955be2c128c9d80, type: 3}
-  projectileSpeed: 4
+  projectileSpeed: 3
   projectileCount: 2
 --- !u!114 &2111015918050900656
 MonoBehaviour:
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76edc1023bee8ad4cbe55a45f0fa5e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 3
+  range: 5
 --- !u!1 &8106113307609407496
 GameObject:
   m_ObjectHideFlags: 0

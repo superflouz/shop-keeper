@@ -61,7 +61,7 @@ MonoBehaviour:
   magicResistance: 20
   floatingText: {fileID: 4474313879110062980, guid: 59ef6d18bbbdc814da4858d2e85e38e6,
     type: 3}
-  goldYield: 200
+  goldYield: 150
 --- !u!114 &8923444318620741892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   icon: {fileID: -3862903190024489479, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Goblin King
   description: Greedy king of the goblins
-  price: 500
+  price: 350
 --- !u!95 &7504935882607404479
 Animator:
   serializedVersion: 3

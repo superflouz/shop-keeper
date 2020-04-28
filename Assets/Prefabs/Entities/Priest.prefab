@@ -84,8 +84,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d7d056f1829d047a449bacf885df7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 2
-  manaCost: 40
+  cooldown: 1
+  manaCost: 45
   particle: {fileID: 922094455198945850, guid: 6019d73c52e205745a8f63a4a3e6556d, type: 3}
   healValue: 40
 --- !u!114 &1975219761670715040

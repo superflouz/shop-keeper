@@ -154,10 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3290d40eaa31a3641a33189b04e82a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 0.75
-  baseDamage: 15
+  attackSpeed: 1
+  baseDamage: 8
   arrow: {fileID: 780387246298754671, guid: 059e16867cb9aea459db1131f220fbd1, type: 3}
-  projectileSpeed: 5
+  projectileSpeed: 6
 --- !u!114 &827287757326477858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76edc1023bee8ad4cbe55a45f0fa5e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 7
+  range: 5
 --- !u!1 &7439100805852674686
 GameObject:
   m_ObjectHideFlags: 0

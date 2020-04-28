@@ -269,7 +269,7 @@ MonoBehaviour:
   icon: {fileID: -8930018218856646630, guid: 1adbb16a7b911b942a9dd11daa9de33c, type: 3}
   objectName: Green Lizard
   description: Launch poisonous projectile
-  price: 20
+  price: 40
 --- !u!61 &4567519633544979081
 BoxCollider2D:
   m_ObjectHideFlags: 0
