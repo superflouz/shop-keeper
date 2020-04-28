@@ -44,7 +44,7 @@ public class CurvedProjectile : Projectile
         // Calculate the middle point
         Vector2 middlePoint;
         middlePoint.x = (Origin.x + Destination.x) / 2;
-        middlePoint.y = Origin.y + 6;
+        middlePoint.y = Origin.y + 3;
         MiddlePoint = middlePoint;
 
         // The projectile will have the same speed regardless of the distance (grosso merdo)
